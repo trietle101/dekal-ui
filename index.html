@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dekal Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- CDN Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CDN AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CDN JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .aboutus-active {
+            background-color: #1d1d1d !important;
+        }
+
+        .aboutus-active>div {
+            color: #ffffff !important;
+        }
+
+        .flip-container {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .flip-1,
+        .flip-2 {
+            backface-visibility: hidden;
+            transition: 0.5s;
+        }
+
+        .flip-2 {
+            transform: rotateY(180deg);
+        }
+
+        .flip:hover .flip-2 {
+            transform: rotateY(0deg);
+        }
+
+        .flip:hover .flip-1 {
+            transform: rotateY(-180deg);
+        }
+
+        .btn-5 {
+  border: 0 solid;
+
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, .5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+} 
+
+.btn-5:hover {
+
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388; 
+}
+
+
+
+    </style>
+</head>
+
+<body class="bg-[#f4f4f5]">
+    <div class="bg-[#f4f4f5] w-screen overflow-x-hidden">
+        <button
+            class="fixed hidden bottom-5 end-5 z-[100] rounded-full bg-red-600 p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
+            id="btn-back-to-top">
+            <span class="[&>svg]:w-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+                </svg>
+            </span>
+        </button>
+        <!-- Header -->
+        <header class="bg-[#141414] fixed w-full z-50">
+            <div class="px-[120px] mx-auto max-[998.98px]:px-[20px]">
+                <div class="flex justify-between items-center py-[13px] max-[998.98px]:relative">
+                    <label for="menu-checkbox" class="toggle-menu hidden max-[998.98px]:inline-block">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="max-[998.98px]:text-white max-[998.98px]:w-[24px]" viewBox="0 0 448 512">
+                            <path fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                        </svg>
+                    </label>
+                    <a href="#!" id="logo"><img src="./assets/img/Logo-Dekal.svg"
+                            class="block w-[34px] h-[34px] max-[998.98px]:absolute max-[998.98px]:top-[50%] max-[998.98px]:left-[50%] max-[998.98px]:translate-x-[-50%] max-[998.98px]:translate-y-[-50%] max-[998.98px]:w-[30px] max-[998.98px]:h-[30px]"
+                            alt="" /></a>
+                    <ul class="flex items-center text-white max-[998.98px]:hidden" id="pc-nav">
+                        <li>
+                            <a href="#about"
+                                class="text-base font-normal px-[16px] py-[8px] hover:text-gray-300 max-[998.98px]:block max-[998.98px]:py-[14px] max-[998.98px]:px-[0] max-[998.98px]:font-medium">Giới
+                                Thiệu</a>
+                        </li>
+                        <li>
+                            <a href="#service"
+                                class="text-base font-normal px-[16px] py-[8px] hover:text-gray-300 max-[998.98px]:block max-[998.98px]:py-[14px] max-[998.98px]:px-[0] max-[998.98px]:font-medium">Dịch
+                                vụ</a>
+                        </li>
+                        <li>
+                            <a href="#products"
+                                class="text-base font-normal px-[16px] py-[8px] hover:text-gray-300 max-[998.98px]:block max-[998.98px]:py-[14px] max-[998.98px]:px-[0] max-[998.98px]:font-medium">Sản
+                                phẩm</a>
+                        </li>
+                        <li>
+                            <a href="#gallary"
+                                class="text-base font-normal px-[16px] py-[8px] hover:text-gray-300 max-[998.98px]:block max-[998.98px]:py-[14px] max-[998.98px]:px-[0] max-[998.98px]:font-medium">Thư
+                                viện</a>
+                        </li>
+                        <li>
+                            <a href="#faq"
+                                class="text-base font-normal px-[16px] py-[8px] hover:text-gray-300 max-[998.98px]:block max-[998.98px]:py-[14px] max-[998.98px]:px-[0] max-[998.98px]:font-medium">FAQ</a>
+                        </li>
+                    </ul>
+                    <a href="#contact"
+                        class="btn-5 w-32 h-10 px-[23px] py-2 bg-gradient-to-br from-red-500 to-red-950 rounded justify-between items-center gap-2 inline-flex max-[767.98px]:w-[90px] max-[767.98px]:inline-block max-[767.98px]:px-[0px] max-[767.98px]:py-[0px]">
+                        <svg class="max-[767.98px]:hidden" width="17" height="16" viewBox="0 0 17 16"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="Frame" clip-path="url(#clip0_10548_3660)">
+                                <path id="Vector"
+                                    d="M5.97832 0.7686C5.7377 0.18735 5.10332 -0.122025 4.49707 0.0436001L1.74707 0.7936C1.20332 0.9436 0.825195 1.43735 0.825195 1.99985C0.825195 9.7311 7.09395 15.9998 14.8252 15.9998C15.3877 15.9998 15.8814 15.6217 16.0314 15.078L16.7814 12.328C16.9471 11.7217 16.6377 11.0874 16.0564 10.8467L13.0564 9.59673C12.5471 9.38423 11.9564 9.5311 11.6096 9.95923L10.3471 11.4999C8.14707 10.4592 6.36582 8.67798 5.3252 6.47798L6.86582 5.2186C7.29395 4.8686 7.44082 4.2811 7.22832 3.77172L5.97832 0.771725V0.7686Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_10548_3660">
+                                    <rect width="16" height="16" fill="white"
+                                        transform="translate(0.825195)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div
+                            class="text-white text-base font-medium font-['Inter'] leading-normal max-[767.98px]:flex max-[767.98px]:justify-center max-[767.98px]:items-center max-[767.98px]:leading-[40px]">
+                            Liên hệ</div>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <header class="mobile-header hidden max-[998.98px]:block">
+            <input type="checkbox" name="menu-checkbox" class="menu-checkbox peer" hidden id="menu-checkbox" />
+            <!-- Overlay -->
+            <label for="menu-checkbox"
+                class="menu-overlay max-[998.98px]:fixed max-[998.98px]:inset-0 max-[998.98px]:bg-black/[0.3] max-[998.98px]:z-10 max-[998.98px]:invisible max-[998.98px]:transition max-[998.98px]:duration-[0.5s] max-[998.98px]:ease-out max-[998.98px]:opacity-0 max-[998.98px]:peer-checked:opacity-100 max-[998.98px]:peer-checked:visible"></label>
+            <!-- Menu Content -->
+            <div
+                class="menu-drawer max-[998.98px]:fixed max-[998.98px]:p-[60px] max-[998.98px]:top-0 max-[998.98px]:bottom-0 max-[998.98px]:left-0 max-[998.98px]:w-[40%] max-[998.98px]:bg-black max-[998.98px]:text-white max-[998.98px]:z-[60] max-[998.98px]:translate-x-[-100%] max-[998.98px]:transition max-[998.98px]:duration-[0.5s] max-[998.98px]:ease-out max-[998.98px]:peer-checked:translate-x-[0] max-[767.98px]:w-[60%] max-[767.98px]:p-[30px]">
+                <!-- Logo -->
+                <a href="#!"><img src="./assets/img/Logo-Dekal.svg"
+                        class="block w-[34px] h-[34px] max-[998.98px]:mt-[20px]" alt="" /></a>
+                <!-- Navigation -->
+                <ul id="mobile-nav" class="max-[998.98px]:mt-[32px]"></ul>
+                <script>
+                    const pcNav = document.querySelector("#pc-nav");
+                    const mobileNav = document.querySelector("#mobile-nav");
+                    mobileNav.innerHTML = pcNav.innerHTML;
+                </script>
+            </div>
+        </header>
+
+        <!-- Hero -->
+        <section data-aos="slide-down"
+            class="bg-[url('/assets/img/SVG-Hero.png')] h-[445px] w-full mt-[60px] bg-cover bg-bottom max-[767.98px]:w-[100%]">
+            <div class="px-[120px] mx-auto max-[998.98px]:px-[20px]">
+                <div
+                    class="flex justify-between pt-[98px] max-[998.98px]:flex-col max-[998.98px]:justify-center max-[998.98px]:items-center">
+                    <div
+                        class="bg-[url('/assets/img/hero-1.svg')] bg-no-repeat py-[40px] pl-[48px] max-[998.98px]:relative max-[767.98px]:bg-[url('')] max-[767.98px]:w-[100%] max-[767.98px]:bg-[#6d6d6b] max-[767.98px]:rounded max-[767.98px]:pl-[28px] max-[767.98px]:py-[28px]">
+                        <div>
+                            <div
+                                class="text-white text-2xl font-bold leading-9 max-[998.98px]:text-[20px] max-[767.98px]:text-[18px]">
+                                Khoác áo mới cho xe
+                            </div>
+                            <div
+                                class="text-white text-base font-normal leading-normal mt-[4px] max-[998.98px]:text-[15px]">
+                                Dịch vụ dán Decal độc đáo, ấn tượng.
+                            </div>
+                            <div
+                                class="w-[528px] h-[38px] pr-[79.84px] justify-start items-center gap-4 inline-flex mt-[32px] max-[998.98px]:mt-[35px] max-[767.98px]:mt-[22px]">
+                                <div
+                                    class="btn-5 px-6 py-2 bg-gradient-to-r from-black to-neutral-700 rounded flex-col justify-center items-center inline-flex cursor-pointer max-[998.98px]:px-3 max-[998.98px]:px-1 max-[767.98px]:bg-gradient-to-r max-[767.98px]:from-black max-[767.98px]:to-neutral-700">
+                                    <a href="#!"
+                                        class="text-center text-neutral-50 text-base font-medium leading-snug max-[998.98px]:text-[14px]">PPF</a>
+                                </div>
+                                <div 
+                                    class="btn-5 px-6 py-2 bg-gradient-to-r from-black to-neutral-700 rounded flex-col justify-center items-center inline-flex cursor-pointer max-[998.98px]:px-3 max-[998.98px]:px-1 max-[767.98px]:bg-gradient-to-r max-[767.98px]:from-black max-[767.98px]:to-neutral-700">
+                                    <a href="#!"
+                                        class="text-center text-neutral-50 text-base font-medium leading-snug max-[998.98px]:text-[14px]">Decal
+                                        Đổi Màu</a>
+                                </div>
+                                <div
+                                    class="btn-5 px-6 py-2 bg-gradient-to-r from-black to-neutral-700 rounded flex-col justify-center items-center inline-flex cursor-pointer max-[998.98px]:px-3 max-[998.98px]:px-1 max-[767.98px]:bg-gradient-to-r max-[767.98px]:from-black max-[767.98px]:to-neutral-700">
+                                    <a href="#!"
+                                        class="text-center text-neutral-50 text-base font-medium leading-snug max-[998.98px]:text-[14px]">Xem
+                                        Mẫu</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div 
+                            class="hidden max-[998.98px]:inline-block max-[998.98px]:absolute max-[998.98px]:top-[50%] max-[998.98px]:right-[-54%] max-[998.98px]:translate-y-[-50%] max-[767.98px]:hidden">
+                            <img src="./assets/img/Group 696.png"
+                                class="max-[998.98px]:inline-block max-[998.98px]:w-[40%]" alt="" />
+                        </div>
+                    </div>
+                    <div class="max-[998.98px]:hidden">
+                        <img src="./assets/img/Group 696.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- List -->
+        <div
+            class="flex flex-col justify-center px-[120px] mx-auto py-[40px] max-[998.98px]:px-[30px] max-[767.98px]:py-[20px] max-[767.98px]:px-[30px]">
+            <!-- list car -->
+            <section class="list-car" data-aos="fade-left"> 
+                <div
+                    class="text-gradient text-center text-2xl font-bold leading-9 max-[998.98px]:text-[20px] max-[767.98px]:text-[18px]">
+                    Chuyên decal cho các dòng xe
+                </div>
+                <div 
+                    class="bg-[url('/assets/img/List.svg')] bg-no-repeat bg-center w-full h-[97px] mt-[30px] px-[120px] mx-auto max-[998.98px]:bg-contain max-[767.98px]:mt-[20px] max-[767.98px]:w-[100%] max-[767.98px]:px-[0px] max-[767.98px]:bg-contain">
+                </div>
+            </section>
+            <!-- Introduction -->
+            <section
+                class="pt-[90px] pb-[20px] mx-auto flex gap-3  max-[998.98px]:pt-[50px] max-[998.98px]:gap-5 max-[767.98px]:flex-col max-[767.98px]:pt-[0px]"
+                id="about">
+                <img data-aos="slide-up" src="../assets/img/about-pink.png"
+                    class="inline-block w-[50%] object-cover ml-[-33px] pb-[10px] max-[998.98px]:w-[50%] max-[998.98px]:ml-[0px] max-[998.98px]:py-[100px] max-[767.98px]:hidden max-[767.98px]:w-full max-[767.98px]:py-[0px]"
+                    alt="" />
+                <div data-aos="slide-up" class="pl-[17px] max-[998.98px]:pl-[0px]  max-[998.98px]:w-full">
+                    <div class="pb-8 max-[767.98px]:w-full">
+                        <div class="justify-center items-center gap-2.5 inline-flex">
+                            <div>
+                              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="8" fill="url(#paint0_linear_10641_3127)"/>
+                                <g clip-path="url(#clip0_10641_3127)">
+                                <path opacity="0.2" d="M10.8254 27.866L12.1622 31.87L21.3387 19.87L12.1622 7.87L10.7603 11.7871L16.8558 19.8678L10.8254 27.866Z" fill="white"/>
+                                <path d="M30.3859 31.8678H26.0312L16.8525 19.8678L26.0312 7.87H30.3859L21.3365 19.8678L30.3859 31.8678Z" fill="#F08179"/>
+                                <path d="M8.66992 7.87H12.1602V31.8678H8.66992V7.87Z" fill="white"/>
+                                <path d="M30.3894 31.8678H26.0346L16.856 19.8678L26.0346 7.87H30.3894L21.34 19.8678L30.3894 31.8678Z" fill="white"/>
+                                <path d="M30.3894 31.8678H26.0346L16.856 19.8678L26.0346 7.87H30.3894L21.34 19.8678L30.3894 31.8678Z" fill="white"/>
+                                <path d="M30.3894 31.8678H26.0346L16.856 19.8678L26.0346 7.87H30.3894L21.34 19.8678L30.3894 31.8678Z" fill="white"/>
+                                <path d="M30.3894 31.8678H26.0346L16.856 19.8678L26.0346 7.87H30.3894L21.34 19.8678L30.3894 31.8678Z" fill="white"/>
+                                </g>
+                                <defs>
+                                <linearGradient id="paint0_linear_10641_3127" x1="0" y1="20" x2="40" y2="20" gradientUnits="userSpaceOnUse">
+                                <stop/>
+                                <stop offset="1" stop-color="#444444"/>
+                                </linearGradient>
+                                <clipPath id="clip0_10641_3127">
+                                <rect width="24" height="24" fill="white" transform="translate(7.66992 7.87)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                            </div>
+                            <div class="text-stone-900 text-lg font-normal font-['Inter'] capitalize">
+                                Về chúng tôi
+                            </div>
+                        </div>
+                        <div
+                            class="my-3 text-stone-900 text-[35px] font-bold font-['Inter'] capitalize max-[998.98px]:text-[24px]">
+                            Tổng Quan Về Công Ty
+                        </div>
+                        <div
+                            class="w-[592px] text-gray-500 text-base font-medium font-['Inter'] leading-normal max-[998.98px]:text-[14px] max-[998.98px]:w-[320px]">
+                            Dekal tự hào là điểm đến hàng đầu cho các giải pháp dán decal xe
+                            hơi, mang lại diện mạo mới mẻ và độc đáo cho phương tiện của
+                            bạn. Chúng tôi cam kết cung cấp dịch vụ và sản phẩm chất lượng
+                            cao, phản ánh phong cách và cá tính của mỗi khách hàng. Dưới đây
+                            là các thông tin giúp bạn tìm hiểu sâu hơn về chúng tôi:
+                        </div>
+                        <div class="flex gap-4 mt-6  max-[998.98px]:gap-3">
+                            <div class="aboutus-btn px-4 py-2 bg-gray-200 rounded justify-center items-center gap-2 inline-flex aboutus-active cursor-pointer max-[998.98px]:px-2 max-[998.98px]:py-2"
+                                id="aboutus-company">
+                                <div
+                                    class="text-center text-stone-900 text-lg font-medium font-['Inter'] capitalize max-[998.98px]:text-[14px]">
+                                    Công ty
+                                </div>
+                            </div>
+                            <div class="aboutus-btn px-4 py-2 bg-gray-200 bg-opacity-50 rounded justify-center items-center gap-2 inline-flex cursor-pointer max-[998.98px]:px-2 max-[998.98px]:py-2"
+                                id="aboutus-products">
+                                <div
+                                    class="text-center text-stone-900 text-lg font-medium font-['Inter'] capitalize max-[998.98px]:text-[14px]">
+                                    Sản phẩm
+                                </div>
+                            </div>
+                            <div class="aboutus-btn px-4 py-2 bg-gray-200 bg-opacity-50 rounded justify-center items-center gap-2 inline-flex cursor-pointer max-[998.98px]:px-2 max-[998.98px]:py-2"
+                                id="aboutus-team">
+                                <div
+                                    class="text-center text-stone-900 text-lg font-medium font-['Inter'] capitalize max-[998.98px]:text-[14px]">
+                                    Đội ngũ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="flex flex-col gap-6 pt-8">
+                        <div class="w-[592px] text-gray-500 text-base font-medium font-['Inter'] leading-normal max-[998.98px]:w-[340px] max-[998.98px]:text-[14px] max-[767.98px]:w-[330px] max-[767.98px]:h-[110px]"
+                            id="aboutus-content">
+                            Dekal, một doanh nghiệp hàng đầu trong ngành dán decal, cam kết
+                            mang đến sự độc đáo và bền bỉ cho mọi sản phẩm. Chúng tôi tự hào
+                            về khả năng biến ý tưởng của khách hàng thành hiện thực, với sự
+                            sáng tạo và chất lượng làm nền tảng.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About Decal -->
+            <section
+                class="w-full flex flex-col justify-center about-decal pt-[90px] pb-[70px] max-[998.98px]:pt-[70px] max-[998.98px]:pb-[50px]  max-[767.98px]:pt-[50px]">
+                <!-- 1 -->
+                <div class="justify-center row-1 flex items-center gap-[20px] max-[767.98px]:flex-col"
+                    data-aos="fade-left">
+                    <div class="w-[386.67px] h-[386.67px] max-[998.98px]:hidden"></div>
+                    <div class="flip max-[767.98px]:order-2 relative">
+                        <img src="./assets/img/about-1.png"
+                            class="flip-1 absolute max-[998.98px]:block max-[998.98px]:w-[100%] max-[998.98px]:h-[290px]  max-[998.98px]:object-cover max-[767.98px]:h-[290px] max-[767.98px]:w-[290px]"
+                            alt="" />
+                        <img src="./assets/img/porsche-911-gt3-rs.jpg"
+                            class="flip-2 w-[388px] h-[388px] rounded-[12px] max-[998.98px]:block max-[998.98px]:w-[100%] max-[998.98px]:h-[290px] max-[998.98px]:object-cover max-[767.98px]:h-[290px] max-[767.98px]:w-[290px]"
+                            alt="" />
+                    </div>
+                    <div
+                        class="bg-gradient-about w-[386.67px] h-[386.67px] bg- rounded-xl p-[36px] max-[998.98px]:h-[290px] max-[998.98px]:w-auto max-[998.98px]:p-[30px] max-[767.98px]:order-1 max-[767.98px]:h-[290px] max-[767.98px]:w-[290px]">
+                        <!-- icon -->
+                        <div
+                            class="w-[40px] h-[40px] rounded-[40px] bg-white bg-opacity-20 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_8646_21)">
+                                    <path
+                                        d="M16.1719 1.83281L22.1625 7.89375C24.6188 10.3781 24.6188 14.3719 22.1625 16.8563L16.9125 22.1672C16.4766 22.6078 15.7641 22.6125 15.3234 22.1766C14.8828 21.7406 14.8781 21.0281 15.3141 20.5875L20.5594 15.2766C22.1484 13.6687 22.1484 11.0859 20.5594 9.47812L14.5734 3.41719C14.1375 2.97656 14.1422 2.26406 14.5828 1.82812C15.0234 1.39219 15.7359 1.39688 16.1719 1.8375V1.83281ZM0 10.7578V3.75C0 2.50781 1.00781 1.5 2.25 1.5H9.25781C10.0547 1.5 10.8188 1.81406 11.3813 2.37656L19.2563 10.2516C20.4281 11.4234 20.4281 13.3219 19.2563 14.4938L12.9984 20.7516C11.8266 21.9234 9.92813 21.9234 8.75625 20.7516L0.88125 12.8766C0.314062 12.3141 0 11.5547 0 10.7578ZM6.75 6.75C6.75 6.35218 6.59197 5.97064 6.31066 5.68934C6.02936 5.40804 5.64783 5.25 5.25 5.25C4.85218 5.25 4.47064 5.40804 4.18934 5.68934C3.90804 5.97064 3.75 6.35218 3.75 6.75C3.75 7.14782 3.90804 7.52936 4.18934 7.81066C4.47064 8.09196 4.85218 8.25 5.25 8.25C5.64783 8.25 6.02936 8.09196 6.31066 7.81066C6.59197 7.52936 6.75 7.14782 6.75 6.75Z"
+                                        fill="#FAFAFA" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_8646_21">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <!--  -->
+                        <h2 class="mt-[12px] text-neutral-50 text-xl font-bold max-[998.98px]:text-[18px]">
+                            Chuyên nghiệp và Tinh tế
+                        </h2>
+                        <!--  -->
+                        <p
+                            class="mt-[12px] w-[314.67px] text-zinc-300 text-base font-normal leading-normal max-[998.98px]:text-[14px] max-[767.98px]:w-[240.67px]">
+                            Dekal mang đến dịch vụ dán xe ô tô chuyên nghiệp, từ việc chọn
+                            lựa mẫu mã đến quy trình thi công, đảm bảo mỗi chiếc xe được
+                            trang trí một cách tinh tế và chuyên nghiệp.
+                        </p>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="justify-center row-2 flex items-center gap-[20px] py-[20px] max-[767.98px]:flex-col"
+                    data-aos="fade-right">
+                    <div class="w-[386.67px] h-[386.67px] order-3 max-[998.98px]:hidden"></div>
+                    <div class="flip relative order-2">
+                        <img src="./assets/img/about-2.png"
+                            class="flip-1 absolute max-[998.98px]:block max-[998.98px]:w-[100%] max-[998.98px]:h-[290px] max-[998.98px]:object-cover max-[767.98px]:h-[290px] max-[767.98px]:w-[290px]"
+                            alt="" />
+                        <img src="./assets/img/mclaren-red.jpg"
+                            class="flip-2 w-[388px] h-[388px] rounded-[12px] max-[998.98px]:block max-[998.98px]:w-[100%] max-[998.98px]:h-[290px] max-[998.98px]:object-cover max-[767.98px]:h-[290px] max-[767.98px]:w-[290px]"
+                            alt="" />
+                    </div>
+                    <div
+                        class="bg-gradient-about w-[386.67px] h-[386.67px] bg- rounded-xl p-[36px] order-1 max-[998.98px]:h-[290px] max-[998.98px]:w-auto max-[998.98px]:p-[30px] max-[767.98px]:h-[290px] max-[767.98px]:w-[290px]">
+                        <!-- icon -->
+                        <div
+                            class="w-[40px] h-[40px] rounded-[40px] bg-white bg-opacity-20 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22"
+                                viewBox="0 0 24 22" fill="none">
+                                <g clip-path="url(#clip0_8697_1888)">
+                                    <path
+                                        d="M13.204 0.75C12.9832 0.291667 12.5165 0 12.004 0C11.4915 0 11.029 0.291667 10.804 0.75L8.12488 6.2625L2.14154 7.14583C1.64154 7.22083 1.22488 7.57083 1.07071 8.05C0.916545 8.52917 1.04154 9.05833 1.39988 9.4125L5.74154 13.7083L4.71654 19.7792C4.63321 20.2792 4.84154 20.7875 5.25404 21.0833C5.66654 21.3792 6.21238 21.4167 6.66238 21.1792L12.0082 18.325L17.354 21.1792C17.804 21.4167 18.3499 21.3833 18.7624 21.0833C19.1749 20.7833 19.3832 20.2792 19.2999 19.7792L18.2707 13.7083L22.6124 9.4125C22.9707 9.05833 23.0999 8.52917 22.9415 8.05C22.7832 7.57083 22.3707 7.22083 21.8707 7.14583L15.8832 6.2625L13.204 0.75Z"
+                                        fill="#FAFAFA" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_8697_1888">
+                                        <rect width="24" height="21.3333" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <!--  -->
+                        <h2 class="mt-[12px] text-neutral-50 text-xl font-bold max-[998.98px]:text-[18px]">
+                            Tùy chỉnh độc đáo
+                        </h2>
+                        <!--  -->
+                        <p
+                            class="mt-[12px] w-[314.67px] text-zinc-300 text-base font-normal leading-normal max-[998.98px]:text-[14px] max-[767.98px]:w-[240.67px]">
+                            Chúng tôi hiểu rằng mỗi chiếc xe là một tác phẩm riêng biệt. Với
+                            Dekal, bạn có thể tùy chỉnh từng chi tiết để tạo nên phong cách
+                            riêng, phản ánh cá nhân và cái đẹp độc đáo của chiếc xe của bạn.
+                        </p>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="justify-center row-3 flex items-center gap-[20px] max-[767.98px]:flex-col"
+                    data-aos="fade-left">
+                    <div class="w-[386.67px] h-[386.67px] max-[998.98px]:hidden"></div>
+                    <div class="flip relative max-[767.98px]:order-2">
+                        <img src="./assets/img/about-3.png"
+                            class="flip-1 absolute max-[998.98px]:block max-[998.98px]:w-[100%] max-[998.98px]:h-[290px] max-[998.98px]:object-cover max-[767.98px]:h-[290px] max-[767.98px]:w-[290px]"
+                            alt="" />
+                        <img src="./assets/img/jeep-silver.jpg"
+                            class="flip-2 w-[388px] h-[388px] rounded-[12px] max-[998.98px]:block max-[998.98px]:w-[100%] max-[998.98px]:h-[290px] max-[998.98px]:object-cover max-[767.98px]:h-[290px] max-[767.98px]:w-[290px]"
+                            alt="" />
+                    </div>
+                    <div
+                        class="bg-gradient-about w-[386.67px] h-[386.67px] bg- rounded-xl p-[36px] max-[998.98px]:h-[290px] max-[998.98px]:w-auto max-[998.98px]:p-[30px] max-[767.98px]:order-1 max-[767.98px]:h-[290px] max-[767.98px]:w-[290px]">
+                        <!-- icon -->
+                        <div
+                            class="w-[40px] h-[40px] rounded-[40px] bg-white bg-opacity-20 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20"
+                                viewBox="0 0 24 20" fill="none">
+                                <path
+                                    d="M12.1275 3.19502L8.4975 6.13502C7.89375 6.62252 7.7775 7.50002 8.235 8.12627C8.71875 8.79377 9.66 8.92502 10.3088 8.41877L14.0325 5.52377C14.295 5.32127 14.67 5.36627 14.8763 5.62877C15.0825 5.89127 15.0338 6.26627 14.7713 6.47252L13.9875 7.08002L20.6325 13.2H22.2C23.1938 13.2 24 12.3938 24 11.4V6.60002C24 5.60627 23.1938 4.80002 22.2 4.80002H19.35H19.2H19.1737L19.0275 4.70627L16.305 2.96252C15.7312 2.59502 15.06 2.40002 14.3775 2.40002C13.56 2.40002 12.765 2.68127 12.1275 3.19502ZM12.9825 7.86002L11.0438 9.36752C9.8625 10.29 8.14875 10.05 7.26375 8.83502C6.43125 7.69127 6.64125 6.09377 7.74 5.20502L10.86 2.68127C10.425 2.49752 9.95625 2.40377 9.48 2.40377C8.775 2.40002 8.08875 2.61002 7.5 3.00002L4.8 4.80002H1.8C0.80625 4.80002 0 5.60627 0 6.60002V11.4C0 12.3938 0.80625 13.2 1.8 13.2H5.8575L9.285 16.3275C10.02 16.9988 11.1562 16.9463 11.8275 16.2113C12.0338 15.9825 12.1725 15.7163 12.2438 15.4388L12.8813 16.0238C13.6125 16.695 14.7525 16.6463 15.4237 15.915C15.5925 15.7313 15.7163 15.5175 15.795 15.2963C16.5225 15.7838 17.5125 15.6825 18.1238 15.015C18.795 14.2838 18.7463 13.1438 18.015 12.4725L12.9825 7.86002Z"
+                                    fill="#FAFAFA" />
+                            </svg>
+                        </div>
+                        <!--  -->
+                        <h2 class="mt-[12px] text-neutral-50 text-xl font-bold max-[998.98px]:text-[18px]">
+                            Sự hài lòng đảm bảo
+                        </h2>
+                        <!--  -->
+                        <p
+                            class="mt-[12px] w-[314.67px] text-zinc-300 text-base font-normal leading-normal max-[998.98px]:text-[14px] max-[767.98px]:w-[240.67px]">
+                            Với kinh nghiệm và uy tín trong ngành, Dekal cam kết mang lại
+                            cho bạn trải nghiệm dán xe ô tô tốt nhất, đảm bảo sự hài lòng và
+                            tin tưởng từ khách hàng.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Service -->
+        <div class="service mb-[40px] px-[200px] py-[100px] max-[998.98px]:px-[100px] max-[998.98px]:py-[50px] max-[767.98px]:px-[40px] max-[767.98px]:py-[40px]"
+            id="service">
+            <!-- Icon -->
+            <div data-aos="zoom-out" class="row flex items-center gap-[12px]">
+                <div class="w-[36px] h-[36px] bg-[#ff564f40] rounded-[8px] flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                        fill="none">
+                        <path d="M3.17017 8.3501L12.0002 13.4601L20.7701 8.38007" stroke="#FF564F" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M12.0002 22.5201V13.4501" stroke="#FF564F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M9.93011 3.39003L4.59012 6.36007C3.38012 7.03007 2.39014 8.71005 2.39014 10.09V15.7401C2.39014 17.1201 3.38012 18.8001 4.59012 19.4701L9.93011 22.4401C11.0701 23.0701 12.9401 23.0701 14.0801 22.4401L19.4201 19.4701C20.6301 18.8001 21.6201 17.1201 21.6201 15.7401V10.09C21.6201 8.71005 20.6301 7.03007 19.4201 6.36007L14.0801 3.39003C12.9301 2.75003 11.0701 2.75003 9.93011 3.39003Z"
+                            stroke="#FF564F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M17 14.15V10.4901L7.51001 5.01001" stroke="#FF564F" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <!-- <img src="./assets/icon/box.svg" alt="" class="w-[24px] h-[24px]" /> -->
+                </div>
+                <h2 class="text-white text-lg font-normal capitalize">
+                    Dịch vụ sản phẩm DeKal
+                </h2>
+            </div>
+            <div data-aos="zoom-out"
+                class="w-[500px] text-white text-[32px] font-semibold capitalize mt-[18px] max-[998.98px]:text-[28px] max-[767.98px]:text-[20px] max-[767.98px]:w-[310px]">
+                DeKal kiến tạo giá trị cho bạn và xe của bạn
+            </div>
+        </div>
+        <!-- Introduction -->
+        <div 
+            class="introduction max-w-[1200px] mx-auto max-[998.98px]:px-[60px] max-[767.98px]:py-[20px] max-[767.98px]:px-[20px]">
+            <!-- 1 -->
+            <div data-aos="fade-right"
+                class="row-1 flex items-center justify-between px-[64px] max-[998.98px]:px-[32px] max-[998.98px]:flex-col max-[998.98px]:justify-center max-[998.98px]:gap-[32px] max-[767.98px]:px-[20px]">
+                <div class="info">
+                    <h2 class="text-zinc-800 text-4xl font-bold max-[998.98px]:text-[32px] max-[767.98px]:text-[24px]">
+                        Decal PPF
+                    </h2>
+                    <p
+                        class="w-[460px] text-[#71717A] text-base font-normal pt-[16px] pb-[32px] max-[767.98px]:w-[300px]">
+                        <span class="text-[#EF4444]">Dekal PPF</span> là viết tắt của
+                        "<span class="text-[#EF4444]">Paint Protection Film</span>" (PPF),
+                        là một loại phim bảo vệ sơn xe hơi được thiết kế để bảo vệ bề mặt
+                        sơn của xe khỏi các vết trầy xước, ảnh hưởng từ tác động của môi
+                        trường và các hạt nhỏ gây tổn thương như sỏi, cát. Đây là
+                        <span class="text-[#EF4444]">một lớp phủ trong suốt</span> có độ
+                        dày nhất định được áp dụng trực tiếp lên bề mặt sơn của xe.
+                    </p>
+                    <div
+                        class="inline-block px-[16px] py-[10px] rounded-[10px] bg-black text-center text-white text-xs font-semibold cursor-pointer">
+                        Xem ngay - Không cần đăng ký
+                    </div>
+                </div>
+                <div class="image relative max-[998.98px]:justify-items-center max-[767.98px]:w-full">
+                    <img src="./assets/img/introduction-1.png"
+                        class="rounded-[18px] max-[998.98px]:block max-[998.98px]:w-[100%] max-[998.98px]:h-[345px] max-[998.98px]:object-cover max-[767.98px]:h-[310px]"
+                        alt="" />
+                    <div class="info-image flex items-center gap-[12px] absolute bottom-[24px] left-[24px]">
+                        <img src="./assets/img/logo-introduction.png" alt="" />
+                        <div class="">
+                            <div class="text-white text-sm font-bold">DeKal</div>
+                            <div class="text-white text-sm font-normal">
+                                Hệ thống dán xe chuyên nghiệp
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div data-aos="fade-left"
+                class="row-2 flex items-center justify-between my-[40px] px-[64px] max-[998.98px]:px-[32px] max-[998.98px]:flex-col max-[998.98px]:justify-center max-[998.98px]:my-[20px] max-[767.98px]:px-[20px] max-[767.98px]:w-full">
+                <div class="info order-2 max-[998.98px]:order-1 max-[767.98px]:w-full">
+                    <h2 class="text-zinc-800 text-4xl font-bold max-[998.98px]:text-[32px] max-[767.98px]:text-[24px]">
+                        Decal Đổi Màu
+                    </h2>
+                    <p
+                        class="w-[452px] text-[#71717A] text-base font-normal pt-[16px] pb-[32px] max-[767.98px]:w-[300px]">
+                        Dekal đổi màu xe là
+                        <span class="text-[#EF4444]">một giải pháp độc đáo</span> để cá
+                        nhân hóa và thay đổi ngoại hình của xe hơi một cách nhanh chóng và
+                        dễ dàng. Với sự linh hoạt trong thiết kế và đa dạng về màu sắc,
+                        dekal đổi màu cho phép chủ xe
+                        <span class="text-[#EF4444]">tạo ra các kiểu dáng và hoa văn độc đáo</span>, từ những màu sắc
+                        cơ bản đến những họa tiết phức tạp.
+                    </p>
+                </div>
+                <div class="image relative order-1 max-[998.98px]:order-2 max-[767.98px]:w-full">
+                    <img src="./assets/img/introduction-2.png"
+                        class="rounded-[18px] max-[998.98px]:block max-[998.98px]:w-[100%] max-[998.98px]:h-[345px] max-[998.98px]:object-cover max-[767.98px]:h-[310px]"
+                        alt="" />
+                </div>
+            </div>
+            <!-- 3 -->
+            <div data-aos="fade-right"
+                class="row-3 flex items-center justify-between px-[64px] max-[998.98px]:px-[32px] max-[998.98px]:flex-col max-[998.98px]:justify-center max-[998.98px]:gap-[32px] max-[767.98px]:px-[20px] max-[767.98px]:w-full">
+                <div class="info max-[767.98px]:w-full">
+                    <h2 class="text-zinc-800 text-4xl font-bold max-[998.98px]:text-[32px] max-[767.98px]:text-[24px]">
+                        Decal Carbon
+                    </h2>
+                    <p
+                        class="w-[460px] text-[#71717A] text-base font-normal pt-[16px] pb-[32px] max-[998.98px]:pb-[0px] max-[767.98px]:w-[300px]">
+                        Với Dekal Carbon, chủ xe có thể tạo ra những mẫu dekal độc đáo, từ
+                        logo, hình ảnh, đến hoa văn và kỹ thuật in ấn tiên tiến. Sự linh
+                        hoạt trong thiết kế cho phép khách hàng thể hiện phong cách và cá
+                        nhân hóa xe của mình theo ý muốn. Bằng cách sử dụng công nghệ và
+                        vật liệu chất lượng cao,
+                        <span class="text-[#EF4444]">Dekal Custom mang đến sự độc đáo và chất lượng trong mỗi chi
+                            tiết</span>, tạo nên sự khác biệt và ấn tượng.
+                    </p>
+                </div>
+                <div class="image relative max-[767.98px]:w-full">
+                    <img src="./assets/img/introduction-3.png"
+                        class="rounded-[18px] max-[998.98px]:block max-[998.98px]:w-[100%] max-[998.98px]:h-[345px] max-[998.98px]:object-cover max-[767.98px]:h-[310px]"
+                        alt="" />
+                </div>
+            </div>
+        </div>
+        <!-- discover -->
+        <div  class="discover mt-[120px] max-[998.98px]:mt-[60px] max-[767.98px]:mt-[20px]" id="products">
+            <div class="row-info text-center">
+                <h2
+                    class="text-center text-black text-[42px] font-bold max-[998.98px]:text-[30px] max-[767.98px]:text-[24px]">
+                    Khám phá sản phẩm
+                </h2>
+                <p
+                    class="mt-[12px] text-center text-zinc-500 text-xl font-normal max-[998.98px]:text-[18px] max-[767.98px]:text-[16px]">
+                    Hãy để chúng tôi chăm sóc xe của bạn
+                </p>
+            </div>
+            <div 
+                class="list max-w-[1200px] mx-auto mt-[64px] mb-5 max-[998.98px]:px-[60px] max-[767.98px]:mt-[40px] max-[767.98px]:px-[20px]">
+                <div
+                    class="products-list h-[] grid grid-cols-4 gap-[24px] max-[998.98px]:grid-cols-2 max-[998.98px]:gap-[14px] max-[998.98px]:place-items-center max-[767.98px]:grid-cols-1">
+                    <!-- 1 -->
+                    <div
+                        class="w-[282px] h-auto rounded-[10px] border border-[#02083026] overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%]">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-1.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div
+                        class="w-[282px] h-auto rounded-[10px] border border-[#02083026] overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%]">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-2.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div
+                        class="w-[282px] h-auto rounded-[10px] border border-[#02083026 overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%]">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-3.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div
+                        class="w-[282px] h-auto rounded-[10px] border border-[#02083026] overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%]">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-4.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 1 -->
+                    <div
+                        class="product-item w-[282px] h-auto rounded-[10px] border border-[#02083026] overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%] hidden">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-1.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div
+                        class="product-item w-[282px] h-auto rounded-[10px] border border-[#02083026] overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%] hidden">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-2.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div
+                        class="product-item w-[282px] h-auto rounded-[10px] border border-[#02083026 overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%] hidden">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-3.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div
+                        class="product-item w-[282px] h-auto rounded-[10px] border border-[#02083026] overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%] hidden">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-4.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 1 -->
+                    <div
+                        class="product-item w-[282px] h-auto rounded-[10px] border border-[#02083026] overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%] hidden">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-1.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div
+                        class="product-item w-[282px] h-auto rounded-[10px] border border-[#02083026] overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%] hidden">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-2.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div
+                        class="product-item w-[282px] h-auto rounded-[10px] border border-[#02083026 overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%] hidden">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-3.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div
+                        class="product-item w-[282px] h-auto rounded-[10px] border border-[#02083026] overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%] hidden">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-4.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 1 -->
+                    <div
+                        class="product-item w-[282px] h-auto rounded-[10px] border border-[#02083026] overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%] hidden">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-1.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div
+                        class="product-item w-[282px] h-auto rounded-[10px] border border-[#02083026] overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%] hidden">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-2.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div
+                        class="product-item w-[282px] h-auto rounded-[10px] border border-[#02083026 overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%] hidden">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-3.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div
+                        class="product-item w-[282px] h-auto rounded-[10px] border border-[#02083026] overflow-hidden max-[998.98px]:w-full max-[767.98px]:w-[85%] hidden">
+                        <div class="overflow-hidden cursor-pointer">
+                            <img src="./assets/img/decal-4.png"
+                                class="block w-full h-[156.63px] object-cover transition duration-150"
+                                alt="" />
+                        </div>
+                        <div class="info p-[16px]">
+                            <h3 class="pt-[2px] text-black text-[17px] font-semibold cursor-pointer">
+                                Dekal Đổi Màu
+                            </h3>
+                            <p class="mt-[8px] text-zinc-500 text-sm font-normal">
+                                Vinyl Wrap
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- button xem sản phẩm -->
+            <div class="flex justify-center">
+                <button
+                    class=" block w-[137px] h-[50px] leading-[5px] bg-black hover:bg-gray-800 rounded-[10px] px-[15px] py-[19px] outline-none border-none text-center text-white text-sm font-medium mt-[32px]"
+                    id="expand">
+                    Xem thêm
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Sản phẩm hoàn thiện -->
+    <div class="mt-[90px]">
+      <div class="row-info text-center">
+        <h2
+          class="text-center text-black text-[42px] font-bold max-[998.98px]:text-[30px] max-[767.98px]:text-[24px]"
+        >
+          Sản Phẩm hoàn thiện
+        </h2>
+        <p
+          class="mt-[12px] text-center text-zinc-500 text-xl font-normal max-[998.98px]:text-[18px] max-[767.98px]:text-[16px]"
+        >
+          Thư viện ảnh của doanh nghiệp DeKal
+        </p>
+      </div>
+      <section class="pt-[90px] pb-[20px] px-[120px] mx-auto flex gap-5  max-[998.98px]:pt-[50px] max-[998.98px]:gap-5 max-[767.98px]:flex-col max-[767.98px]:pt-[0px]" id="about">
+        <!-- video -->
+        <div>
+          <video class="w-[100%] rounded-[12px]" autoplay muted loop src="https://cdn.shopify.com/videos/c/vp/cc1bb138b3f348e7b29ef8f3da333f94/cc1bb138b3f348e7b29ef8f3da333f94.HD-1080p-7.2Mbps-23262791.mp4"></video>
+        </div>
+        
+        <div class="mt-[-10px]">
+          <div class="pb-12">
+             
+            <div
+              class="text-stone-900 text-[35px] font-semibold font-['Inter'] capitalize max-[998.98px]:text-[24px]"
+            >
+               Đam mê
+            </div>
+            <div
+              class="w-[592px] text-slate-500 text-base font-medium font-['Inter'] leading-normal max-[998.98px]:text-[14px] max-[998.98px]:w-[320px]"
+            >
+            Dekal tự hào là điểm đến hàng đầu cho các giải pháp dán decal xe
+            hơi, Dekal tự hào là điểm đến hàng đầu cho các giải pháp dán decal xe
+            hơiDekal tự hào là điểm đến hàng đầu cho các giải pháp dán decal xe
+            hơi
+            </div>
+       
+          </div>
+          <hr />
+          <div class="cursor-pointer overflow-hidden rounded-[10px]">
+            <img src="./assets/img/image 10.png" class="rounded-[10px] transition duration-150 hover:scale-125 object-cover" alt="">
+         </div>
+        </div>
+       </section>
+       <div class="px-[120px] mx-auto">
+          <div class="grid grid-cols-3 gap-4">
+              <!-- 1 -->
+              <div class="rounded-[12px] overflow-hidden cursor-pointer">
+                  <img src="./assets/img/image 1.png" class="transition duration-150 hover:scale-125 object-cover" alt="">
+              </div>
+              <div class="rounded-[12px] overflow-hidden cursor-pointer">
+                <img src="./assets/img/image 2.png" class="transition duration-150 hover:scale-125 object-cover" alt="">
+              </div>
+              <div class="rounded-[12px] overflow-hidden cursor-pointer">
+                <img src="./assets/img/image 3.png" class="transition duration-150 hover:scale-125 object-cover" alt="">
+              </div>
+              <!-- 2 -->
+              <div class="rounded-[12px] overflow-hidden cursor-pointer">
+                <img src="./assets/img/image 4.png" class="transition duration-150 hover:scale-125 object-cover" alt="">
+            </div>
+            <div class="rounded-[12px] overflow-hidden">
+              <img src="./assets/img/image 5.png" class="transition duration-150 hover:scale-125 object-cover" alt="">
+            </div>
+            <div class="rounded-[12px] overflow-hidden cursor-pointer">
+              <img src="./assets/img/image 6.png" class="transition duration-150 hover:scale-125 object-cover" alt="">
+            </div>
+            <!-- 3 -->
+            <div class="rounded-[12px] overflow-hidden cursor-pointer">
+              <img src="./assets/img/image 7.png" class="transition duration-150 hover:scale-125 object-cover" alt="">
+          </div>
+          <div class="rounded-[12px] overflow-hidden cursor-pointer">
+            <img src="./assets/img/image 8.png" class="transition duration-150 hover:scale-125 object-cover" alt="">
+          </div>
+          <div class="rounded-[12px] overflow-hidden cursor-pointer">
+            <img src="./assets/img/image 9.png" class="transition duration-150 hover:scale-125 object-cover" alt="">
+          </div>
+          </div>
+       </div>
+    </div>
+
+    <!-- question -->
+    <div class="bg-[#f4f4f5] question mt-[120px] py-[80px] max-[998.98px]:mt-[60px] max-[998.98px]:py-[40px] max-[767.98px]:mt-[30px] max-[767.98px]:py-[20px]"
+        id="faq">
+        <div
+            class="block text-center text-zinc-800 text-[50px] font-bold mb-[64px] max-[998.98px]:text-[35px] max-[998.98px]:mb-[40px] max-[767.98px]:text-[26px]">
+            <h2>Bạn hỏi, DeKal trả lời</h2>
+        </div>
+        <!-- Question -->
+        <div class="px-[120px] mx-auto max-[767.98px]:px-[20px]">
+            <script>
+                $(document).ready(function() {
+                    $(".accordion-header").click(function() {
+                        $(this).parent().toggleClass("active");
+                        $(this).parent().children(".accordion-body").slideToggle();
+                        // Update toggle icons based on active state
+                        const toggleIcon = $(this).find(".toogle-icon");
+                        if ($(this).parent().hasClass("active")) {
+                            toggleIcon.find(".plus").hide();
+                            toggleIcon.find(".minus").show();
+                        } else {
+                            toggleIcon.find(".plus").show();
+                            toggleIcon.find(".minus").hide();
+                        }
+                    });
+                });
+            </script>
+            <div class="accordion px-[120px] max-[998.98px]:px-[20px] max-[767.98px]:px-[0px]">
+                <!-- 1 -->
+                <div class="accordion-item">
+                    <div class="accordion-header flex items-center justify-between">
+                        <h3 class="text-black text-lg font-bold">
+                            Tôi có thể đặt hàng online được không?
+                        </h3>
+                        <div class="toogle-icon flex">
+                            <!-- Dấu cộng -->
+                            <div
+                                class="plus flex items-center justify-center w-[32px] h-[32px] p-[6px] bg-[#26377a0f] rounded-[9999px]">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <!-- Dấu trừ -->
+                            <div class="minus w-[32px] h-[32px] p-[6px] bg-[#26377a0f] rounded-[9999px] relative">
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-body">
+                        Hiện tại Dekal chưa hỗ trợ đặt hàng online. Để có trải nghiệm
+                        dịch vụ tốt nhất, vui lòng quý khách liên hệ cho tư vấn viên của
+                        Dekal để được hỗ trợ đặt lịch.
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="accordion-item">
+                    <div class="accordion-header flex items-center justify-between">
+                        <h3 class="text-black text-lg font-bold">
+                            Tôi muốn dán xe tại nhà được không?
+                        </h3>
+                        <div class="toogle-icon flex">
+                            <!-- Dấu cộng -->
+                            <div
+                                class="plus flex items-center justify-center w-[32px] h-[32px] p-[6px] bg-[#26377a0f] rounded-[9999px]">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <!-- Dấu trừ -->
+                            <div class="minus w-[32px] h-[32px] p-[6px] bg-[#26377a0f] rounded-[9999px] relative">
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-body">
+                        Do hạn chế về mặt thiết bị, Dekal hiện tại không có dịch vụ dán
+                        xe tận nhà. Thay vào đó chúng tôi cung cấp dịch vụ giao - nhận
+                        xe tận nhà hoàn toàn miễn phí!
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="accordion-item">
+                    <div class="accordion-header flex items-center justify-between">
+                        <h3 class="text-black text-lg font-bold">
+                            Tại sao PPF lại quan trọng đối với xe?
+                        </h3>
+                        <div class="toogle-icon flex">
+                            <!-- Dấu cộng -->
+                            <div
+                                class="plus flex items-center justify-center w-[32px] h-[32px] p-[6px] bg-[#26377a0f] rounded-[9999px]">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <!-- Dấu trừ -->
+                            <div class="minus w-[32px] h-[32px] p-[6px] bg-[#26377a0f] rounded-[9999px] relative">
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-body">
+                        PPF, hay phim bảo vệ sơn xe rất cần thiết trong việc bảo vệ bề
+                        mặt sơn xe khỏi các tác động như trầy xước nhỏ, hư hại do môi
+                        trường và tia UV, đồng thời giữ cho xe luôn trông như mới, kéo
+                        dài tuổi thọ của lớp sơn. Ngoài ra PPF còn cho quý khách nhiều
+                        lựa chọn để cá nhân hóa xe của mình với chi phí vừa phải.
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="accordion-item">
+                    <div class="accordion-header flex items-center justify-between">
+                        <h3 class="text-black text-lg font-bold">
+                            Địa chỉ của cửa hàng ở đâu?
+                        </h3>
+                        <div class="toogle-icon flex">
+                            <!-- Dấu cộng -->
+                            <div
+                                class="plus flex items-center justify-center w-[32px] h-[32px] p-[6px] bg-[#26377a0f] rounded-[9999px]">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <!-- Dấu trừ -->
+                            <div class="minus w-[32px] h-[32px] p-[6px] bg-[#26377a0f] rounded-[9999px] relative">
+                                <i class="fa-solid fa-minus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-body">
+                        Địa chỉ trung tâm dịch vụ của Dekal nằm tại:
+                        <b>Tòa nhà QTSC9 (toà T), đường Tô Ký, phường Tân Chánh Hiệp,
+                            quận 12, TP HCM.</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- car company -->
+
+    <div class="logos pt-[20px] pb-[100px] max-[998.98px]:pb-[70px] max-[767.98px]:pb-[30px]">
+        <div class="logos-slide">
+            <img src="./assets/img/Hyundai.png" alt="" />
+            <img src="./assets/img/Honda.png" alt="" />
+            <img src="./assets/img/Jaguar.png" alt="" />
+            <img src="./assets/img/Lamborghini.png" alt="" />
+            <img src="./assets/img/Mazda.png" alt="" />
+            <img src="./assets/img/Mitsubishi.png" alt="" />
+            <img src="./assets/img/BMW.png" alt="" />
+            <img src="./assets/img/Mercedes Benz.png" alt="" />
+            <img src="./assets/img/Nissan.png" alt="" />
+            <img src="./assets/img/Bugatti.png" alt="" />
+            <img src="./assets/img/Peugeot.png" alt="">
+            <img src="./assets/img/Porsche.png" alt="">
+            <img src="./assets/img/Alfa Romeo.png" alt="">
+            <img src="./assets/img/Iran Khodro.png" alt="">
+            <img src="./assets/img/Citroen.png" alt="">
+            <img src="./assets/img/Ferrari.png" alt="">
+            <img src="./assets/img/GT-R.png" alt="">
+            <img src="./assets/img/Hyundai.png" alt="" />
+            <img src="./assets/img/Honda.png" alt="" />
+            <img src="./assets/img/Jaguar.png" alt="" />
+            <img src="./assets/img/Lamborghini.png" alt="" />
+            <img src="./assets/img/Mazda.png" alt="" />
+            <img src="./assets/img/Mitsubishi.png" alt="" />
+            <img src="./assets/img/BMW.png" alt="" />
+            <img src="./assets/img/Mercedes Benz.png" alt="" />
+            <img src="./assets/img/Nissan.png" alt="" />
+            <img src="./assets/img/Bugatti.png" alt="" />
+            <img src="./assets/img/Peugeot.png" alt="">
+            <img src="./assets/img/Porsche.png" alt="">
+            <img src="./assets/img/Alfa Romeo.png" alt="">
+            <img src="./assets/img/Iran Khodro.png" alt="">
+            <img src="./assets/img/Citroen.png" alt="">
+            <img src="./assets/img/Ferrari.png" alt="">
+            <img src="./assets/img/GT-R.png" alt="">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white px-[116px] mx-auto max-[998.98px]:px-[50px] max-[767.98px]:px-[20px]" id="contact">
+        <!-- footer top -->
+        <div
+            class="footer-top pt-[32px] pb-[21px] flex justify-between border-b border-b-[#D4D4D8] max-[767.98px]:w-full max-[767.98px]:flex-col max-[767.98px]:gap-[10px]">
+            <img src="./assets/img/Decal -1.jpg" class="max-[767.98px]:block max-[767.98px]:w-[40%]"
+                alt="" />
+            <div class="flex items-center max-[767.98px]:relative">
+                <input type="email" name="" id="" placeholder="Địa chỉ email"
+                    class="w-[350px] px-[16px] py-[10px] border border-[#D4D4D8] rounded-tl-[3px] rounded-bl-[3px] placeholder:text-[#71717a] placeholder:text-sm placeholder:font-normal focus:outline-none" />
+                <button type="submit"
+                    class="py-[15px] px-[34px] bg-zinc-800 text-white text-xs font-normal capitalize rounded-tr rounded-br max-[767.98px]:absolute max-[767.98px]:right-0 max-[767.98px]:font-medium">
+                    Đăng ký
+                </button>
+            </div>
+        </div>
+        <!-- footer bottom -->
+        <div class="pt-[32px] pl-[8px] pb-[100px] max-[998.98px]:pb-[50px] max-[767.98px]:pb-[40px]">
+            <!-- icon social -->
+            <div class="flex items-center gap-[16px]">
+                <a href="#!"><img src="./assets/icon/fb.svg" alt="" /></a>
+                <a href="#!"><img src="./assets/icon/p.svg" alt="" /></a>
+                <a href="#!"><img src="./assets/icon/youtube.svg" alt="" /></a>
+                <a href="#!"><img src="./assets/icon/tit.svg" alt="" /></a>
+                <a href="#!"><img src="./assets/icon/in.svg" alt="" /></a>
+                <a href="#!"><img src="./assets/icon/ins.svg" alt="" /></a>
+                <a href="#!"><img src="./assets/icon/wifi.svg" alt="" /></a>
+            </div>
+
+            <!-- list nav -->
+            <nav class="mt-[24px] max-[998.98px]:mt-[18px]">
+                <ul
+                    class="text-slate-800 text-xs font-normal flex gap-[26px] max-[767.98px]:flex-wrap max-[767.98px]:gap-[20px] max-[767.98px]:font-medium">
+                    <li><a href="#!">Trang Chủ</a></li>
+                    <li><a href="#!">Giới Thiệu</a></li>
+                    <li><a href="#!">PPF</a></li>
+                    <li><a href="#!">Decal Đổi Màu</a></li>
+                    <li><a href="#!">Sản Phẩm Khác</a></li>
+                    <li><a href="#!">Liên Hệ</a></li>
+                    <li><a href="#!">Bảo Mật</a></li>
+                </ul>
+            </nav>
+            <!-- no copyright -->
+            <div
+                class="mt-[34px] text-slate-800 text-xs font-normal max-[998.98px]:mt-[24px] max-[767.98px]:mt-[18px]">
+                © DEKAL.com, Inc., một công ty con hoàn toàn thuộc sở hữu của
+                SevenTeam, Inc. Bằng cách sử dụng dekal.com, bạn đồng ý cho việc
+                theo dõi và lưu trữ các tương tác của bạn với trang web, bao gồm bởi
+                một nhà cung cấp dịch vụ của DeKal, để sử dụng trong việc cải thiện
+                và cá nhân hóa dịch vụ của chúng tôi. Xem Quyền riêng tư của chúng
+                tôi để biết thêm chi tiết.
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+<script>
+    AOS.init({
+  duration: 1200,
+})
+    const aboutUsContent = {
+        company: "Dekal, một doanh nghiệp hàng đầu trong ngành dán decal, cam kết mang đến sự độc đáo và bền bỉ cho mọi sản phẩm. Chúng tôi tự hào về khả năng biến ý tưởng của khách hàng thành hiện thực, với sự sáng tạo và chất lượng làm nền tảng.",
+        products: " Cung cấp đa dạng sản phẩm từ decal bảo vệ đến trang trí nội thất và ngoại thất xe, Dekal đáp ứng mọi yêu cầu với công nghệ in tiên tiến và chất liệu cao cấp, đảm bảo tính thẩm mỹ và độ bền.",
+        team: "Đội ngũ Dekal bao gồm các chuyên gia thiết kế, kỹ thuật viên và chuyên viên lắp đặt chuyên nghiệp, đều là những người đam mê với nghệ thuật và xe cộ, sẵn sàng biến mọi dự án thành tác phẩm nổi bật."
+    };
+    $(".aboutus-btn").on("click", function() {
+        $(".aboutus-btn").removeClass("aboutus-active");
+        $(this).addClass("aboutus-active");
+        if ($(this).is("#aboutus-company")) {
+            $("#aboutus-content").text(aboutUsContent.company);
+            console.log(aboutUsContent.company);
+        }
+        if ($(this).is("#aboutus-products")) {
+            $("#aboutus-content").text(aboutUsContent.products);
+            console.log(aboutUsContent.products);
+        }
+        if ($(this).is("#aboutus-team")) {
+            $("#aboutus-content").text(aboutUsContent.team);
+            console.log(aboutUsContent.team);
+        }
+    });
+    $("#expand").on("click", function() {
+        if ($(".product-item").hasClass("hidden")) {
+            $(".product-item").removeClass("hidden");
+            $("#expand").text("Thu gọn");
+        } else {
+            $(".product-item").addClass("hidden");
+            $("#expand").text("Xem thêm");
+        }
+    });
+    $(document).on('click', 'a[href^="#"]', function(event) {
+        event.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 700);
+    });
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+            $("#btn-back-to-top").removeClass('hidden');
+        } else {
+            $("#btn-back-to-top").addClass('hidden');
+        }
+    });
+
+    $("#btn-back-to-top").on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, '300');
+    });
+    $(document).ready(function() {
+        $('#logo').click(function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 'slow');
+        });
+    });
+</script>
+
+</html>

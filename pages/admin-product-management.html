@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Product Management</title>
+    <!-- <title>Orders Completed</title> -->
+    <!-- CDN Flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  </head>
+
+  <body class="bg-[#FAFAFA] w-[1440px] mx-auto">
+    <!-- Header -->
+    <div class="flex justify-between items-center px-[50px] py-4">
+      <div
+        class="w-12 self-stretch h-12 px-4 py-2 bg-white rounded-full border border-white inline-flex gap-2 justify-center items-center shadow"
+      >
+        <img
+          class="w-6 h-6 relative"
+          src="../assets/img/Logo-Dekal.svg"
+          alt=""
+        />
+      </div>
+      <div class="flex gap-6">
+        <ul class="flex bg-white shadow rounded-[46px] p-1">
+          <li
+            class="self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer"
+          >
+            <img
+              class="w-3.5 h-[12.44px] relative"
+              src="../assets/icon/house 1.svg"
+              alt=""
+            />
+            <div
+              class="text-zinc-500 text-sm font-medium font-['Inter'] leading-[21px]"
+            >
+              Dashboard
+            </div>
+          </li>
+          <li
+            class="self-stretch px-4 py-2 justify-start items-center gap-2 flex bg-red-50 rounded-[66px] relative cursor-pointer"
+          >
+            <img
+              class="w-3.5 h-3.5 relative relative"
+              src="../assets/icon/layer-group 1.svg"
+              alt=""
+            />
+            <div
+              class="text-red-500 text-sm font-medium font-['Inter'] leading-[21px]"
+            >
+              Hóa đơn
+            </div>
+            <!-- <div
+              class="w-[176px] h-[168px] p-1 bg-white rounded-lg shadow border border-white flex-col justify-center items-start gap-1 inline-flex absolute left-0 bottom-[-174px]"
+            >
+              <div
+                class="self-stretch px-4 py-2 hover:bg-zinc-100 active:bg-zinc-100 rounded justify-start items-center gap-2.5 inline-flex"
+              >
+                <div
+                  class="text-black text-sm font-normal font-['Inter'] leading-[21px]"
+                >
+                  Hóa đơn cần xử lý
+                </div>
+              </div>
+              <button
+                class="self-stretch px-4 py-2 hover:bg-zinc-100 bg-white focus:bg-zinc-100 rounded justify-start items-center gap-2.5 inline-flex"
+              >
+                <div
+                  class="text-zinc-800 text-sm font-normal font-['Inter'] leading-[21px]"
+                >
+                  Hóa đơn hoàn thành
+                </div>
+              </button>
+              <div
+                class="self-stretch px-4 py-2 hover:bg-zinc-100 rounded justify-start items-center gap-2.5 inline-flex"
+              >
+                <div
+                  class="text-zinc-800 text-sm font-normal font-['Inter'] leading-[21px]"
+                >
+                  Hóa đơn bị hủy
+                </div>
+              </div>
+              <div
+                class="self-stretch px-4 py-2 hover:bg-zinc-100 rounded justify-start items-center gap-2.5 inline-flex"
+              >
+                <div
+                  class="text-zinc-800 text-sm font-normal font-['Inter'] leading-[21px]"
+                >
+                  Cài đặt hóa đơn
+                </div>
+              </div>
+            </div> -->
+          </li>
+          <li
+            class="self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer"
+          >
+            <img
+              class="w-3.5 h-3.5 relative relative"
+              src="../assets/icon/chart-simple 1.svg"
+              alt=""
+            />
+            <div
+              class="text-zinc-500 text-sm font-medium font-['Inter'] leading-[21px]"
+            >
+              Doanh thu
+            </div>
+          </li>
+          <li
+            class="self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer"
+          >
+            <img
+              class="w-3.5 h-3.5 relative relative"
+              src="../assets/icon/tape 1.svg"
+              alt=""
+            />
+            <div
+              class="text-zinc-500 text-sm font-medium font-['Inter'] leading-[21px]"
+            >
+              Vật liệu
+            </div>
+          </li>
+          <li
+            class="self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer"
+          >
+            <img
+              class="w-3.5 h-3.5 relative relative"
+              src="../assets/icon/wrench 1.svg"
+              alt=""
+            />
+            <div
+              class="text-zinc-500 text-sm font-medium font-['Inter'] leading-[21px]"
+            >
+              Gia công
+            </div>
+          </li>
+          <li
+            class="self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer"
+          >
+            <img
+              class="w-3.5 h-3.5 relative relative"
+              src="../assets/icon/user-vneck 1.svg"
+              alt=""
+            />
+            <div
+              class="text-zinc-500 text-sm font-medium font-['Inter'] leading-[21px]"
+            >
+              Khách hàng
+            </div>
+          </li>
+          <li
+            class="self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer"
+          >
+            <img
+              class="w-3.5 h-3.5 relative relative"
+              src="../assets/icon/address-card 1.svg"
+              alt=""
+            />
+            <div
+              class="text-zinc-500 text-sm font-medium font-['Inter'] leading-[21px]"
+            >
+              Nhân sự
+            </div>
+          </li>
+        </ul>
+        <button
+          class="px-4 py-2 flex self-stretch justify-start items-center gap-2 rounded-[66px] bg-white shadow"
+        >
+          <img
+            class="w-3.5 h-4 relative"
+            src="../assets/icon/plus 1.svg"
+            alt=""
+          />
+          <div
+            class="text-red-500 text-sm font-medium font-['Inter'] leading-[21px]"
+          >
+            Tạo hóa đơn
+          </div>
+        </button>
+      </div>
+      <div
+        class="pl-1 pr-2 py-1 bg-white rounded-[66px] border border-white justify-start items-center gap-5 shadow flex cursor-pointer"
+      >
+        <div class="justify-start items-center gap-2 flex">
+          <img
+            class="w-9 h-9 relative rounded-[50px]"
+            src="../assets/img/Frame 7.png"
+          />
+          <div class="flex-col justify-center items-start inline-flex">
+            <p
+              class="text-black text-xs font-medium font-['Inter'] leading-[18px]"
+            >
+              Xuân Mai
+            </p>
+            <p
+              class="text-zinc-500 text-xs font-normal font-['Inter'] leading-[18px]"
+            >
+              Kế toán
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-4 h-4 p-1 bg-zinc-100 rounded-2xl border border-zinc-200 justify-center items-center flex"
+        >
+          <img src="../assets/icon/Frame-down.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center pt-5 pb-10 pl-[3.6rem] pr-[1.6rem]">
+        <div class="inline-flex flex-col gap-5">
+          <!-- Breadcrumb -->
+        <div
+          class="px-4 py-2 w-[140px] h-[37px] bg-white rounded-lg border border-zinc-200 justify-start items-center gap-2.5 inline-flex"
+        >
+          <div class="w-3.5 h-[12.44px] relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="13"
+              viewBox="0 0 14 13"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_8180_5184)">
+                <path
+                  d="M13.7934 5.86082C14.0389 6.06985 14.0705 6.43686 13.8615 6.68235C13.6524 6.92783 13.2854 6.95943 13.0399 6.7504L12.4444 6.24485V10.7778C12.4444 11.8521 11.5743 12.7223 10.5 12.7223H3.5C2.42618 12.7223 1.55555 11.8521 1.55555 10.7778V6.24485L0.960798 6.7504C0.715068 6.95943 0.347082 6.92783 0.138541 6.68235C-0.0698795 6.43686 -0.0397163 6.06985 0.20594 5.86082L6.62326 0.416374C6.83958 0.231651 7.16042 0.231651 7.37674 0.416374L13.7934 5.86082ZM3.5 11.5556H4.66667V7.86117C4.66667 7.32401 5.10174 6.88894 5.63889 6.88894H8.36111C8.89826 6.88894 9.33333 7.32401 9.33333 7.86117V11.5556H10.5C10.9302 11.5556 11.2778 11.208 11.2778 10.7778V5.25561L7 1.62606L2.72222 5.25561V10.7778C2.72222 11.208 3.06979 11.5556 3.5 11.5556ZM5.83333 11.5556H8.16667V8.05561H5.83333V11.5556Z"
+                  fill="#3F3F46"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_8180_5184">
+                  <rect
+                    width="14"
+                    height="12.4444"
+                    fill="white"
+                    transform="translate(0 0.277832)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+
+          <p class="text-zinc-700 text-sm">/</p>
+          <p class="text-zinc-700 text-sm">Sản Phẩm</p>
+        </div>
+        <!-- Thống kê -->
+        <div class="flex gap-[20px] justify-between">
+            <!-- left -->
+                <div class="product-left w-[528px] border border-[#E4E4E7] rounded-[12px] p-[20px]">
+                    <!-- Logo -->
+                    <img src="../assets/img/pd-mana-img.svg" alt="">
+                    <!-- Số liệu -->
+                    <div class="flex gap-[20px] justify-between">
+                        <div class="bg-product w-[254px] p-[20px]">
+                            <div class="flex items-center justify-between pt-[3px]">
+                                <p class="text-white text-sm font-normal">Tổng số sản phẩm</p>
+                                <div class="cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_9224_452)">
+                                          <path d="M8 0C3.58214 0 0 3.58214 0 8C0 12.4179 3.58214 16 8 16C12.4179 16 16 12.4179 16 8C16 3.58214 12.4179 0 8 0ZM8 14.6429C4.33214 14.6429 1.35714 11.6679 1.35714 8C1.35714 4.33214 4.33214 1.35714 8 1.35714C11.6679 1.35714 14.6429 4.33214 14.6429 8C14.6429 11.6679 11.6679 14.6429 8 14.6429Z" fill="white"/>
+                                          <path d="M7.14258 4.85714C7.14258 5.08447 7.23288 5.30249 7.39363 5.46323C7.55438 5.62398 7.77239 5.71429 7.99972 5.71429C8.22705 5.71429 8.44507 5.62398 8.60581 5.46323C8.76656 5.30249 8.85686 5.08447 8.85686 4.85714C8.85686 4.62981 8.76656 4.4118 8.60581 4.25105C8.44507 4.09031 8.22705 4 7.99972 4C7.77239 4 7.55438 4.09031 7.39363 4.25105C7.23288 4.4118 7.14258 4.62981 7.14258 4.85714ZM8.42829 6.85714H7.57115C7.49258 6.85714 7.42829 6.92143 7.42829 7V11.8571C7.42829 11.9357 7.49258 12 7.57115 12H8.42829C8.50686 12 8.57115 11.9357 8.57115 11.8571V7C8.57115 6.92143 8.50686 6.85714 8.42829 6.85714Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_9224_452">
+                                            <rect width="16" height="16" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="text-white text-3xl font-medium leading-[45px] pt-[6px]">60</div>
+                        </div>
+                        <div class="bg-product w-[254px] p-[20px]">
+                            <div class="flex items-center justify-between pt-[3px]">
+                                <p class="text-white text-sm font-normal">Tổng số vật liệu</p>
+                                <div class="cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <g clip-path="url(#clip0_9224_452)">
+                                          <path d="M8 0C3.58214 0 0 3.58214 0 8C0 12.4179 3.58214 16 8 16C12.4179 16 16 12.4179 16 8C16 3.58214 12.4179 0 8 0ZM8 14.6429C4.33214 14.6429 1.35714 11.6679 1.35714 8C1.35714 4.33214 4.33214 1.35714 8 1.35714C11.6679 1.35714 14.6429 4.33214 14.6429 8C14.6429 11.6679 11.6679 14.6429 8 14.6429Z" fill="white"/>
+                                          <path d="M7.14258 4.85714C7.14258 5.08447 7.23288 5.30249 7.39363 5.46323C7.55438 5.62398 7.77239 5.71429 7.99972 5.71429C8.22705 5.71429 8.44507 5.62398 8.60581 5.46323C8.76656 5.30249 8.85686 5.08447 8.85686 4.85714C8.85686 4.62981 8.76656 4.4118 8.60581 4.25105C8.44507 4.09031 8.22705 4 7.99972 4C7.77239 4 7.55438 4.09031 7.39363 4.25105C7.23288 4.4118 7.14258 4.62981 7.14258 4.85714ZM8.42829 6.85714H7.57115C7.49258 6.85714 7.42829 6.92143 7.42829 7V11.8571C7.42829 11.9357 7.49258 12 7.57115 12H8.42829C8.50686 12 8.57115 11.9357 8.57115 11.8571V7C8.57115 6.92143 8.50686 6.85714 8.42829 6.85714Z" fill="white"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_9224_452">
+                                            <rect width="16" height="16" fill="white"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="text-white text-3xl font-medium leading-[45px] pt-[6px]">3</div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Right -->
+            <div class="w-[568px] border border-[#E4E4E7] bg-white rounded-[12px] ">
+                <!-- Top -->
+                <div class="flex items-center gap-[10px] border-b border-zinc-100 py-[12px] px-[20px]">
+                    <div class="w-[24px] h-[24px] rounded-[24px] bg-[#93C5FD] flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="14" viewBox="0 0 10 14" fill="none">
+                            <g clip-path="url(#clip0_8730_2413)">
+                              <path d="M8.75 0H1.25C0.559635 0 0 0.559635 0 1.25V12.4974C0 13.1406 0.697656 13.5411 1.25312 13.2172L5 11.0312L8.7474 13.2169C9.30208 13.5182 10 13.1406 10 12.4974V1.25C10 0.559635 9.4401 0 8.75 0ZM8.75 11.7708L5 9.58333L1.25 11.7708V1.40625C1.25 1.31849 1.31849 1.25 1.38281 1.25H8.57031C8.68229 1.25 8.75 1.31849 8.75 1.40625V11.7708Z" fill="#FAFAFA"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_8730_2413">
+                                <rect width="10" height="13.3333" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                    </div>
+                    <p class="text-blue-400 text-sm font-bold">Vật liệu sản phẩm</p>
+                </div>
+                <!-- Add Items -->
+                <div class="flex items-center justify-between py-[12px] px-[20px]">
+                    <input type="text" name="" id="" class="w-[393px] h-[34px] p-1 bg-neutral-50 border-neutral-50 border-b border-b-zinc-300 focus:outline-none focus:ring-0 focus:border-none placeholder:text-zinc-500 placeholder:text-sm placeholder:font-normal" placeholder="Nhập tên vật liệu mới...">
+                    <button class="flex items-center gap-[8px]  px-4 py-2 bg-zinc-700 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
+                            <path d="M13.5 7.99993C13.5 8.41556 13.1656 8.74993 12.75 8.74993H7.75V13.7499C7.75 14.164 7.41406 14.5002 7 14.5002C6.58594 14.5002 6.25 14.1656 6.25 13.7499V8.74993H1.25C0.835938 8.74993 0.5 8.41431 0.5 8.00024C0.5 7.58743 0.835938 7.24993 1.25 7.24993H6.25V2.24993C6.25 1.83587 6.58594 1.50024 7 1.50024C7.41406 1.50024 7.75 1.83587 7.75 2.24993V7.24993H12.75C13.1656 7.24993 13.5 7.58743 13.5 7.99993Z" fill="#FAFAFA"/>
+                        </svg>
+                        <span class="text-white text-xs font-normal">Thêm mới</span>
+                    </button>
+                </div>
+                <!-- Pop up Modal -->
+                 <!-- Main modal -->
+                <!-- Main modal -->
+                <div id="edit-product" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-72%] z-50 justify-center items-center w-[540px] h-[calc(100%-1rem)] max-h-full">
+                    <div class="relative p-4 w-full max-w-2xl max-h-full">
+                        <!-- Modal content -->
+                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <!-- Modal header -->
+                            <div class="flex items-center justify-between p-[20px] rounded-t  ">
+                               <div class="flex items-center gap-[12px]">
+                                    <!-- icon -->
+                                    <div class="w-[24px] h-[24px] bg-blue-300 rounded-[24px] flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="14" viewBox="0 0 10 14" fill="none">
+                                            <g clip-path="url(#clip0_8948_2335)">
+                                            <path d="M8.75 0.5H1.25C0.559635 0.5 0 1.05964 0 1.75V12.9974C0 13.6406 0.697656 14.0411 1.25312 13.7172L5 11.5312L8.7474 13.7169C9.30208 14.0182 10 13.6406 10 12.9974V1.75C10 1.05964 9.4401 0.5 8.75 0.5ZM8.75 12.2708L5 10.0833L1.25 12.2708V1.90625C1.25 1.81849 1.31849 1.75 1.38281 1.75H8.57031C8.68229 1.75 8.75 1.81849 8.75 1.90625V12.2708Z" fill="#FAFAFA"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_8948_2335">
+                                                <rect width="10" height="13.3333" fill="white" transform="translate(0 0.5)"/>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <!--  -->
+                                    <div class="text-blue-400 text-lg font-bold">Chỉnh sửa vật liệu sản phẩm</div>
+                               </div>
+                                
+                            </div>
+                            <!-- Modal body -->
+                            <div class="px-[20px]">
+                               <p class="text-zinc-800 text-sm font-normal">Tên vật liệu:</p>
+                               <input type="text" name="" id="" class="w-full h-[34px] mt-[12px] p-1 bg-neutral-50 border-neutral-50 border-b border-b-zinc-300 focus:outline-none focus:ring-0 focus:border-none placeholder:text-zinc-500 placeholder:text-sm placeholder:font-normal" placeholder="PPF">
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="flex items-center justify-end p-[20px] gap-[12px]">
+                                <button data-modal-hide="edit-product" type="button" class="px-4 py-2 h-[34px] rounded border border-zinc-700 text-zinc-700 text-xs font-normal">Huỷ bỏ</button>
+                                <button data-modal-hide="edit-product" type="button" class="px-4 py-2 h-[34px] rounded bg-blue-400 text-white text-xs font-normal">Cập nhật</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- List Product -->
+                <div>
+                    <div class="py-[12px] px-[20px]">
+                        <p class="text-zinc-800 text-sm font-medium">Danh sách vật liệu</p>
+                    </div>
+                    <div>
+                        <!-- 1 -->
+                        <div class="flex items-center border-b border-zinc-100 px-[20px] py-[12px]">
+                            <div class="text-zinc-800 text-sm font-normal leading-[18px] w-[5%]">1</div>
+                            <div class="flex items-center gap-[8px] w-[50%] pl-[20px]">
+                                <img src="../assets/icon/icon-pd-mana.svg" alt="">
+                                <span class="text-zinc-800 text-sm font-normal">PPF</span>
+                            </div>
+                            <div class="text-zinc-500 text-sm font-normal px-2 py-1 bg-neutral-50 rounded-lg w-auto pl-[20px]  w-[25%]">19/02/2024</div>
+                            <div class="flex items-center justify-end pl-[132px] gap-[10px] w-[20%]">
+                                <div class="w-[30px] h-[30px] px-2 py-1 bg-neutral-50 rounded-lg flex items-center justify-center cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none" type="button" data-modal-target="edit-product" data-modal-toggle="edit-product">
+                                        <g clip-path="url(#clip0_8730_2451)">
+                                            <path d="M10.952 0.682819C11.7203 -0.0860049 12.9672 -0.0860049 13.7355 0.682819L14.0664 1.01423C14.8348 1.78313 14.8348 3.02973 14.0664 3.79809L8.67422 9.19301C8.43633 9.42817 8.14375 9.60044 7.82109 9.69341L5.08672 10.4754C4.85703 10.5411 4.61094 10.4754 4.44141 10.284C4.27461 10.1391 4.20898 9.89301 4.27461 9.66333L5.05664 6.92895C5.14961 6.6063 5.32188 6.31372 5.55703 6.07583L10.952 0.682819ZM12.784 1.61087C12.5516 1.35466 12.1359 1.35466 11.8789 1.61087L11.0832 2.4063L12.3438 3.66684L13.1395 2.84653C13.3965 2.61411 13.3965 2.19848 13.1395 1.94227L12.784 1.61087ZM6.31992 7.28989L5.86055 8.8895L7.46016 8.43012C7.56953 8.40005 7.66523 8.34262 7.74453 8.26333L11.4168 4.5938L10.1562 3.33325L6.48672 7.00552C6.40742 7.08481 6.35 7.18051 6.31992 7.28989ZM6.21875 1.75005C6.58242 1.75005 6.875 2.04399 6.875 2.4063C6.875 2.76997 6.58242 3.06255 6.21875 3.06255H3.15625C2.55223 3.06255 2.0625 3.552 2.0625 4.1563V11.5938C2.0625 12.1981 2.55223 12.6875 3.15625 12.6875H10.5938C11.198 12.6875 11.6875 12.1981 11.6875 11.5938V8.5313C11.6875 8.16762 11.9801 7.87505 12.3438 7.87505C12.7074 7.87505 13 8.16762 13 8.5313V11.5938C13 12.9227 11.9227 14 10.5938 14H3.15625C1.82734 14 0.75 12.9227 0.75 11.5938V4.1563C0.75 2.82739 1.82734 1.75005 3.15625 1.75005H6.21875Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_8730_2451">
+                                            <rect width="14" height="14" fill="white" transform="translate(0.75)"/>
+                                            </clipPath>
+                                        </defs>
+                                        </svg>
+                                </div>
+                                <!-- Delete -->
+                                <div class="w-[30px] h-[30px] px-2 py-1 bg-neutral-50 rounded-lg flex items-center justify-center cursor-pointer" type="button" id="deleteButton" data-modal-target="deleteModal" data-modal-toggle="deleteModal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+                                        <g clip-path="url(#clip0_8730_2454)">
+                                            <path d="M12.3437 2.1875C12.7074 2.1875 13 2.48145 13 2.84375C13 3.20742 12.7074 3.5 12.3437 3.5H12.0266L11.3703 12.3785C11.302 13.2918 10.5418 14 9.62578 14H4.12422C3.20875 14 2.44777 13.2918 2.37996 12.3785L1.72234 3.5H1.40625C1.04395 3.5 0.75 3.20742 0.75 2.84375C0.75 2.48145 1.04395 2.1875 1.40625 2.1875H3.31539L4.31836 0.681953C4.60273 0.255855 5.08125 0 5.59258 0H8.15742C8.66875 0 9.14727 0.255883 9.43164 0.681953L10.4352 2.1875H12.3437ZM5.59258 1.3125C5.52148 1.3125 5.42852 1.34914 5.41211 1.40984L4.89258 2.1875H8.85742L8.33789 1.40984C8.29687 1.34914 8.22852 1.3125 8.15742 1.3125H5.59258ZM10.7113 3.5H3.0384L3.68945 12.2828C3.70586 12.5098 3.89727 12.6875 4.12422 12.6875H9.62578C9.85273 12.6875 10.0441 12.5098 10.0605 12.2828L10.7113 3.5Z" fill="#EF4444"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_8730_2454">
+                                            <rect width="12.25" height="14" fill="white" transform="translate(0.75)"/>
+                                            </clipPath>
+                                        </defs>
+                                        </svg>
+                                </div>
+
+                                <!-- Modal delete -->
+                                <div id="deleteModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-80%] z-50 justify-center items-center w-full h-modal md:h-full">
+                                    <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+                                        <!-- Modal content -->
+                                        <div class="relative p-4 text-center bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+                                            <button type="button" class="text-gray-400 absolute top-2.5 right-2.5 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="deleteModal">
+                                                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                                <span class="sr-only">Close modal</span>
+                                            </button>
+                                            <svg class="text-gray-400 dark:text-gray-500 w-11 h-11 mb-3.5 mx-auto" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                                            <p class="mb-4 text-base text-gray-500 dark:text-gray-300">Bạn có chắc chắn muốn xoá vật liệu này không?</p>
+                                            <div class="flex justify-center items-center space-x-4">
+                                                <button data-modal-toggle="deleteModal" type="button" class="py-2 px-3 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
+                                                    Huỷ bỏ
+                                                </button>
+                                                <button type="submit" class="py-2 px-3 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-500 dark:hover:bg-red-600 dark:focus:ring-red-900">
+                                                    Xoá
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="flex items-center border-b border-zinc-100 px-[20px] py-[12px]">
+                            <div class="text-zinc-800 text-sm font-normal leading-[18px] w-[5%]">2</div>
+                            <div class="flex items-center gap-[8px] w-[50%] pl-[20px]">
+                                <img src="../assets/icon/icon-pd-mana.svg" alt="">
+                                <span class="text-zinc-800 text-sm font-normal">Decal đổi màu</span>
+                            </div>
+                            <div class="text-zinc-500 text-sm font-normal px-2 py-1 bg-neutral-50 rounded-lg w-auto pl-[20px]  w-[25%]">19/02/2024</div>
+                            <div class="flex items-center justify-end pl-[132px] gap-[10px] w-[20%]">
+                                <div class="w-[30px] h-[30px] px-2 py-1 bg-neutral-50 rounded-lg flex items-center justify-center cursor-pointer" type="button" data-modal-target="edit-product" data-modal-toggle="edit-product">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
+                                        <g clip-path="url(#clip0_8730_2451)">
+                                            <path d="M10.952 0.682819C11.7203 -0.0860049 12.9672 -0.0860049 13.7355 0.682819L14.0664 1.01423C14.8348 1.78313 14.8348 3.02973 14.0664 3.79809L8.67422 9.19301C8.43633 9.42817 8.14375 9.60044 7.82109 9.69341L5.08672 10.4754C4.85703 10.5411 4.61094 10.4754 4.44141 10.284C4.27461 10.1391 4.20898 9.89301 4.27461 9.66333L5.05664 6.92895C5.14961 6.6063 5.32188 6.31372 5.55703 6.07583L10.952 0.682819ZM12.784 1.61087C12.5516 1.35466 12.1359 1.35466 11.8789 1.61087L11.0832 2.4063L12.3438 3.66684L13.1395 2.84653C13.3965 2.61411 13.3965 2.19848 13.1395 1.94227L12.784 1.61087ZM6.31992 7.28989L5.86055 8.8895L7.46016 8.43012C7.56953 8.40005 7.66523 8.34262 7.74453 8.26333L11.4168 4.5938L10.1562 3.33325L6.48672 7.00552C6.40742 7.08481 6.35 7.18051 6.31992 7.28989ZM6.21875 1.75005C6.58242 1.75005 6.875 2.04399 6.875 2.4063C6.875 2.76997 6.58242 3.06255 6.21875 3.06255H3.15625C2.55223 3.06255 2.0625 3.552 2.0625 4.1563V11.5938C2.0625 12.1981 2.55223 12.6875 3.15625 12.6875H10.5938C11.198 12.6875 11.6875 12.1981 11.6875 11.5938V8.5313C11.6875 8.16762 11.9801 7.87505 12.3438 7.87505C12.7074 7.87505 13 8.16762 13 8.5313V11.5938C13 12.9227 11.9227 14 10.5938 14H3.15625C1.82734 14 0.75 12.9227 0.75 11.5938V4.1563C0.75 2.82739 1.82734 1.75005 3.15625 1.75005H6.21875Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_8730_2451">
+                                            <rect width="14" height="14" fill="white" transform="translate(0.75)"/>
+                                            </clipPath>
+                                        </defs>
+                                        </svg>
+                                </div>
+                                <div class="w-[30px] h-[30px] px-2 py-1 bg-neutral-50 rounded-lg flex items-center justify-center cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+                                        <g clip-path="url(#clip0_8730_2454)">
+                                            <path d="M12.3437 2.1875C12.7074 2.1875 13 2.48145 13 2.84375C13 3.20742 12.7074 3.5 12.3437 3.5H12.0266L11.3703 12.3785C11.302 13.2918 10.5418 14 9.62578 14H4.12422C3.20875 14 2.44777 13.2918 2.37996 12.3785L1.72234 3.5H1.40625C1.04395 3.5 0.75 3.20742 0.75 2.84375C0.75 2.48145 1.04395 2.1875 1.40625 2.1875H3.31539L4.31836 0.681953C4.60273 0.255855 5.08125 0 5.59258 0H8.15742C8.66875 0 9.14727 0.255883 9.43164 0.681953L10.4352 2.1875H12.3437ZM5.59258 1.3125C5.52148 1.3125 5.42852 1.34914 5.41211 1.40984L4.89258 2.1875H8.85742L8.33789 1.40984C8.29687 1.34914 8.22852 1.3125 8.15742 1.3125H5.59258ZM10.7113 3.5H3.0384L3.68945 12.2828C3.70586 12.5098 3.89727 12.6875 4.12422 12.6875H9.62578C9.85273 12.6875 10.0441 12.5098 10.0605 12.2828L10.7113 3.5Z" fill="#EF4444"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_8730_2454">
+                                            <rect width="12.25" height="14" fill="white" transform="translate(0.75)"/>
+                                            </clipPath>
+                                        </defs>
+                                        </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="flex items-center border-b border-zinc-100 px-[20px] py-[12px]">
+                            <div class="text-zinc-800 text-sm font-normal leading-[18px] w-[5%]">3</div>
+                            <div class="flex items-center gap-[8px] w-[50%] pl-[20px]">
+                                <img src="../assets/icon/icon-pd-mana.svg" alt="">
+                                <span class="text-zinc-800 text-sm font-normal">Decal màu</span>
+                            </div>
+                            <div class="text-zinc-500 text-sm font-normal px-2 py-1 bg-neutral-50 rounded-lg w-auto pl-[20px]  w-[25%]">19/02/2024</div>
+                            <div class="flex items-center justify-end pl-[132px] gap-[10px] w-[20%]">
+                                <div class="w-[30px] h-[30px] px-2 py-1 bg-neutral-50 rounded-lg flex items-center justify-center cursor-pointer" type="button" data-modal-target="edit-product" data-modal-toggle="edit-product">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
+                                        <g clip-path="url(#clip0_8730_2451)">
+                                            <path d="M10.952 0.682819C11.7203 -0.0860049 12.9672 -0.0860049 13.7355 0.682819L14.0664 1.01423C14.8348 1.78313 14.8348 3.02973 14.0664 3.79809L8.67422 9.19301C8.43633 9.42817 8.14375 9.60044 7.82109 9.69341L5.08672 10.4754C4.85703 10.5411 4.61094 10.4754 4.44141 10.284C4.27461 10.1391 4.20898 9.89301 4.27461 9.66333L5.05664 6.92895C5.14961 6.6063 5.32188 6.31372 5.55703 6.07583L10.952 0.682819ZM12.784 1.61087C12.5516 1.35466 12.1359 1.35466 11.8789 1.61087L11.0832 2.4063L12.3438 3.66684L13.1395 2.84653C13.3965 2.61411 13.3965 2.19848 13.1395 1.94227L12.784 1.61087ZM6.31992 7.28989L5.86055 8.8895L7.46016 8.43012C7.56953 8.40005 7.66523 8.34262 7.74453 8.26333L11.4168 4.5938L10.1562 3.33325L6.48672 7.00552C6.40742 7.08481 6.35 7.18051 6.31992 7.28989ZM6.21875 1.75005C6.58242 1.75005 6.875 2.04399 6.875 2.4063C6.875 2.76997 6.58242 3.06255 6.21875 3.06255H3.15625C2.55223 3.06255 2.0625 3.552 2.0625 4.1563V11.5938C2.0625 12.1981 2.55223 12.6875 3.15625 12.6875H10.5938C11.198 12.6875 11.6875 12.1981 11.6875 11.5938V8.5313C11.6875 8.16762 11.9801 7.87505 12.3438 7.87505C12.7074 7.87505 13 8.16762 13 8.5313V11.5938C13 12.9227 11.9227 14 10.5938 14H3.15625C1.82734 14 0.75 12.9227 0.75 11.5938V4.1563C0.75 2.82739 1.82734 1.75005 3.15625 1.75005H6.21875Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_8730_2451">
+                                            <rect width="14" height="14" fill="white" transform="translate(0.75)"/>
+                                            </clipPath>
+                                        </defs>
+                                        </svg>
+                                </div>
+                                <div class="w-[30px] h-[30px] px-2 py-1 bg-neutral-50 rounded-lg flex items-center justify-center cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+                                        <g clip-path="url(#clip0_8730_2454)">
+                                            <path d="M12.3437 2.1875C12.7074 2.1875 13 2.48145 13 2.84375C13 3.20742 12.7074 3.5 12.3437 3.5H12.0266L11.3703 12.3785C11.302 13.2918 10.5418 14 9.62578 14H4.12422C3.20875 14 2.44777 13.2918 2.37996 12.3785L1.72234 3.5H1.40625C1.04395 3.5 0.75 3.20742 0.75 2.84375C0.75 2.48145 1.04395 2.1875 1.40625 2.1875H3.31539L4.31836 0.681953C4.60273 0.255855 5.08125 0 5.59258 0H8.15742C8.66875 0 9.14727 0.255883 9.43164 0.681953L10.4352 2.1875H12.3437ZM5.59258 1.3125C5.52148 1.3125 5.42852 1.34914 5.41211 1.40984L4.89258 2.1875H8.85742L8.33789 1.40984C8.29687 1.34914 8.22852 1.3125 8.15742 1.3125H5.59258ZM10.7113 3.5H3.0384L3.68945 12.2828C3.70586 12.5098 3.89727 12.6875 4.12422 12.6875H9.62578C9.85273 12.6875 10.0441 12.5098 10.0605 12.2828L10.7113 3.5Z" fill="#EF4444"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_8730_2454">
+                                            <rect width="12.25" height="14" fill="white" transform="translate(0.75)"/>
+                                            </clipPath>
+                                        </defs>
+                                        </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+          
+        </div>
+        <!-- Danh sách sản phẩm -->
+        <div class="bg-white rounded-xl border border-zinc-200">
+            <!-- Tiêu đề -->
+            <div class="flex items-center gap-[10px] px-[20px] py-[12px] border-b border-zinc-100">
+                <div class="w-[24px] h-[24px] rounded-[24px] bg-[#93C5FD] flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">
+                    <path d="M3.11111 6.22228C3.11111 4.91221 4.13438 3.88894 5.44444 3.88894C6.73264 3.88894 7.77778 4.91221 7.77778 6.22228C7.77778 7.51047 6.73264 8.55561 5.44444 8.55561C4.13438 8.55561 3.11111 7.51047 3.11111 6.22228ZM5.44444 7.38894C6.08854 7.38894 6.61111 6.86637 6.61111 6.22228C6.61111 5.57818 6.08854 5.05561 5.44444 5.05561C4.80035 5.05561 4.27778 5.57818 4.27778 6.22228C4.27778 6.86637 4.80035 7.38894 5.44444 7.38894ZM13.4167 10.5001C13.7399 10.5001 14 10.7601 14 11.0834C14 11.4067 13.7399 11.6667 13.4167 11.6667H5.44444C2.43785 11.6667 0 9.22887 0 6.22228C0 3.21568 2.43785 0.777832 5.44444 0.777832C8.45104 0.777832 10.8889 3.21568 10.8889 6.22228C10.8889 7.95769 10.0771 9.48165 8.81319 10.5001H13.4167ZM5.44444 10.5001C7.80694 10.5001 9.72222 8.58478 9.72222 6.22228C9.72222 3.85978 7.80694 1.9445 5.44444 1.9445C3.08194 1.9445 1.16667 3.85978 1.16667 6.22228C1.16667 8.58478 3.08194 10.5001 5.44444 10.5001Z" fill="#FAFAFA"/>
+                  </svg>
+                </div>
+                <div class="text-blue-400 text-sm font-bold">Danh sách sản phẩm</div>
+            </div>
+            <!-- Thẻ input search, add -->
+            <div class="px-[20px] py-[12px] flex">
+                <!-- input -->
+                <div class="flex gap-[10px]">
+                    <div class="relative"> 
+                        <input type="text" name="" id="" placeholder="Tìm kiếm sản phẩm..." class="w-[250px] pl-[36px] pr-4 py-2 bg-zinc-100 border-none rounded focus:outline-none focus:border-none focus:ring-0 placeholder:text-zinc-500 placeholder:text-xs placeholder:font-normal">
+                        <div class="absolute top-[13px] left-[16px]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                <g clip-path="url(#clip0_8937_3295)">
+                                  <path d="M13.784 13.8218L10.1199 10.1577C10.9129 9.18701 11.3504 7.96475 11.3504 6.63037C11.3504 3.48857 8.80387 0.942871 5.6629 0.942871C2.52192 0.942871 0 3.48939 0 6.63037C0 9.77135 2.54626 12.3179 5.6629 12.3179C6.997 12.3179 8.2209 11.8555 9.19024 11.0863L12.8543 14.7504C13.0074 14.88 13.177 14.9429 13.3438 14.9429C13.5106 14.9429 13.6795 14.8788 13.8078 14.7506C14.0629 14.4944 14.0629 14.0788 13.784 13.8218ZM1.31251 6.63037C1.31251 4.21811 3.27524 2.25537 5.68751 2.25537C8.09977 2.25537 10.0625 4.21811 10.0625 6.63037C10.0625 9.04264 8.09977 11.0054 5.68751 11.0054C3.27524 11.0054 1.31251 9.04209 1.31251 6.63037Z" fill="#71717A"/>
+                                </g>
+                                <defs>
+                                  <clipPath id="clip0_8937_3295">
+                                    <rect width="14" height="14" fill="white" transform="translate(0 0.942871)"/>
+                                  </clipPath>
+                                </defs>
+                              </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <select name="" id="" class="w-[250px] h-[40px] border-none px-4 py-2 bg-zinc-100 rounded text-zinc-500 text-xs font-normal focus:outline-none focus:border-none focus:ring-0">
+                            <option value="PPF">Tất cả vật liệu</option>
+                            <option value="PPF">PPF</option>
+                            <option value="PPF">Decal Đổi Màu</option>
+                            <option value="PPF">Decal Màu</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- ADD button -->
+                <button class="flex items-center gap-[8px]  px-4 py-2 bg-zinc-700 rounded ml-auto" type="button" data-modal-target="add-product" data-modal-toggle="add-product">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
+                        <path d="M13.5 7.99993C13.5 8.41556 13.1656 8.74993 12.75 8.74993H7.75V13.7499C7.75 14.164 7.41406 14.5002 7 14.5002C6.58594 14.5002 6.25 14.1656 6.25 13.7499V8.74993H1.25C0.835938 8.74993 0.5 8.41431 0.5 8.00024C0.5 7.58743 0.835938 7.24993 1.25 7.24993H6.25V2.24993C6.25 1.83587 6.58594 1.50024 7 1.50024C7.41406 1.50024 7.75 1.83587 7.75 2.24993V7.24993H12.75C13.1656 7.24993 13.5 7.58743 13.5 7.99993Z" fill="#FAFAFA"/>
+                    </svg>
+                    <span class="text-white text-xs font-normal">Thêm mới</span>
+                </button>
+
+                <!-- Main modal -->
+                <div id="add-product" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-50 justify-center items-center w-[540px] h-[calc(100%-1rem)] max-h-full">
+                    <div class="relative p-4 w-full max-w-2xl max-h-full">
+                        <!-- Modal content -->
+                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <!-- Modal header -->
+                            <div class="flex items-center justify-between p-[20px] rounded-t  ">
+                               <div class="flex items-center gap-[12px]">
+                                    <!-- icon -->
+                                    <div class="w-[24px] h-[24px] bg-blue-300 rounded-[24px] flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">
+                                            <g clip-path="url(#clip0_8937_4504)">
+                                              <path d="M3.11111 6.72228C3.11111 5.41221 4.13438 4.38894 5.44444 4.38894C6.73264 4.38894 7.77778 5.41221 7.77778 6.72228C7.77778 8.01047 6.73264 9.05561 5.44444 9.05561C4.13438 9.05561 3.11111 8.01047 3.11111 6.72228ZM5.44444 7.88894C6.08854 7.88894 6.61111 7.36637 6.61111 6.72228C6.61111 6.07818 6.08854 5.55561 5.44444 5.55561C4.80035 5.55561 4.27778 6.07818 4.27778 6.72228C4.27778 7.36637 4.80035 7.88894 5.44444 7.88894ZM13.4167 11.0001C13.7399 11.0001 14 11.2601 14 11.5834C14 11.9067 13.7399 12.1667 13.4167 12.1667H5.44444C2.43785 12.1667 0 9.72887 0 6.72228C0 3.71568 2.43785 1.27783 5.44444 1.27783C8.45104 1.27783 10.8889 3.71568 10.8889 6.72228C10.8889 8.45769 10.0771 9.98165 8.81319 11.0001H13.4167ZM5.44444 11.0001C7.80694 11.0001 9.72222 9.08478 9.72222 6.72228C9.72222 4.35978 7.80694 2.4445 5.44444 2.4445C3.08194 2.4445 1.16667 4.35978 1.16667 6.72228C1.16667 9.08478 3.08194 11.0001 5.44444 11.0001Z" fill="#FAFAFA"/>
+                                            </g>
+                                            <defs>
+                                              <clipPath id="clip0_8937_4504">
+                                                <rect width="14" height="12.4444" fill="white" transform="translate(0 0.5)"/>
+                                              </clipPath>
+                                            </defs>
+                                          </svg>
+                                    </div>
+                                    <!--  -->
+                                    <div class="text-blue-400 text-lg font-bold">Thêm sản phẩm</div>
+                               </div>
+                                
+                            </div>
+                            <!-- Modal body -->
+                            <div class="px-[20px]">
+                               <p class="text-zinc-800 text-sm font-normal">Vật liệu sản phẩm</p>
+                                <select name="" id="" class="w-full mt-[12px] h-[40px] border-none px-4 py-2 bg-zinc-100 rounded text-zinc-500 text-xs font-normal focus:outline-none focus:border-none focus:ring-0">
+                                <option value="PPF">Tất cả vật liệu</option>
+                                <option value="PPF">PPF</option>
+                                <option selected value="PPF">Decal Đổi Màu</option>
+                                <option value="PPF">Decal Màu</option>
+                                </select>
+                            </div>
+                            <div class="p-[20px]">
+                                <p class="text-zinc-800 text-sm font-normal">Tên sản phẩm:</p>
+                                <input type="text" name="" id="" class="w-full mt-[12px] h-[34px] p-1 bg-neutral-50 border-neutral-50 border-b border-b-zinc-300 focus:outline-none focus:ring-0 focus:border-none placeholder:text-zinc-500 placeholder:text-sm placeholder:font-normal" placeholder="Nhập tên vật liệu mới...">
+                             </div>
+                             <div class="px-[20px]">
+                                <p class="text-zinc-800 text-sm font-normal">Hình ảnh sản phẩm</p>
+                                <div class="flex items-center gap-[20px] mt-[12px]">
+                                    <div class="w-[215px] relative">
+                                        <input type="file" name="" title="Tải lên hình ảnh" multiple accept="image/*" id="my-file-input" class="w-[215px] p-10 rounded-lg border-dashed border border-blue-400">
+                                        <div class="flex items-center gap-[10px] absolute top-[43px] left-[45px]">
+                                            <img src="../assets/icon/upload.png" alt="">
+                                            <span class="text-blue-300 text-sm font-medium">Tải lên hình ảnh</span>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="text-zinc-400 text-sm font-normal">Chưa chọn hình ảnh nào</div> -->
+                                    <div class="flex items-center gap-[20px]">
+                                        <div class="text-center">
+                                            <img src="../assets/img/img-list-pd.svg" class="rounded" alt="">
+                                            <span class="text-zinc-400 text-sm font-normal">1.jpg</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <img src="../assets/img/img-list-pd.svg" class="rounded" alt="">
+                                            <span class="text-zinc-400 text-sm font-normal">1.jpg</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <img src="../assets/img/img-list-pd.svg" class="rounded" alt="">
+                                            <span class="text-zinc-400 text-sm font-normal">1.jpg</span>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                             <div class="px-[20px] pt-[20px]">
+                                <p class="text-zinc-800 text-sm font-normal">Mô tả sản phẩm:</p>
+                                <div class="mt-[12px]">
+                                    <textarea name="" id="" cols="30" rows="10" class="w-full h-[150px] p-2 bg-neutral-50 rounded-lg border border-zinc-300 resize-none placeholder:text-zinc-500 placeholder:text-sm placeholder:font-normal" placeholder="Nhập mô tả sản phẩm..."></textarea>
+                                </div>
+                             </div>
+                            <!-- Modal footer -->
+                            <div class="flex items-center justify-end p-[20px] gap-[12px]">
+                                <button data-modal-hide="add-product" type="button" class="px-4 py-2 h-[34px] rounded border border-zinc-700 text-zinc-700 text-xs font-normal">Huỷ bỏ</button>
+                                <button data-modal-hide="add-product" type="button" class="px-4 py-2 h-[34px] rounded bg-blue-400 text-white text-xs font-normal">Thêm mới</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- table -->
+                <table class="w-full text-xs text-left rtl:text-right text-zinc-800 overflow-hidden">
+                    <thead class="text-zinc-800 text-xs font-medium bg-neutral-50 px-[20px] py-[12px]">
+                        <tr>
+                            <th scope="col" class="px-[20px] py-[12px] text-zinc-800 text-xs font-medium">
+                                #
+                            </th>
+                            <th scope="col" class="px-[20px] py-[12px] text-zinc-800 text-xs font-medium">
+                                Sản phẩm
+                            </th>
+                            <th scope="col" class="px-[20px] py-[12px] text-zinc-800 text-xs font-medium">
+                                Mô tả
+                            </th>
+                            <th scope="col" class="px-[20px] py-[12px]text-zinc-800 text-xs font-medium">
+                                Vật liệu
+                            </th>
+                            <th scope="col" class="px-[20px] py-[12px] text-zinc-800 text-xs font-medium">
+                                Thao tác
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white border-b border-zinc-100">
+                            <th class="px-[20px] py-4" scope="row">
+                                1
+                            </th>
+                            <td class="px-4 py-4 flex items-center gap-[16px]">
+                                <img src="../assets/img/img-list-pd.svg" alt="" class="block w-[64px] h-[64px] object-cover rounded">
+                                <span>Matte Aurora White</span>
+                            </td>
+                            <td class="py-4 px-4 style=" style="max-width: 420px;">
+                                <p class="line-clamp-2">TPU Paint Protection Film can protect your car from damages caused by stone chips, scratches, splatters, and any minor abrasions preventing the paint from fading and prolonging its lifespan. In the meantime, it brings a significant increase in brightness, turning it into an outstanding finish.</p>
+                            </td>
+                            <td class="px-4 py-4">
+                                <span class="px-2 py-1 bg-orange-50 rounded-lg text-orange-500 text-xs font-normal">PPF</span>
+                            </td>
+                            <td class="px-4 py-4">
+                                <!-- eye -->
+                                <button  class="inline-block w-[31px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer" type="button" data-modal-target="product-details" data-modal-toggle="product-details">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_685)">
+                                          <path d="M4.375 7.88574C4.375 5.95254 5.9418 4.38574 7.875 4.38574C9.80821 4.38574 11.375 5.95254 11.375 7.88574C11.375 9.81894 9.80821 11.3857 7.875 11.3857C5.9418 11.3857 4.375 9.81894 4.375 7.88574ZM7.875 10.0732C9.0836 10.0732 10.0625 9.09434 10.0625 7.88574C10.0625 6.67715 9.0836 5.69824 7.875 5.69824C7.85586 5.69824 7.83946 5.69824 7.79571 5.69824C7.85586 5.8377 7.875 5.98535 7.875 6.13574C7.875 7.10098 7.09024 7.88574 6.125 7.88574C5.97461 7.88574 5.82696 7.8666 5.6875 7.80645C5.6875 7.8502 5.6875 7.8666 5.6875 7.86113C5.6875 9.09434 6.66641 10.0732 7.875 10.0732ZM2.60914 3.96465C3.89649 2.76809 5.66563 1.76074 7.875 1.76074C10.0844 1.76074 11.8535 2.76809 13.1414 3.96465C14.4211 5.15137 15.277 6.54863 15.6816 7.54941C15.7719 7.76543 15.7719 8.00605 15.6816 8.22207C15.277 9.19824 14.4211 10.5955 13.1414 11.8068C11.8535 13.0045 10.0844 14.0107 7.875 14.0107C5.66563 14.0107 3.89649 13.0045 2.60914 11.8068C1.32946 10.5955 0.474144 9.19824 0.0672964 8.22207C-0.0224321 8.00605 -0.0224321 7.76543 0.0672964 7.54941C0.474144 6.54863 1.32946 5.15137 2.60914 3.96465ZM7.875 3.07324C6.09219 3.07324 4.62657 3.88262 3.50274 4.92441C2.45 5.90332 1.72321 7.04082 1.35188 7.88574C1.72321 8.70605 2.45 9.86816 3.50274 10.8471C4.62657 11.8889 6.09219 12.6982 7.875 12.6982C9.65782 12.6982 11.1234 11.8889 12.2473 10.8471C13.3 9.86816 14.0027 8.70605 14.3992 7.88574C14.0027 7.04082 13.3 5.90332 12.2473 4.92441C11.1234 3.88262 9.65782 3.07324 7.875 3.07324Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_685">
+                                            <rect width="15.75" height="14" fill="white" transform="translate(0 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </button>
+                                <!-- Modal detail -->
+                                <div id="product-details" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-55%] z-50 justify-center items-center w-[540px] h-[calc(100%-1rem)] max-h-full">
+                                    <div class="relative p-4 w-full max-w-2xl max-h-full">
+                                        <!-- Modal content -->
+                                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                            <!-- Modal header -->
+                                            <div class="flex items-center justify-between p-[20px] rounded-t  ">
+                                                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="product-details">
+                                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                                                    </svg>
+                                                    <span class="sr-only">Close modal</span>
+                                                </button>
+                                            </div>
+                                                
+                                            
+                                            <!-- Modal body -->
+                                            <div class="px-[20px]">
+                                                <div class="flex items-center justify-center gap-[20px]">
+                                                    <!-- left -->
+                                                    <div class="w-8 h-8 p-1 opacity-50 bg-zinc-200 rounded cursor-pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                                            <path d="M15.1602 7.74301L10.5802 12.333L15.1602 16.923L13.7502 18.333L7.75016 12.333L13.7502 6.33301L15.1602 7.74301Z" fill="#71717A"/>
+                                                          </svg>
+                                                    </div>
+                                                    <!-- image -->
+                                                    <div>
+                                                        <img src="../assets/img/image-pd-details.svg" class="block w-[250px] h-[250px] rounded object-cover" alt="">
+                                                    </div>
+                                                    <!-- right -->
+                                                    <div class="w-8 h-8 p-1 opacity-50 bg-zinc-200 rounded cursor-pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                                            <path d="M8.83984 7.74301L13.4198 12.333L8.83984 16.923L10.2498 18.333L16.2498 12.333L10.2498 6.33301L8.83984 7.74301Z" fill="#71717A"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-[20px]">
+                                                <div class="flex items-center gap-[12px]">
+                                                    <!-- icon -->
+                                                    <div class="w-[24px] h-[24px] bg-blue-300 rounded-[24px] flex items-center justify-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">
+                                                            <g clip-path="url(#clip0_8937_4504)">
+                                                              <path d="M3.11111 6.72228C3.11111 5.41221 4.13438 4.38894 5.44444 4.38894C6.73264 4.38894 7.77778 5.41221 7.77778 6.72228C7.77778 8.01047 6.73264 9.05561 5.44444 9.05561C4.13438 9.05561 3.11111 8.01047 3.11111 6.72228ZM5.44444 7.88894C6.08854 7.88894 6.61111 7.36637 6.61111 6.72228C6.61111 6.07818 6.08854 5.55561 5.44444 5.55561C4.80035 5.55561 4.27778 6.07818 4.27778 6.72228C4.27778 7.36637 4.80035 7.88894 5.44444 7.88894ZM13.4167 11.0001C13.7399 11.0001 14 11.2601 14 11.5834C14 11.9067 13.7399 12.1667 13.4167 12.1667H5.44444C2.43785 12.1667 0 9.72887 0 6.72228C0 3.71568 2.43785 1.27783 5.44444 1.27783C8.45104 1.27783 10.8889 3.71568 10.8889 6.72228C10.8889 8.45769 10.0771 9.98165 8.81319 11.0001H13.4167ZM5.44444 11.0001C7.80694 11.0001 9.72222 9.08478 9.72222 6.72228C9.72222 4.35978 7.80694 2.4445 5.44444 2.4445C3.08194 2.4445 1.16667 4.35978 1.16667 6.72228C1.16667 9.08478 3.08194 11.0001 5.44444 11.0001Z" fill="#FAFAFA"/>
+                                                            </g>
+                                                            <defs>
+                                                              <clipPath id="clip0_8937_4504">
+                                                                <rect width="14" height="12.4444" fill="white" transform="translate(0 0.5)"/>
+                                                              </clipPath>
+                                                            </defs>
+                                                          </svg>
+                                                    </div>
+                                                    <!-- Name -->
+                                                    <div class="text-blue-400 text-lg font-bold"> Matte Aurora White</div>
+                                                    <!-- Kiểu -->
+                                                    <div class="inline-block px-2 py-1 bg-orange-50 rounded-lg text-orange-500 text-xs font-normal">PPF</div>
+                                                </div>
+                                            </div>
+                                            <div class="pb-[20px]">
+                                                <p class="text-zinc-800 text-sm font-normal px-[20px]">Mô tả:</p>
+                                                <p class="text-zinc-800 text-sm font-normal leading-[21px] mt-[12px] px-[20px]">TPU Paint Protection Film can protect your car from damages caused by stone chips, scratches, splatters, and any minor abrasions preventing the paint from fading and prolonging its lifespan. In the meantime, it brings a significant increase in brightness, turning it into an outstanding finish.</p>
+                                            </div>
+                                           
+                                        </div>
+                                        </div>
+                                    </div>
+                               
+                                <!-- edit -->
+                                <button class="inline-block w-[30px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer" type="button" data-modal-target="edit" data-modal-toggle="edit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_688)">
+                                          <path d="M10.952 1.56856C11.7203 0.799737 12.9672 0.799737 13.7355 1.56856L14.0664 1.89997C14.8348 2.66887 14.8348 3.91548 14.0664 4.68383L8.67422 10.0788C8.43633 10.3139 8.14375 10.4862 7.82109 10.5791L5.08672 11.3612C4.85703 11.4268 4.61094 11.3612 4.44141 11.1698C4.27461 11.0249 4.20898 10.7788 4.27461 10.5491L5.05664 7.81469C5.14961 7.49204 5.32188 7.19946 5.55703 6.96157L10.952 1.56856ZM12.784 2.49661C12.5516 2.2404 12.1359 2.2404 11.8789 2.49661L11.0832 3.29204L12.3438 4.55259L13.1395 3.73227C13.3965 3.49985 13.3965 3.08423 13.1395 2.82801L12.784 2.49661ZM6.31992 8.17563L5.86055 9.77524L7.46016 9.31587C7.56953 9.28579 7.66523 9.22837 7.74453 9.14907L11.4168 5.47954L10.1562 4.21899L6.48672 7.89126C6.40742 7.97055 6.35 8.06626 6.31992 8.17563ZM6.21875 2.63579C6.58242 2.63579 6.875 2.92973 6.875 3.29204C6.875 3.65571 6.58242 3.94829 6.21875 3.94829H3.15625C2.55223 3.94829 2.0625 4.43774 2.0625 5.04204V12.4795C2.0625 13.0838 2.55223 13.5733 3.15625 13.5733H10.5938C11.198 13.5733 11.6875 13.0838 11.6875 12.4795V9.41704C11.6875 9.05337 11.9801 8.76079 12.3438 8.76079C12.7074 8.76079 13 9.05337 13 9.41704V12.4795C13 13.8084 11.9227 14.8858 10.5938 14.8858H3.15625C1.82734 14.8858 0.75 13.8084 0.75 12.4795V5.04204C0.75 3.71313 1.82734 2.63579 3.15625 2.63579H6.21875Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_688">
+                                            <rect width="14" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </button>
+                                <!-- Modal edit -->
+                                <!-- Main modal -->
+                                <div id="edit" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-50 justify-center items-center w-[540px] h-[calc(100%-1rem)] max-h-full">
+                                    <div class="relative p-4 w-full max-w-2xl max-h-full">
+                                        <!-- Modal content -->
+                                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                            <!-- Modal header -->
+                                            <div class="flex items-center justify-between p-[20px] rounded-t  ">
+                                            <div class="flex items-center gap-[12px]">
+                                                    <!-- icon -->
+                                                    <div class="w-[24px] h-[24px] bg-blue-300 rounded-[24px] flex items-center justify-center">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">
+                                                            <g clip-path="url(#clip0_8937_4504)">
+                                                            <path d="M3.11111 6.72228C3.11111 5.41221 4.13438 4.38894 5.44444 4.38894C6.73264 4.38894 7.77778 5.41221 7.77778 6.72228C7.77778 8.01047 6.73264 9.05561 5.44444 9.05561C4.13438 9.05561 3.11111 8.01047 3.11111 6.72228ZM5.44444 7.88894C6.08854 7.88894 6.61111 7.36637 6.61111 6.72228C6.61111 6.07818 6.08854 5.55561 5.44444 5.55561C4.80035 5.55561 4.27778 6.07818 4.27778 6.72228C4.27778 7.36637 4.80035 7.88894 5.44444 7.88894ZM13.4167 11.0001C13.7399 11.0001 14 11.2601 14 11.5834C14 11.9067 13.7399 12.1667 13.4167 12.1667H5.44444C2.43785 12.1667 0 9.72887 0 6.72228C0 3.71568 2.43785 1.27783 5.44444 1.27783C8.45104 1.27783 10.8889 3.71568 10.8889 6.72228C10.8889 8.45769 10.0771 9.98165 8.81319 11.0001H13.4167ZM5.44444 11.0001C7.80694 11.0001 9.72222 9.08478 9.72222 6.72228C9.72222 4.35978 7.80694 2.4445 5.44444 2.4445C3.08194 2.4445 1.16667 4.35978 1.16667 6.72228C1.16667 9.08478 3.08194 11.0001 5.44444 11.0001Z" fill="#FAFAFA"/>
+                                                            </g>
+                                                            <defs>
+                                                            <clipPath id="clip0_8937_4504">
+                                                                <rect width="14" height="12.4444" fill="white" transform="translate(0 0.5)"/>
+                                                            </clipPath>
+                                                            </defs>
+                                                        </svg>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="text-blue-400 text-lg font-bold">Chỉnh sửa sản phẩm</div>
+                                            </div>
+                                                
+                                            </div>
+                                            <!-- Modal body -->
+                                            <div class="px-[20px]">
+                                            <p class="text-zinc-800 text-sm font-normal">Vật liệu sản phẩm</p>
+                                                <select name="" id="" class="w-full mt-[12px] h-[40px] border-none px-4 py-2 bg-zinc-100 rounded text-zinc-500 text-xs font-normal focus:outline-none focus:border-none focus:ring-0">
+                                                <option value="PPF">Tất cả vật liệu</option>
+                                                <option value="PPF">PPF</option>
+                                                <option selected value="PPF">Decal Đổi Màu</option>
+                                                <option value="PPF">Decal Màu</option>
+                                                </select>
+                                            </div>
+                                            <div class="p-[20px]">
+                                                <p class="text-zinc-800 text-sm font-normal">Tên sản phẩm:</p>
+                                                <input type="text" name="" id="" class="w-full mt-[12px] h-[34px] p-1 bg-neutral-50 border-neutral-50 border-b border-b-zinc-300 focus:outline-none focus:ring-0 focus:border-none placeholder:text-zinc-500 placeholder:text-sm placeholder:font-normal" placeholder="Nhập tên vật liệu mới...">
+                                            </div>
+                                            <div class="px-[20px]">
+                                                <p class="text-zinc-800 text-sm font-normal">Hình ảnh sản phẩm</p>
+                                                <div class="flex items-center gap-[20px] mt-[12px]">
+                                                    <div class="w-[215px] relative">
+                                                        <input type="file" name="" title="Tải lên hình ảnh" multiple accept="image/*" id="my-file-input" class="w-[215px] p-10 rounded-lg border-dashed border border-blue-400">
+                                                        <div class="flex items-center gap-[10px] absolute top-[43px] left-[45px]">
+                                                            <img src="../assets/icon/upload.png" alt="">
+                                                            <span class="text-blue-300 text-sm font-medium">Tải lên hình ảnh</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="text-zinc-400 text-sm font-normal">Chưa chọn hình ảnh nào</div> -->
+                                                    <div class="flex items-center gap-[20px]">
+                                                        <div class="text-center">
+                                                            <img src="../assets/img/img-list-pd.svg" class="rounded" alt="">
+                                                            <span class="text-zinc-400 text-sm font-normal">1.jpg</span>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <img src="../assets/img/img-list-pd.svg" class="rounded" alt="">
+                                                            <span class="text-zinc-400 text-sm font-normal">1.jpg</span>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <img src="../assets/img/img-list-pd.svg" class="rounded" alt="">
+                                                            <span class="text-zinc-400 text-sm font-normal">1.jpg</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="px-[20px] pt-[20px]">
+                                                <p class="text-zinc-800 text-sm font-normal">Mô tả sản phẩm:</p>
+                                                <div class="mt-[12px]">
+                                                    <textarea name="" id="" cols="30" rows="10" class="w-full h-[150px] p-2 bg-neutral-50 rounded-lg border border-zinc-300 resize-none placeholder:text-zinc-500 placeholder:text-sm placeholder:font-normal" placeholder="Nhập mô tả sản phẩm..."></textarea>
+                                                </div>
+                                            </div>
+                                            <!-- Modal footer -->
+                                            <div class="flex items-center justify-end p-[20px] gap-[12px]">
+                                                <button data-modal-hide="edit" type="button" class="px-4 py-2 h-[34px] rounded border border-zinc-700 text-zinc-700 text-xs font-normal">Huỷ bỏ</button>
+                                                <button data-modal-hide="edit" type="button" class="px-4 py-2 h-[34px] rounded bg-blue-400 text-white text-xs font-normal">Cập nhật</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- delete -->
+                                <button class="inline-block w-[28.25px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer" type="button" id="deleteButton" data-modal-target="deleteItem" data-modal-toggle="deleteItem">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_697)">
+                                          <path d="M12.3437 3.07324C12.7074 3.07324 13 3.36719 13 3.72949C13 4.09316 12.7074 4.38574 12.3437 4.38574H12.0266L11.3703 13.2643C11.302 14.1775 10.5418 14.8857 9.62578 14.8857H4.12422C3.20875 14.8857 2.44777 14.1775 2.37996 13.2643L1.72234 4.38574H1.40625C1.04395 4.38574 0.75 4.09316 0.75 3.72949C0.75 3.36719 1.04395 3.07324 1.40625 3.07324H3.31539L4.31836 1.5677C4.60273 1.1416 5.08125 0.885742 5.59258 0.885742H8.15742C8.66875 0.885742 9.14727 1.14163 9.43164 1.5677L10.4352 3.07324H12.3437ZM5.59258 2.19824C5.52148 2.19824 5.42852 2.23488 5.41211 2.29559L4.89258 3.07324H8.85742L8.33789 2.29559C8.29687 2.23488 8.22852 2.19824 8.15742 2.19824H5.59258ZM10.7113 4.38574H3.0384L3.68945 13.1686C3.70586 13.3955 3.89727 13.5732 4.12422 13.5732H9.62578C9.85273 13.5732 10.0441 13.3955 10.0605 13.1686L10.7113 4.38574Z" fill="#EF4444"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_697">
+                                            <rect width="12.25" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </button>
+                                <!-- Modal delete item -->
+                                <div id="deleteItem" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-80%] z-50 justify-center items-center w-full h-modal md:h-full">
+                                    <div class="relative p-4 h-full md:h-auto">
+                                        <!-- Modal content -->
+                                        <div class="relative p-4 text-center bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+                                            <button type="button" class="text-gray-400 absolute top-2.5 right-2.5 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="deleteItem">
+                                                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                                <span class="sr-only">Close modal</span>
+                                            </button>
+                                            <svg class="text-gray-400 dark:text-gray-500 w-11 h-11 mb-3.5 mx-auto" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                                            <p class="mb-4 text-base text-gray-500 dark:text-gray-300">Bạn có chắc chắn muốn xoá sản phẩm này không?</p>
+                                            <div class="flex justify-center items-center space-x-4">
+                                                <button data-modal-toggle="deleteItem" type="button" class="py-2 px-3 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-primary-300 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
+                                                    Huỷ bỏ
+                                                </button>
+                                                <button type="submit" class="py-2 px-3 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-500 dark:hover:bg-red-600 dark:focus:ring-red-900">
+                                                    Xoá
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-zinc-100">
+                            <th class="px-[20px] py-4" scope="row">
+                                2
+                            </th>
+                            <td class="px-4 py-4 flex items-center gap-[16px]">
+                                <img src="../assets/img/img-list-pd.svg" alt="" class="block w-[64px] h-[64px] object-cover rounded">
+                                <span>Matte Aurora White</span>
+                            </td>
+                            <td class="py-4 px-4 style=" style="max-width: 420px;">
+                                <p class="line-clamp-2">TPU Paint Protection Film can protect your car from damages caused by stone chips, scratches, splatters, and any minor abrasions preventing the paint from fading and prolonging its lifespan. In the meantime, it brings a significant increase in brightness, turning it into an outstanding finish.</p>
+                            </td>
+                            <td class="px-4 py-4">
+                                <span class="px-2 py-1 bg-orange-50 rounded-lg text-orange-500 text-xs font-normal">PPF</span>
+                            </td>
+                            <td class="px-4 py-4">
+                                <!-- eye -->
+                                <button  class="inline-block w-[31px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer" type="button" data-modal-target="product-details" data-modal-toggle="product-details">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_685)">
+                                          <path d="M4.375 7.88574C4.375 5.95254 5.9418 4.38574 7.875 4.38574C9.80821 4.38574 11.375 5.95254 11.375 7.88574C11.375 9.81894 9.80821 11.3857 7.875 11.3857C5.9418 11.3857 4.375 9.81894 4.375 7.88574ZM7.875 10.0732C9.0836 10.0732 10.0625 9.09434 10.0625 7.88574C10.0625 6.67715 9.0836 5.69824 7.875 5.69824C7.85586 5.69824 7.83946 5.69824 7.79571 5.69824C7.85586 5.8377 7.875 5.98535 7.875 6.13574C7.875 7.10098 7.09024 7.88574 6.125 7.88574C5.97461 7.88574 5.82696 7.8666 5.6875 7.80645C5.6875 7.8502 5.6875 7.8666 5.6875 7.86113C5.6875 9.09434 6.66641 10.0732 7.875 10.0732ZM2.60914 3.96465C3.89649 2.76809 5.66563 1.76074 7.875 1.76074C10.0844 1.76074 11.8535 2.76809 13.1414 3.96465C14.4211 5.15137 15.277 6.54863 15.6816 7.54941C15.7719 7.76543 15.7719 8.00605 15.6816 8.22207C15.277 9.19824 14.4211 10.5955 13.1414 11.8068C11.8535 13.0045 10.0844 14.0107 7.875 14.0107C5.66563 14.0107 3.89649 13.0045 2.60914 11.8068C1.32946 10.5955 0.474144 9.19824 0.0672964 8.22207C-0.0224321 8.00605 -0.0224321 7.76543 0.0672964 7.54941C0.474144 6.54863 1.32946 5.15137 2.60914 3.96465ZM7.875 3.07324C6.09219 3.07324 4.62657 3.88262 3.50274 4.92441C2.45 5.90332 1.72321 7.04082 1.35188 7.88574C1.72321 8.70605 2.45 9.86816 3.50274 10.8471C4.62657 11.8889 6.09219 12.6982 7.875 12.6982C9.65782 12.6982 11.1234 11.8889 12.2473 10.8471C13.3 9.86816 14.0027 8.70605 14.3992 7.88574C14.0027 7.04082 13.3 5.90332 12.2473 4.92441C11.1234 3.88262 9.65782 3.07324 7.875 3.07324Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_685">
+                                            <rect width="15.75" height="14" fill="white" transform="translate(0 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </button>
+                                <!-- edit -->
+                                <button class="inline-block w-[30px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_688)">
+                                          <path d="M10.952 1.56856C11.7203 0.799737 12.9672 0.799737 13.7355 1.56856L14.0664 1.89997C14.8348 2.66887 14.8348 3.91548 14.0664 4.68383L8.67422 10.0788C8.43633 10.3139 8.14375 10.4862 7.82109 10.5791L5.08672 11.3612C4.85703 11.4268 4.61094 11.3612 4.44141 11.1698C4.27461 11.0249 4.20898 10.7788 4.27461 10.5491L5.05664 7.81469C5.14961 7.49204 5.32188 7.19946 5.55703 6.96157L10.952 1.56856ZM12.784 2.49661C12.5516 2.2404 12.1359 2.2404 11.8789 2.49661L11.0832 3.29204L12.3438 4.55259L13.1395 3.73227C13.3965 3.49985 13.3965 3.08423 13.1395 2.82801L12.784 2.49661ZM6.31992 8.17563L5.86055 9.77524L7.46016 9.31587C7.56953 9.28579 7.66523 9.22837 7.74453 9.14907L11.4168 5.47954L10.1562 4.21899L6.48672 7.89126C6.40742 7.97055 6.35 8.06626 6.31992 8.17563ZM6.21875 2.63579C6.58242 2.63579 6.875 2.92973 6.875 3.29204C6.875 3.65571 6.58242 3.94829 6.21875 3.94829H3.15625C2.55223 3.94829 2.0625 4.43774 2.0625 5.04204V12.4795C2.0625 13.0838 2.55223 13.5733 3.15625 13.5733H10.5938C11.198 13.5733 11.6875 13.0838 11.6875 12.4795V9.41704C11.6875 9.05337 11.9801 8.76079 12.3438 8.76079C12.7074 8.76079 13 9.05337 13 9.41704V12.4795C13 13.8084 11.9227 14.8858 10.5938 14.8858H3.15625C1.82734 14.8858 0.75 13.8084 0.75 12.4795V5.04204C0.75 3.71313 1.82734 2.63579 3.15625 2.63579H6.21875Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_688">
+                                            <rect width="14" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </button>
+                                <!-- delete -->
+                                <button class="inline-block w-[28.25px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_697)">
+                                          <path d="M12.3437 3.07324C12.7074 3.07324 13 3.36719 13 3.72949C13 4.09316 12.7074 4.38574 12.3437 4.38574H12.0266L11.3703 13.2643C11.302 14.1775 10.5418 14.8857 9.62578 14.8857H4.12422C3.20875 14.8857 2.44777 14.1775 2.37996 13.2643L1.72234 4.38574H1.40625C1.04395 4.38574 0.75 4.09316 0.75 3.72949C0.75 3.36719 1.04395 3.07324 1.40625 3.07324H3.31539L4.31836 1.5677C4.60273 1.1416 5.08125 0.885742 5.59258 0.885742H8.15742C8.66875 0.885742 9.14727 1.14163 9.43164 1.5677L10.4352 3.07324H12.3437ZM5.59258 2.19824C5.52148 2.19824 5.42852 2.23488 5.41211 2.29559L4.89258 3.07324H8.85742L8.33789 2.29559C8.29687 2.23488 8.22852 2.19824 8.15742 2.19824H5.59258ZM10.7113 4.38574H3.0384L3.68945 13.1686C3.70586 13.3955 3.89727 13.5732 4.12422 13.5732H9.62578C9.85273 13.5732 10.0441 13.3955 10.0605 13.1686L10.7113 4.38574Z" fill="#EF4444"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_697">
+                                            <rect width="12.25" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-zinc-100">
+                            <th class="px-[20px] py-4" scope="row">
+                                3
+                            </th>
+                            <td class="px-4 py-4 flex items-center gap-[16px]">
+                                <img src="../assets/img/img-list-pd.svg" alt="" class="block w-[64px] h-[64px] object-cover rounded">
+                                <span>Matte Aurora White</span>
+                            </td>
+                            <td class="py-4 px-4 style=" style="max-width: 420px;">
+                                <p class="line-clamp-2">TPU Paint Protection Film can protect your car from damages caused by stone chips, scratches, splatters, and any minor abrasions preventing the paint from fading and prolonging its lifespan. In the meantime, it brings a significant increase in brightness, turning it into an outstanding finish.</p>
+                            </td>
+                            <td class="px-4 py-4">
+                                <span class="px-2 py-1 bg-orange-50 rounded-lg text-orange-500 text-xs font-normal">PPF</span>
+                            </td>
+                            <td class="px-4 py-4">
+                                <!-- eye -->
+                                <button  class="inline-block w-[31px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer" type="button" data-modal-target="product-details" data-modal-toggle="product-details">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_685)">
+                                          <path d="M4.375 7.88574C4.375 5.95254 5.9418 4.38574 7.875 4.38574C9.80821 4.38574 11.375 5.95254 11.375 7.88574C11.375 9.81894 9.80821 11.3857 7.875 11.3857C5.9418 11.3857 4.375 9.81894 4.375 7.88574ZM7.875 10.0732C9.0836 10.0732 10.0625 9.09434 10.0625 7.88574C10.0625 6.67715 9.0836 5.69824 7.875 5.69824C7.85586 5.69824 7.83946 5.69824 7.79571 5.69824C7.85586 5.8377 7.875 5.98535 7.875 6.13574C7.875 7.10098 7.09024 7.88574 6.125 7.88574C5.97461 7.88574 5.82696 7.8666 5.6875 7.80645C5.6875 7.8502 5.6875 7.8666 5.6875 7.86113C5.6875 9.09434 6.66641 10.0732 7.875 10.0732ZM2.60914 3.96465C3.89649 2.76809 5.66563 1.76074 7.875 1.76074C10.0844 1.76074 11.8535 2.76809 13.1414 3.96465C14.4211 5.15137 15.277 6.54863 15.6816 7.54941C15.7719 7.76543 15.7719 8.00605 15.6816 8.22207C15.277 9.19824 14.4211 10.5955 13.1414 11.8068C11.8535 13.0045 10.0844 14.0107 7.875 14.0107C5.66563 14.0107 3.89649 13.0045 2.60914 11.8068C1.32946 10.5955 0.474144 9.19824 0.0672964 8.22207C-0.0224321 8.00605 -0.0224321 7.76543 0.0672964 7.54941C0.474144 6.54863 1.32946 5.15137 2.60914 3.96465ZM7.875 3.07324C6.09219 3.07324 4.62657 3.88262 3.50274 4.92441C2.45 5.90332 1.72321 7.04082 1.35188 7.88574C1.72321 8.70605 2.45 9.86816 3.50274 10.8471C4.62657 11.8889 6.09219 12.6982 7.875 12.6982C9.65782 12.6982 11.1234 11.8889 12.2473 10.8471C13.3 9.86816 14.0027 8.70605 14.3992 7.88574C14.0027 7.04082 13.3 5.90332 12.2473 4.92441C11.1234 3.88262 9.65782 3.07324 7.875 3.07324Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_685">
+                                            <rect width="15.75" height="14" fill="white" transform="translate(0 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </button>
+                                <!-- edit -->
+                                <button class="inline-block w-[30px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_688)">
+                                          <path d="M10.952 1.56856C11.7203 0.799737 12.9672 0.799737 13.7355 1.56856L14.0664 1.89997C14.8348 2.66887 14.8348 3.91548 14.0664 4.68383L8.67422 10.0788C8.43633 10.3139 8.14375 10.4862 7.82109 10.5791L5.08672 11.3612C4.85703 11.4268 4.61094 11.3612 4.44141 11.1698C4.27461 11.0249 4.20898 10.7788 4.27461 10.5491L5.05664 7.81469C5.14961 7.49204 5.32188 7.19946 5.55703 6.96157L10.952 1.56856ZM12.784 2.49661C12.5516 2.2404 12.1359 2.2404 11.8789 2.49661L11.0832 3.29204L12.3438 4.55259L13.1395 3.73227C13.3965 3.49985 13.3965 3.08423 13.1395 2.82801L12.784 2.49661ZM6.31992 8.17563L5.86055 9.77524L7.46016 9.31587C7.56953 9.28579 7.66523 9.22837 7.74453 9.14907L11.4168 5.47954L10.1562 4.21899L6.48672 7.89126C6.40742 7.97055 6.35 8.06626 6.31992 8.17563ZM6.21875 2.63579C6.58242 2.63579 6.875 2.92973 6.875 3.29204C6.875 3.65571 6.58242 3.94829 6.21875 3.94829H3.15625C2.55223 3.94829 2.0625 4.43774 2.0625 5.04204V12.4795C2.0625 13.0838 2.55223 13.5733 3.15625 13.5733H10.5938C11.198 13.5733 11.6875 13.0838 11.6875 12.4795V9.41704C11.6875 9.05337 11.9801 8.76079 12.3438 8.76079C12.7074 8.76079 13 9.05337 13 9.41704V12.4795C13 13.8084 11.9227 14.8858 10.5938 14.8858H3.15625C1.82734 14.8858 0.75 13.8084 0.75 12.4795V5.04204C0.75 3.71313 1.82734 2.63579 3.15625 2.63579H6.21875Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_688">
+                                            <rect width="14" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </button>
+                                <!-- delete -->
+                                <button class="inline-block w-[28.25px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_697)">
+                                          <path d="M12.3437 3.07324C12.7074 3.07324 13 3.36719 13 3.72949C13 4.09316 12.7074 4.38574 12.3437 4.38574H12.0266L11.3703 13.2643C11.302 14.1775 10.5418 14.8857 9.62578 14.8857H4.12422C3.20875 14.8857 2.44777 14.1775 2.37996 13.2643L1.72234 4.38574H1.40625C1.04395 4.38574 0.75 4.09316 0.75 3.72949C0.75 3.36719 1.04395 3.07324 1.40625 3.07324H3.31539L4.31836 1.5677C4.60273 1.1416 5.08125 0.885742 5.59258 0.885742H8.15742C8.66875 0.885742 9.14727 1.14163 9.43164 1.5677L10.4352 3.07324H12.3437ZM5.59258 2.19824C5.52148 2.19824 5.42852 2.23488 5.41211 2.29559L4.89258 3.07324H8.85742L8.33789 2.29559C8.29687 2.23488 8.22852 2.19824 8.15742 2.19824H5.59258ZM10.7113 4.38574H3.0384L3.68945 13.1686C3.70586 13.3955 3.89727 13.5732 4.12422 13.5732H9.62578C9.85273 13.5732 10.0441 13.3955 10.0605 13.1686L10.7113 4.38574Z" fill="#EF4444"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_697">
+                                            <rect width="12.25" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-zinc-100">
+                            <th class="px-[20px] py-4" scope="row">
+                               4
+                            </th>
+                            <td class="px-4 py-4 flex items-center gap-[16px]">
+                                <img src="../assets/img/img-list-pd.svg" alt="" class="block w-[64px] h-[64px] object-cover">
+                                <span>Matte Aurora White</span>
+                            </td>
+                            <td class="py-4 px-4 style=" style="max-width: 420px;">
+                                <p class="line-clamp-2">TPU Paint Protection Film can protect your car from damages caused by stone chips, scratches, splatters, and any minor abrasions preventing the paint from fading and prolonging its lifespan. In the meantime, it brings a significant increase in brightness, turning it into an outstanding finish.</p>
+                            </td>
+                            <td class="px-4 py-4">
+                                <span class="px-2 py-1 bg-orange-50 rounded-lg text-orange-500 text-xs font-normal">PPF</span>
+                            </td>
+                            <td class="px-4 py-4">
+                                <!-- eye -->
+                                <span  class="inline-block w-[31px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_685)">
+                                          <path d="M4.375 7.88574C4.375 5.95254 5.9418 4.38574 7.875 4.38574C9.80821 4.38574 11.375 5.95254 11.375 7.88574C11.375 9.81894 9.80821 11.3857 7.875 11.3857C5.9418 11.3857 4.375 9.81894 4.375 7.88574ZM7.875 10.0732C9.0836 10.0732 10.0625 9.09434 10.0625 7.88574C10.0625 6.67715 9.0836 5.69824 7.875 5.69824C7.85586 5.69824 7.83946 5.69824 7.79571 5.69824C7.85586 5.8377 7.875 5.98535 7.875 6.13574C7.875 7.10098 7.09024 7.88574 6.125 7.88574C5.97461 7.88574 5.82696 7.8666 5.6875 7.80645C5.6875 7.8502 5.6875 7.8666 5.6875 7.86113C5.6875 9.09434 6.66641 10.0732 7.875 10.0732ZM2.60914 3.96465C3.89649 2.76809 5.66563 1.76074 7.875 1.76074C10.0844 1.76074 11.8535 2.76809 13.1414 3.96465C14.4211 5.15137 15.277 6.54863 15.6816 7.54941C15.7719 7.76543 15.7719 8.00605 15.6816 8.22207C15.277 9.19824 14.4211 10.5955 13.1414 11.8068C11.8535 13.0045 10.0844 14.0107 7.875 14.0107C5.66563 14.0107 3.89649 13.0045 2.60914 11.8068C1.32946 10.5955 0.474144 9.19824 0.0672964 8.22207C-0.0224321 8.00605 -0.0224321 7.76543 0.0672964 7.54941C0.474144 6.54863 1.32946 5.15137 2.60914 3.96465ZM7.875 3.07324C6.09219 3.07324 4.62657 3.88262 3.50274 4.92441C2.45 5.90332 1.72321 7.04082 1.35188 7.88574C1.72321 8.70605 2.45 9.86816 3.50274 10.8471C4.62657 11.8889 6.09219 12.6982 7.875 12.6982C9.65782 12.6982 11.1234 11.8889 12.2473 10.8471C13.3 9.86816 14.0027 8.70605 14.3992 7.88574C14.0027 7.04082 13.3 5.90332 12.2473 4.92441C11.1234 3.88262 9.65782 3.07324 7.875 3.07324Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_685">
+                                            <rect width="15.75" height="14" fill="white" transform="translate(0 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                                <!-- edit -->
+                                <span class="inline-block w-[30px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_688)">
+                                          <path d="M10.952 1.56856C11.7203 0.799737 12.9672 0.799737 13.7355 1.56856L14.0664 1.89997C14.8348 2.66887 14.8348 3.91548 14.0664 4.68383L8.67422 10.0788C8.43633 10.3139 8.14375 10.4862 7.82109 10.5791L5.08672 11.3612C4.85703 11.4268 4.61094 11.3612 4.44141 11.1698C4.27461 11.0249 4.20898 10.7788 4.27461 10.5491L5.05664 7.81469C5.14961 7.49204 5.32188 7.19946 5.55703 6.96157L10.952 1.56856ZM12.784 2.49661C12.5516 2.2404 12.1359 2.2404 11.8789 2.49661L11.0832 3.29204L12.3438 4.55259L13.1395 3.73227C13.3965 3.49985 13.3965 3.08423 13.1395 2.82801L12.784 2.49661ZM6.31992 8.17563L5.86055 9.77524L7.46016 9.31587C7.56953 9.28579 7.66523 9.22837 7.74453 9.14907L11.4168 5.47954L10.1562 4.21899L6.48672 7.89126C6.40742 7.97055 6.35 8.06626 6.31992 8.17563ZM6.21875 2.63579C6.58242 2.63579 6.875 2.92973 6.875 3.29204C6.875 3.65571 6.58242 3.94829 6.21875 3.94829H3.15625C2.55223 3.94829 2.0625 4.43774 2.0625 5.04204V12.4795C2.0625 13.0838 2.55223 13.5733 3.15625 13.5733H10.5938C11.198 13.5733 11.6875 13.0838 11.6875 12.4795V9.41704C11.6875 9.05337 11.9801 8.76079 12.3438 8.76079C12.7074 8.76079 13 9.05337 13 9.41704V12.4795C13 13.8084 11.9227 14.8858 10.5938 14.8858H3.15625C1.82734 14.8858 0.75 13.8084 0.75 12.4795V5.04204C0.75 3.71313 1.82734 2.63579 3.15625 2.63579H6.21875Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_688">
+                                            <rect width="14" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                                <!-- delete -->
+                                <span class="inline-block w-[28.25px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_697)">
+                                          <path d="M12.3437 3.07324C12.7074 3.07324 13 3.36719 13 3.72949C13 4.09316 12.7074 4.38574 12.3437 4.38574H12.0266L11.3703 13.2643C11.302 14.1775 10.5418 14.8857 9.62578 14.8857H4.12422C3.20875 14.8857 2.44777 14.1775 2.37996 13.2643L1.72234 4.38574H1.40625C1.04395 4.38574 0.75 4.09316 0.75 3.72949C0.75 3.36719 1.04395 3.07324 1.40625 3.07324H3.31539L4.31836 1.5677C4.60273 1.1416 5.08125 0.885742 5.59258 0.885742H8.15742C8.66875 0.885742 9.14727 1.14163 9.43164 1.5677L10.4352 3.07324H12.3437ZM5.59258 2.19824C5.52148 2.19824 5.42852 2.23488 5.41211 2.29559L4.89258 3.07324H8.85742L8.33789 2.29559C8.29687 2.23488 8.22852 2.19824 8.15742 2.19824H5.59258ZM10.7113 4.38574H3.0384L3.68945 13.1686C3.70586 13.3955 3.89727 13.5732 4.12422 13.5732H9.62578C9.85273 13.5732 10.0441 13.3955 10.0605 13.1686L10.7113 4.38574Z" fill="#EF4444"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_697">
+                                            <rect width="12.25" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-zinc-100">
+                            <th class="px-[20px] py-4" scope="row">
+                                5
+                            </th>
+                            <td class="px-4 py-4 flex items-center gap-[16px]">
+                                <img src="../assets/img/img-list-pd.svg" alt="" class="block w-[64px] h-[64px] object-cover">
+                                <span>Matte Aurora White</span>
+                            </td>
+                            <td class="py-4 px-4 style=" style="max-width: 420px;">
+                                <p class="line-clamp-2">TPU Paint Protection Film can protect your car from damages caused by stone chips, scratches, splatters, and any minor abrasions preventing the paint from fading and prolonging its lifespan. In the meantime, it brings a significant increase in brightness, turning it into an outstanding finish.</p>
+                            </td>
+                            <td class="px-4 py-4">
+                                <span class="px-2 py-1 bg-orange-50 rounded-lg text-orange-500 text-xs font-normal">PPF</span>
+                            </td>
+                            <td class="px-4 py-4">
+                                <!-- eye -->
+                                <span  class="inline-block w-[31px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_685)">
+                                          <path d="M4.375 7.88574C4.375 5.95254 5.9418 4.38574 7.875 4.38574C9.80821 4.38574 11.375 5.95254 11.375 7.88574C11.375 9.81894 9.80821 11.3857 7.875 11.3857C5.9418 11.3857 4.375 9.81894 4.375 7.88574ZM7.875 10.0732C9.0836 10.0732 10.0625 9.09434 10.0625 7.88574C10.0625 6.67715 9.0836 5.69824 7.875 5.69824C7.85586 5.69824 7.83946 5.69824 7.79571 5.69824C7.85586 5.8377 7.875 5.98535 7.875 6.13574C7.875 7.10098 7.09024 7.88574 6.125 7.88574C5.97461 7.88574 5.82696 7.8666 5.6875 7.80645C5.6875 7.8502 5.6875 7.8666 5.6875 7.86113C5.6875 9.09434 6.66641 10.0732 7.875 10.0732ZM2.60914 3.96465C3.89649 2.76809 5.66563 1.76074 7.875 1.76074C10.0844 1.76074 11.8535 2.76809 13.1414 3.96465C14.4211 5.15137 15.277 6.54863 15.6816 7.54941C15.7719 7.76543 15.7719 8.00605 15.6816 8.22207C15.277 9.19824 14.4211 10.5955 13.1414 11.8068C11.8535 13.0045 10.0844 14.0107 7.875 14.0107C5.66563 14.0107 3.89649 13.0045 2.60914 11.8068C1.32946 10.5955 0.474144 9.19824 0.0672964 8.22207C-0.0224321 8.00605 -0.0224321 7.76543 0.0672964 7.54941C0.474144 6.54863 1.32946 5.15137 2.60914 3.96465ZM7.875 3.07324C6.09219 3.07324 4.62657 3.88262 3.50274 4.92441C2.45 5.90332 1.72321 7.04082 1.35188 7.88574C1.72321 8.70605 2.45 9.86816 3.50274 10.8471C4.62657 11.8889 6.09219 12.6982 7.875 12.6982C9.65782 12.6982 11.1234 11.8889 12.2473 10.8471C13.3 9.86816 14.0027 8.70605 14.3992 7.88574C14.0027 7.04082 13.3 5.90332 12.2473 4.92441C11.1234 3.88262 9.65782 3.07324 7.875 3.07324Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_685">
+                                            <rect width="15.75" height="14" fill="white" transform="translate(0 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                                <!-- edit -->
+                                <span class="inline-block w-[30px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_688)">
+                                          <path d="M10.952 1.56856C11.7203 0.799737 12.9672 0.799737 13.7355 1.56856L14.0664 1.89997C14.8348 2.66887 14.8348 3.91548 14.0664 4.68383L8.67422 10.0788C8.43633 10.3139 8.14375 10.4862 7.82109 10.5791L5.08672 11.3612C4.85703 11.4268 4.61094 11.3612 4.44141 11.1698C4.27461 11.0249 4.20898 10.7788 4.27461 10.5491L5.05664 7.81469C5.14961 7.49204 5.32188 7.19946 5.55703 6.96157L10.952 1.56856ZM12.784 2.49661C12.5516 2.2404 12.1359 2.2404 11.8789 2.49661L11.0832 3.29204L12.3438 4.55259L13.1395 3.73227C13.3965 3.49985 13.3965 3.08423 13.1395 2.82801L12.784 2.49661ZM6.31992 8.17563L5.86055 9.77524L7.46016 9.31587C7.56953 9.28579 7.66523 9.22837 7.74453 9.14907L11.4168 5.47954L10.1562 4.21899L6.48672 7.89126C6.40742 7.97055 6.35 8.06626 6.31992 8.17563ZM6.21875 2.63579C6.58242 2.63579 6.875 2.92973 6.875 3.29204C6.875 3.65571 6.58242 3.94829 6.21875 3.94829H3.15625C2.55223 3.94829 2.0625 4.43774 2.0625 5.04204V12.4795C2.0625 13.0838 2.55223 13.5733 3.15625 13.5733H10.5938C11.198 13.5733 11.6875 13.0838 11.6875 12.4795V9.41704C11.6875 9.05337 11.9801 8.76079 12.3438 8.76079C12.7074 8.76079 13 9.05337 13 9.41704V12.4795C13 13.8084 11.9227 14.8858 10.5938 14.8858H3.15625C1.82734 14.8858 0.75 13.8084 0.75 12.4795V5.04204C0.75 3.71313 1.82734 2.63579 3.15625 2.63579H6.21875Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_688">
+                                            <rect width="14" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                                <!-- delete -->
+                                <span class="inline-block w-[28.25px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_697)">
+                                          <path d="M12.3437 3.07324C12.7074 3.07324 13 3.36719 13 3.72949C13 4.09316 12.7074 4.38574 12.3437 4.38574H12.0266L11.3703 13.2643C11.302 14.1775 10.5418 14.8857 9.62578 14.8857H4.12422C3.20875 14.8857 2.44777 14.1775 2.37996 13.2643L1.72234 4.38574H1.40625C1.04395 4.38574 0.75 4.09316 0.75 3.72949C0.75 3.36719 1.04395 3.07324 1.40625 3.07324H3.31539L4.31836 1.5677C4.60273 1.1416 5.08125 0.885742 5.59258 0.885742H8.15742C8.66875 0.885742 9.14727 1.14163 9.43164 1.5677L10.4352 3.07324H12.3437ZM5.59258 2.19824C5.52148 2.19824 5.42852 2.23488 5.41211 2.29559L4.89258 3.07324H8.85742L8.33789 2.29559C8.29687 2.23488 8.22852 2.19824 8.15742 2.19824H5.59258ZM10.7113 4.38574H3.0384L3.68945 13.1686C3.70586 13.3955 3.89727 13.5732 4.12422 13.5732H9.62578C9.85273 13.5732 10.0441 13.3955 10.0605 13.1686L10.7113 4.38574Z" fill="#EF4444"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_697">
+                                            <rect width="12.25" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-zinc-100">
+                            <th class="px-[20px] py-4" scope="row">
+                               6
+                            </th>
+                            <td class="px-4 py-4 flex items-center gap-[16px]">
+                                <img src="../assets/img/img-list-pd.svg" alt="" class="block w-[64px] h-[64px] object-cover">
+                                <span>Matte Aurora White</span>
+                            </td>
+                            <td class="py-4 px-4 style=" style="max-width: 420px;">
+                                <p class="line-clamp-2">TPU Paint Protection Film can protect your car from damages caused by stone chips, scratches, splatters, and any minor abrasions preventing the paint from fading and prolonging its lifespan. In the meantime, it brings a significant increase in brightness, turning it into an outstanding finish.</p>
+                            </td>
+                            <td class="px-4 py-4">
+                                <span class="px-2 py-1 bg-orange-50 rounded-lg text-orange-500 text-xs font-normal">PPF</span>
+                            </td>
+                            <td class="px-4 py-4">
+                                <!-- eye -->
+                                <span  class="inline-block w-[31px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_685)">
+                                          <path d="M4.375 7.88574C4.375 5.95254 5.9418 4.38574 7.875 4.38574C9.80821 4.38574 11.375 5.95254 11.375 7.88574C11.375 9.81894 9.80821 11.3857 7.875 11.3857C5.9418 11.3857 4.375 9.81894 4.375 7.88574ZM7.875 10.0732C9.0836 10.0732 10.0625 9.09434 10.0625 7.88574C10.0625 6.67715 9.0836 5.69824 7.875 5.69824C7.85586 5.69824 7.83946 5.69824 7.79571 5.69824C7.85586 5.8377 7.875 5.98535 7.875 6.13574C7.875 7.10098 7.09024 7.88574 6.125 7.88574C5.97461 7.88574 5.82696 7.8666 5.6875 7.80645C5.6875 7.8502 5.6875 7.8666 5.6875 7.86113C5.6875 9.09434 6.66641 10.0732 7.875 10.0732ZM2.60914 3.96465C3.89649 2.76809 5.66563 1.76074 7.875 1.76074C10.0844 1.76074 11.8535 2.76809 13.1414 3.96465C14.4211 5.15137 15.277 6.54863 15.6816 7.54941C15.7719 7.76543 15.7719 8.00605 15.6816 8.22207C15.277 9.19824 14.4211 10.5955 13.1414 11.8068C11.8535 13.0045 10.0844 14.0107 7.875 14.0107C5.66563 14.0107 3.89649 13.0045 2.60914 11.8068C1.32946 10.5955 0.474144 9.19824 0.0672964 8.22207C-0.0224321 8.00605 -0.0224321 7.76543 0.0672964 7.54941C0.474144 6.54863 1.32946 5.15137 2.60914 3.96465ZM7.875 3.07324C6.09219 3.07324 4.62657 3.88262 3.50274 4.92441C2.45 5.90332 1.72321 7.04082 1.35188 7.88574C1.72321 8.70605 2.45 9.86816 3.50274 10.8471C4.62657 11.8889 6.09219 12.6982 7.875 12.6982C9.65782 12.6982 11.1234 11.8889 12.2473 10.8471C13.3 9.86816 14.0027 8.70605 14.3992 7.88574C14.0027 7.04082 13.3 5.90332 12.2473 4.92441C11.1234 3.88262 9.65782 3.07324 7.875 3.07324Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_685">
+                                            <rect width="15.75" height="14" fill="white" transform="translate(0 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                                <!-- edit -->
+                                <span class="inline-block w-[30px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_688)">
+                                          <path d="M10.952 1.56856C11.7203 0.799737 12.9672 0.799737 13.7355 1.56856L14.0664 1.89997C14.8348 2.66887 14.8348 3.91548 14.0664 4.68383L8.67422 10.0788C8.43633 10.3139 8.14375 10.4862 7.82109 10.5791L5.08672 11.3612C4.85703 11.4268 4.61094 11.3612 4.44141 11.1698C4.27461 11.0249 4.20898 10.7788 4.27461 10.5491L5.05664 7.81469C5.14961 7.49204 5.32188 7.19946 5.55703 6.96157L10.952 1.56856ZM12.784 2.49661C12.5516 2.2404 12.1359 2.2404 11.8789 2.49661L11.0832 3.29204L12.3438 4.55259L13.1395 3.73227C13.3965 3.49985 13.3965 3.08423 13.1395 2.82801L12.784 2.49661ZM6.31992 8.17563L5.86055 9.77524L7.46016 9.31587C7.56953 9.28579 7.66523 9.22837 7.74453 9.14907L11.4168 5.47954L10.1562 4.21899L6.48672 7.89126C6.40742 7.97055 6.35 8.06626 6.31992 8.17563ZM6.21875 2.63579C6.58242 2.63579 6.875 2.92973 6.875 3.29204C6.875 3.65571 6.58242 3.94829 6.21875 3.94829H3.15625C2.55223 3.94829 2.0625 4.43774 2.0625 5.04204V12.4795C2.0625 13.0838 2.55223 13.5733 3.15625 13.5733H10.5938C11.198 13.5733 11.6875 13.0838 11.6875 12.4795V9.41704C11.6875 9.05337 11.9801 8.76079 12.3438 8.76079C12.7074 8.76079 13 9.05337 13 9.41704V12.4795C13 13.8084 11.9227 14.8858 10.5938 14.8858H3.15625C1.82734 14.8858 0.75 13.8084 0.75 12.4795V5.04204C0.75 3.71313 1.82734 2.63579 3.15625 2.63579H6.21875Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_688">
+                                            <rect width="14" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                                <!-- delete -->
+                                <span class="inline-block w-[28.25px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_697)">
+                                          <path d="M12.3437 3.07324C12.7074 3.07324 13 3.36719 13 3.72949C13 4.09316 12.7074 4.38574 12.3437 4.38574H12.0266L11.3703 13.2643C11.302 14.1775 10.5418 14.8857 9.62578 14.8857H4.12422C3.20875 14.8857 2.44777 14.1775 2.37996 13.2643L1.72234 4.38574H1.40625C1.04395 4.38574 0.75 4.09316 0.75 3.72949C0.75 3.36719 1.04395 3.07324 1.40625 3.07324H3.31539L4.31836 1.5677C4.60273 1.1416 5.08125 0.885742 5.59258 0.885742H8.15742C8.66875 0.885742 9.14727 1.14163 9.43164 1.5677L10.4352 3.07324H12.3437ZM5.59258 2.19824C5.52148 2.19824 5.42852 2.23488 5.41211 2.29559L4.89258 3.07324H8.85742L8.33789 2.29559C8.29687 2.23488 8.22852 2.19824 8.15742 2.19824H5.59258ZM10.7113 4.38574H3.0384L3.68945 13.1686C3.70586 13.3955 3.89727 13.5732 4.12422 13.5732H9.62578C9.85273 13.5732 10.0441 13.3955 10.0605 13.1686L10.7113 4.38574Z" fill="#EF4444"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_697">
+                                            <rect width="12.25" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-zinc-100">
+                            <th class="px-[20px] py-4" scope="row">
+                                7
+                            </th>
+                            <td class="px-4 py-4 flex items-center gap-[16px]">
+                                <img src="../assets/img/img-list-pd.svg" alt="" class="block w-[64px] h-[64px] object-cover">
+                                <span>Matte Aurora White</span>
+                            </td>
+                            <td class="py-4 px-4 style=" style="max-width: 420px;">
+                                <p class="line-clamp-2">TPU Paint Protection Film can protect your car from damages caused by stone chips, scratches, splatters, and any minor abrasions preventing the paint from fading and prolonging its lifespan. In the meantime, it brings a significant increase in brightness, turning it into an outstanding finish.</p>
+                            </td>
+                            <td class="px-4 py-4">
+                                <span class="px-2 py-1 bg-orange-50 rounded-lg text-orange-500 text-xs font-normal">PPF</span>
+                            </td>
+                            <td class="px-4 py-4">
+                                <!-- eye -->
+                                <span  class="inline-block w-[31px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_685)">
+                                          <path d="M4.375 7.88574C4.375 5.95254 5.9418 4.38574 7.875 4.38574C9.80821 4.38574 11.375 5.95254 11.375 7.88574C11.375 9.81894 9.80821 11.3857 7.875 11.3857C5.9418 11.3857 4.375 9.81894 4.375 7.88574ZM7.875 10.0732C9.0836 10.0732 10.0625 9.09434 10.0625 7.88574C10.0625 6.67715 9.0836 5.69824 7.875 5.69824C7.85586 5.69824 7.83946 5.69824 7.79571 5.69824C7.85586 5.8377 7.875 5.98535 7.875 6.13574C7.875 7.10098 7.09024 7.88574 6.125 7.88574C5.97461 7.88574 5.82696 7.8666 5.6875 7.80645C5.6875 7.8502 5.6875 7.8666 5.6875 7.86113C5.6875 9.09434 6.66641 10.0732 7.875 10.0732ZM2.60914 3.96465C3.89649 2.76809 5.66563 1.76074 7.875 1.76074C10.0844 1.76074 11.8535 2.76809 13.1414 3.96465C14.4211 5.15137 15.277 6.54863 15.6816 7.54941C15.7719 7.76543 15.7719 8.00605 15.6816 8.22207C15.277 9.19824 14.4211 10.5955 13.1414 11.8068C11.8535 13.0045 10.0844 14.0107 7.875 14.0107C5.66563 14.0107 3.89649 13.0045 2.60914 11.8068C1.32946 10.5955 0.474144 9.19824 0.0672964 8.22207C-0.0224321 8.00605 -0.0224321 7.76543 0.0672964 7.54941C0.474144 6.54863 1.32946 5.15137 2.60914 3.96465ZM7.875 3.07324C6.09219 3.07324 4.62657 3.88262 3.50274 4.92441C2.45 5.90332 1.72321 7.04082 1.35188 7.88574C1.72321 8.70605 2.45 9.86816 3.50274 10.8471C4.62657 11.8889 6.09219 12.6982 7.875 12.6982C9.65782 12.6982 11.1234 11.8889 12.2473 10.8471C13.3 9.86816 14.0027 8.70605 14.3992 7.88574C14.0027 7.04082 13.3 5.90332 12.2473 4.92441C11.1234 3.88262 9.65782 3.07324 7.875 3.07324Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_685">
+                                            <rect width="15.75" height="14" fill="white" transform="translate(0 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                                <!-- edit -->
+                                <span class="inline-block w-[30px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_688)">
+                                          <path d="M10.952 1.56856C11.7203 0.799737 12.9672 0.799737 13.7355 1.56856L14.0664 1.89997C14.8348 2.66887 14.8348 3.91548 14.0664 4.68383L8.67422 10.0788C8.43633 10.3139 8.14375 10.4862 7.82109 10.5791L5.08672 11.3612C4.85703 11.4268 4.61094 11.3612 4.44141 11.1698C4.27461 11.0249 4.20898 10.7788 4.27461 10.5491L5.05664 7.81469C5.14961 7.49204 5.32188 7.19946 5.55703 6.96157L10.952 1.56856ZM12.784 2.49661C12.5516 2.2404 12.1359 2.2404 11.8789 2.49661L11.0832 3.29204L12.3438 4.55259L13.1395 3.73227C13.3965 3.49985 13.3965 3.08423 13.1395 2.82801L12.784 2.49661ZM6.31992 8.17563L5.86055 9.77524L7.46016 9.31587C7.56953 9.28579 7.66523 9.22837 7.74453 9.14907L11.4168 5.47954L10.1562 4.21899L6.48672 7.89126C6.40742 7.97055 6.35 8.06626 6.31992 8.17563ZM6.21875 2.63579C6.58242 2.63579 6.875 2.92973 6.875 3.29204C6.875 3.65571 6.58242 3.94829 6.21875 3.94829H3.15625C2.55223 3.94829 2.0625 4.43774 2.0625 5.04204V12.4795C2.0625 13.0838 2.55223 13.5733 3.15625 13.5733H10.5938C11.198 13.5733 11.6875 13.0838 11.6875 12.4795V9.41704C11.6875 9.05337 11.9801 8.76079 12.3438 8.76079C12.7074 8.76079 13 9.05337 13 9.41704V12.4795C13 13.8084 11.9227 14.8858 10.5938 14.8858H3.15625C1.82734 14.8858 0.75 13.8084 0.75 12.4795V5.04204C0.75 3.71313 1.82734 2.63579 3.15625 2.63579H6.21875Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_688">
+                                            <rect width="14" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                                <!-- delete -->
+                                <span class="inline-block w-[28.25px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_697)">
+                                          <path d="M12.3437 3.07324C12.7074 3.07324 13 3.36719 13 3.72949C13 4.09316 12.7074 4.38574 12.3437 4.38574H12.0266L11.3703 13.2643C11.302 14.1775 10.5418 14.8857 9.62578 14.8857H4.12422C3.20875 14.8857 2.44777 14.1775 2.37996 13.2643L1.72234 4.38574H1.40625C1.04395 4.38574 0.75 4.09316 0.75 3.72949C0.75 3.36719 1.04395 3.07324 1.40625 3.07324H3.31539L4.31836 1.5677C4.60273 1.1416 5.08125 0.885742 5.59258 0.885742H8.15742C8.66875 0.885742 9.14727 1.14163 9.43164 1.5677L10.4352 3.07324H12.3437ZM5.59258 2.19824C5.52148 2.19824 5.42852 2.23488 5.41211 2.29559L4.89258 3.07324H8.85742L8.33789 2.29559C8.29687 2.23488 8.22852 2.19824 8.15742 2.19824H5.59258ZM10.7113 4.38574H3.0384L3.68945 13.1686C3.70586 13.3955 3.89727 13.5732 4.12422 13.5732H9.62578C9.85273 13.5732 10.0441 13.3955 10.0605 13.1686L10.7113 4.38574Z" fill="#EF4444"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_697">
+                                            <rect width="12.25" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-zinc-100">
+                            <th class="px-[20px] py-4" scope="row">
+                               8
+                            </th>
+                            <td class="px-4 py-4 flex items-center gap-[16px]">
+                                <img src="../assets/img/img-list-pd.svg" alt="" class="block w-[64px] h-[64px] object-cover">
+                                <span>Matte Aurora White</span>
+                            </td>
+                            <td class="py-4 px-4 style=" style="max-width: 420px;">
+                                <p class="line-clamp-2">TPU Paint Protection Film can protect your car from damages caused by stone chips, scratches, splatters, and any minor abrasions preventing the paint from fading and prolonging its lifespan. In the meantime, it brings a significant increase in brightness, turning it into an outstanding finish.</p>
+                            </td>
+                            <td class="px-4 py-4">
+                                <span class="px-2 py-1 bg-orange-50 rounded-lg text-orange-500 text-xs font-normal">PPF</span>
+                            </td>
+                            <td class="px-4 py-4">
+                                <!-- eye -->
+                                <span  class="inline-block w-[31px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_685)">
+                                          <path d="M4.375 7.88574C4.375 5.95254 5.9418 4.38574 7.875 4.38574C9.80821 4.38574 11.375 5.95254 11.375 7.88574C11.375 9.81894 9.80821 11.3857 7.875 11.3857C5.9418 11.3857 4.375 9.81894 4.375 7.88574ZM7.875 10.0732C9.0836 10.0732 10.0625 9.09434 10.0625 7.88574C10.0625 6.67715 9.0836 5.69824 7.875 5.69824C7.85586 5.69824 7.83946 5.69824 7.79571 5.69824C7.85586 5.8377 7.875 5.98535 7.875 6.13574C7.875 7.10098 7.09024 7.88574 6.125 7.88574C5.97461 7.88574 5.82696 7.8666 5.6875 7.80645C5.6875 7.8502 5.6875 7.8666 5.6875 7.86113C5.6875 9.09434 6.66641 10.0732 7.875 10.0732ZM2.60914 3.96465C3.89649 2.76809 5.66563 1.76074 7.875 1.76074C10.0844 1.76074 11.8535 2.76809 13.1414 3.96465C14.4211 5.15137 15.277 6.54863 15.6816 7.54941C15.7719 7.76543 15.7719 8.00605 15.6816 8.22207C15.277 9.19824 14.4211 10.5955 13.1414 11.8068C11.8535 13.0045 10.0844 14.0107 7.875 14.0107C5.66563 14.0107 3.89649 13.0045 2.60914 11.8068C1.32946 10.5955 0.474144 9.19824 0.0672964 8.22207C-0.0224321 8.00605 -0.0224321 7.76543 0.0672964 7.54941C0.474144 6.54863 1.32946 5.15137 2.60914 3.96465ZM7.875 3.07324C6.09219 3.07324 4.62657 3.88262 3.50274 4.92441C2.45 5.90332 1.72321 7.04082 1.35188 7.88574C1.72321 8.70605 2.45 9.86816 3.50274 10.8471C4.62657 11.8889 6.09219 12.6982 7.875 12.6982C9.65782 12.6982 11.1234 11.8889 12.2473 10.8471C13.3 9.86816 14.0027 8.70605 14.3992 7.88574C14.0027 7.04082 13.3 5.90332 12.2473 4.92441C11.1234 3.88262 9.65782 3.07324 7.875 3.07324Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_685">
+                                            <rect width="15.75" height="14" fill="white" transform="translate(0 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                                <!-- edit -->
+                                <span class="inline-block w-[30px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_688)">
+                                          <path d="M10.952 1.56856C11.7203 0.799737 12.9672 0.799737 13.7355 1.56856L14.0664 1.89997C14.8348 2.66887 14.8348 3.91548 14.0664 4.68383L8.67422 10.0788C8.43633 10.3139 8.14375 10.4862 7.82109 10.5791L5.08672 11.3612C4.85703 11.4268 4.61094 11.3612 4.44141 11.1698C4.27461 11.0249 4.20898 10.7788 4.27461 10.5491L5.05664 7.81469C5.14961 7.49204 5.32188 7.19946 5.55703 6.96157L10.952 1.56856ZM12.784 2.49661C12.5516 2.2404 12.1359 2.2404 11.8789 2.49661L11.0832 3.29204L12.3438 4.55259L13.1395 3.73227C13.3965 3.49985 13.3965 3.08423 13.1395 2.82801L12.784 2.49661ZM6.31992 8.17563L5.86055 9.77524L7.46016 9.31587C7.56953 9.28579 7.66523 9.22837 7.74453 9.14907L11.4168 5.47954L10.1562 4.21899L6.48672 7.89126C6.40742 7.97055 6.35 8.06626 6.31992 8.17563ZM6.21875 2.63579C6.58242 2.63579 6.875 2.92973 6.875 3.29204C6.875 3.65571 6.58242 3.94829 6.21875 3.94829H3.15625C2.55223 3.94829 2.0625 4.43774 2.0625 5.04204V12.4795C2.0625 13.0838 2.55223 13.5733 3.15625 13.5733H10.5938C11.198 13.5733 11.6875 13.0838 11.6875 12.4795V9.41704C11.6875 9.05337 11.9801 8.76079 12.3438 8.76079C12.7074 8.76079 13 9.05337 13 9.41704V12.4795C13 13.8084 11.9227 14.8858 10.5938 14.8858H3.15625C1.82734 14.8858 0.75 13.8084 0.75 12.4795V5.04204C0.75 3.71313 1.82734 2.63579 3.15625 2.63579H6.21875Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_688">
+                                            <rect width="14" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                                <!-- delete -->
+                                <span class="inline-block w-[28.25px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_697)">
+                                          <path d="M12.3437 3.07324C12.7074 3.07324 13 3.36719 13 3.72949C13 4.09316 12.7074 4.38574 12.3437 4.38574H12.0266L11.3703 13.2643C11.302 14.1775 10.5418 14.8857 9.62578 14.8857H4.12422C3.20875 14.8857 2.44777 14.1775 2.37996 13.2643L1.72234 4.38574H1.40625C1.04395 4.38574 0.75 4.09316 0.75 3.72949C0.75 3.36719 1.04395 3.07324 1.40625 3.07324H3.31539L4.31836 1.5677C4.60273 1.1416 5.08125 0.885742 5.59258 0.885742H8.15742C8.66875 0.885742 9.14727 1.14163 9.43164 1.5677L10.4352 3.07324H12.3437ZM5.59258 2.19824C5.52148 2.19824 5.42852 2.23488 5.41211 2.29559L4.89258 3.07324H8.85742L8.33789 2.29559C8.29687 2.23488 8.22852 2.19824 8.15742 2.19824H5.59258ZM10.7113 4.38574H3.0384L3.68945 13.1686C3.70586 13.3955 3.89727 13.5732 4.12422 13.5732H9.62578C9.85273 13.5732 10.0441 13.3955 10.0605 13.1686L10.7113 4.38574Z" fill="#EF4444"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_697">
+                                            <rect width="12.25" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-zinc-100">
+                            <th class="px-[20px] py-4" scope="row">
+                                9
+                            </th>
+                            <td class="px-4 py-4 flex items-center gap-[16px]">
+                                <img src="../assets/img/img-list-pd.svg" alt="" class="block w-[64px] h-[64px] object-cover">
+                                <span>Matte Aurora White</span>
+                            </td>
+                            <td class="py-4 px-4 style=" style="max-width: 420px;">
+                                <p class="line-clamp-2">TPU Paint Protection Film can protect your car from damages caused by stone chips, scratches, splatters, and any minor abrasions preventing the paint from fading and prolonging its lifespan. In the meantime, it brings a significant increase in brightness, turning it into an outstanding finish.</p>
+                            </td>
+                            <td class="px-4 py-4">
+                                <span class="px-2 py-1 bg-orange-50 rounded-lg text-orange-500 text-xs font-normal">PPF</span>
+                            </td>
+                            <td class="px-4 py-4">
+                                <!-- eye -->
+                                <span  class="inline-block w-[31px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_685)">
+                                          <path d="M4.375 7.88574C4.375 5.95254 5.9418 4.38574 7.875 4.38574C9.80821 4.38574 11.375 5.95254 11.375 7.88574C11.375 9.81894 9.80821 11.3857 7.875 11.3857C5.9418 11.3857 4.375 9.81894 4.375 7.88574ZM7.875 10.0732C9.0836 10.0732 10.0625 9.09434 10.0625 7.88574C10.0625 6.67715 9.0836 5.69824 7.875 5.69824C7.85586 5.69824 7.83946 5.69824 7.79571 5.69824C7.85586 5.8377 7.875 5.98535 7.875 6.13574C7.875 7.10098 7.09024 7.88574 6.125 7.88574C5.97461 7.88574 5.82696 7.8666 5.6875 7.80645C5.6875 7.8502 5.6875 7.8666 5.6875 7.86113C5.6875 9.09434 6.66641 10.0732 7.875 10.0732ZM2.60914 3.96465C3.89649 2.76809 5.66563 1.76074 7.875 1.76074C10.0844 1.76074 11.8535 2.76809 13.1414 3.96465C14.4211 5.15137 15.277 6.54863 15.6816 7.54941C15.7719 7.76543 15.7719 8.00605 15.6816 8.22207C15.277 9.19824 14.4211 10.5955 13.1414 11.8068C11.8535 13.0045 10.0844 14.0107 7.875 14.0107C5.66563 14.0107 3.89649 13.0045 2.60914 11.8068C1.32946 10.5955 0.474144 9.19824 0.0672964 8.22207C-0.0224321 8.00605 -0.0224321 7.76543 0.0672964 7.54941C0.474144 6.54863 1.32946 5.15137 2.60914 3.96465ZM7.875 3.07324C6.09219 3.07324 4.62657 3.88262 3.50274 4.92441C2.45 5.90332 1.72321 7.04082 1.35188 7.88574C1.72321 8.70605 2.45 9.86816 3.50274 10.8471C4.62657 11.8889 6.09219 12.6982 7.875 12.6982C9.65782 12.6982 11.1234 11.8889 12.2473 10.8471C13.3 9.86816 14.0027 8.70605 14.3992 7.88574C14.0027 7.04082 13.3 5.90332 12.2473 4.92441C11.1234 3.88262 9.65782 3.07324 7.875 3.07324Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_685">
+                                            <rect width="15.75" height="14" fill="white" transform="translate(0 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                                <!-- edit -->
+                                <span class="inline-block w-[30px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_688)">
+                                          <path d="M10.952 1.56856C11.7203 0.799737 12.9672 0.799737 13.7355 1.56856L14.0664 1.89997C14.8348 2.66887 14.8348 3.91548 14.0664 4.68383L8.67422 10.0788C8.43633 10.3139 8.14375 10.4862 7.82109 10.5791L5.08672 11.3612C4.85703 11.4268 4.61094 11.3612 4.44141 11.1698C4.27461 11.0249 4.20898 10.7788 4.27461 10.5491L5.05664 7.81469C5.14961 7.49204 5.32188 7.19946 5.55703 6.96157L10.952 1.56856ZM12.784 2.49661C12.5516 2.2404 12.1359 2.2404 11.8789 2.49661L11.0832 3.29204L12.3438 4.55259L13.1395 3.73227C13.3965 3.49985 13.3965 3.08423 13.1395 2.82801L12.784 2.49661ZM6.31992 8.17563L5.86055 9.77524L7.46016 9.31587C7.56953 9.28579 7.66523 9.22837 7.74453 9.14907L11.4168 5.47954L10.1562 4.21899L6.48672 7.89126C6.40742 7.97055 6.35 8.06626 6.31992 8.17563ZM6.21875 2.63579C6.58242 2.63579 6.875 2.92973 6.875 3.29204C6.875 3.65571 6.58242 3.94829 6.21875 3.94829H3.15625C2.55223 3.94829 2.0625 4.43774 2.0625 5.04204V12.4795C2.0625 13.0838 2.55223 13.5733 3.15625 13.5733H10.5938C11.198 13.5733 11.6875 13.0838 11.6875 12.4795V9.41704C11.6875 9.05337 11.9801 8.76079 12.3438 8.76079C12.7074 8.76079 13 9.05337 13 9.41704V12.4795C13 13.8084 11.9227 14.8858 10.5938 14.8858H3.15625C1.82734 14.8858 0.75 13.8084 0.75 12.4795V5.04204C0.75 3.71313 1.82734 2.63579 3.15625 2.63579H6.21875Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_688">
+                                            <rect width="14" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                                <!-- delete -->
+                                <span class="inline-block w-[28.25px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_697)">
+                                          <path d="M12.3437 3.07324C12.7074 3.07324 13 3.36719 13 3.72949C13 4.09316 12.7074 4.38574 12.3437 4.38574H12.0266L11.3703 13.2643C11.302 14.1775 10.5418 14.8857 9.62578 14.8857H4.12422C3.20875 14.8857 2.44777 14.1775 2.37996 13.2643L1.72234 4.38574H1.40625C1.04395 4.38574 0.75 4.09316 0.75 3.72949C0.75 3.36719 1.04395 3.07324 1.40625 3.07324H3.31539L4.31836 1.5677C4.60273 1.1416 5.08125 0.885742 5.59258 0.885742H8.15742C8.66875 0.885742 9.14727 1.14163 9.43164 1.5677L10.4352 3.07324H12.3437ZM5.59258 2.19824C5.52148 2.19824 5.42852 2.23488 5.41211 2.29559L4.89258 3.07324H8.85742L8.33789 2.29559C8.29687 2.23488 8.22852 2.19824 8.15742 2.19824H5.59258ZM10.7113 4.38574H3.0384L3.68945 13.1686C3.70586 13.3955 3.89727 13.5732 4.12422 13.5732H9.62578C9.85273 13.5732 10.0441 13.3955 10.0605 13.1686L10.7113 4.38574Z" fill="#EF4444"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_697">
+                                            <rect width="12.25" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b border-zinc-100">
+                            <th class="px-[20px] py-4" scope="row">
+                                10
+                            </th>
+                            <td class="px-4 py-4 flex items-center gap-[16px]">
+                                <img src="../assets/img/img-list-pd.svg" alt="" class="block w-[64px] h-[64px] object-cover">
+                                <span>Matte Aurora White</span>
+                            </td>
+                            <td class="py-4 px-4 style=" style="max-width: 420px;">
+                                <p class="line-clamp-2">TPU Paint Protection Film can protect your car from damages caused by stone chips, scratches, splatters, and any minor abrasions preventing the paint from fading and prolonging its lifespan. In the meantime, it brings a significant increase in brightness, turning it into an outstanding finish.</p>
+                            </td>
+                            <td class="px-4 py-4">
+                                <span class="px-2 py-1 bg-orange-50 rounded-lg text-orange-500 text-xs font-normal">PPF</span>
+                            </td>
+                            <td class="px-4 py-4">
+                                <!-- eye -->
+                                <span  class="inline-block w-[31px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_685)">
+                                          <path d="M4.375 7.88574C4.375 5.95254 5.9418 4.38574 7.875 4.38574C9.80821 4.38574 11.375 5.95254 11.375 7.88574C11.375 9.81894 9.80821 11.3857 7.875 11.3857C5.9418 11.3857 4.375 9.81894 4.375 7.88574ZM7.875 10.0732C9.0836 10.0732 10.0625 9.09434 10.0625 7.88574C10.0625 6.67715 9.0836 5.69824 7.875 5.69824C7.85586 5.69824 7.83946 5.69824 7.79571 5.69824C7.85586 5.8377 7.875 5.98535 7.875 6.13574C7.875 7.10098 7.09024 7.88574 6.125 7.88574C5.97461 7.88574 5.82696 7.8666 5.6875 7.80645C5.6875 7.8502 5.6875 7.8666 5.6875 7.86113C5.6875 9.09434 6.66641 10.0732 7.875 10.0732ZM2.60914 3.96465C3.89649 2.76809 5.66563 1.76074 7.875 1.76074C10.0844 1.76074 11.8535 2.76809 13.1414 3.96465C14.4211 5.15137 15.277 6.54863 15.6816 7.54941C15.7719 7.76543 15.7719 8.00605 15.6816 8.22207C15.277 9.19824 14.4211 10.5955 13.1414 11.8068C11.8535 13.0045 10.0844 14.0107 7.875 14.0107C5.66563 14.0107 3.89649 13.0045 2.60914 11.8068C1.32946 10.5955 0.474144 9.19824 0.0672964 8.22207C-0.0224321 8.00605 -0.0224321 7.76543 0.0672964 7.54941C0.474144 6.54863 1.32946 5.15137 2.60914 3.96465ZM7.875 3.07324C6.09219 3.07324 4.62657 3.88262 3.50274 4.92441C2.45 5.90332 1.72321 7.04082 1.35188 7.88574C1.72321 8.70605 2.45 9.86816 3.50274 10.8471C4.62657 11.8889 6.09219 12.6982 7.875 12.6982C9.65782 12.6982 11.1234 11.8889 12.2473 10.8471C13.3 9.86816 14.0027 8.70605 14.3992 7.88574C14.0027 7.04082 13.3 5.90332 12.2473 4.92441C11.1234 3.88262 9.65782 3.07324 7.875 3.07324Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_685">
+                                            <rect width="15.75" height="14" fill="white" transform="translate(0 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                                <!-- edit -->
+                                <span class="inline-block w-[30px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_688)">
+                                          <path d="M10.952 1.56856C11.7203 0.799737 12.9672 0.799737 13.7355 1.56856L14.0664 1.89997C14.8348 2.66887 14.8348 3.91548 14.0664 4.68383L8.67422 10.0788C8.43633 10.3139 8.14375 10.4862 7.82109 10.5791L5.08672 11.3612C4.85703 11.4268 4.61094 11.3612 4.44141 11.1698C4.27461 11.0249 4.20898 10.7788 4.27461 10.5491L5.05664 7.81469C5.14961 7.49204 5.32188 7.19946 5.55703 6.96157L10.952 1.56856ZM12.784 2.49661C12.5516 2.2404 12.1359 2.2404 11.8789 2.49661L11.0832 3.29204L12.3438 4.55259L13.1395 3.73227C13.3965 3.49985 13.3965 3.08423 13.1395 2.82801L12.784 2.49661ZM6.31992 8.17563L5.86055 9.77524L7.46016 9.31587C7.56953 9.28579 7.66523 9.22837 7.74453 9.14907L11.4168 5.47954L10.1562 4.21899L6.48672 7.89126C6.40742 7.97055 6.35 8.06626 6.31992 8.17563ZM6.21875 2.63579C6.58242 2.63579 6.875 2.92973 6.875 3.29204C6.875 3.65571 6.58242 3.94829 6.21875 3.94829H3.15625C2.55223 3.94829 2.0625 4.43774 2.0625 5.04204V12.4795C2.0625 13.0838 2.55223 13.5733 3.15625 13.5733H10.5938C11.198 13.5733 11.6875 13.0838 11.6875 12.4795V9.41704C11.6875 9.05337 11.9801 8.76079 12.3438 8.76079C12.7074 8.76079 13 9.05337 13 9.41704V12.4795C13 13.8084 11.9227 14.8858 10.5938 14.8858H3.15625C1.82734 14.8858 0.75 13.8084 0.75 12.4795V5.04204C0.75 3.71313 1.82734 2.63579 3.15625 2.63579H6.21875Z" fill="#71717A"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_688">
+                                            <rect width="14" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                                <!-- delete -->
+                                <span class="inline-block w-[28.25px] h-[22px] px-2 py-1 bg-neutral-50 rounded-lg cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15" fill="none">
+                                        <g clip-path="url(#clip0_8862_697)">
+                                          <path d="M12.3437 3.07324C12.7074 3.07324 13 3.36719 13 3.72949C13 4.09316 12.7074 4.38574 12.3437 4.38574H12.0266L11.3703 13.2643C11.302 14.1775 10.5418 14.8857 9.62578 14.8857H4.12422C3.20875 14.8857 2.44777 14.1775 2.37996 13.2643L1.72234 4.38574H1.40625C1.04395 4.38574 0.75 4.09316 0.75 3.72949C0.75 3.36719 1.04395 3.07324 1.40625 3.07324H3.31539L4.31836 1.5677C4.60273 1.1416 5.08125 0.885742 5.59258 0.885742H8.15742C8.66875 0.885742 9.14727 1.14163 9.43164 1.5677L10.4352 3.07324H12.3437ZM5.59258 2.19824C5.52148 2.19824 5.42852 2.23488 5.41211 2.29559L4.89258 3.07324H8.85742L8.33789 2.29559C8.29687 2.23488 8.22852 2.19824 8.15742 2.19824H5.59258ZM10.7113 4.38574H3.0384L3.68945 13.1686C3.70586 13.3955 3.89727 13.5732 4.12422 13.5732H9.62578C9.85273 13.5732 10.0441 13.3955 10.0605 13.1686L10.7113 4.38574Z" fill="#EF4444"/>
+                                        </g>
+                                        <defs>
+                                          <clipPath id="clip0_8862_697">
+                                            <rect width="12.25" height="14" fill="white" transform="translate(0.75 0.885742)"/>
+                                          </clipPath>
+                                        </defs>
+                                      </svg>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+           
+        </div>
+        <div
+          class="flex-col justify-center items-center inline-flex"
+        >
+          <div class="justify-start items-center gap-2 inline-flex">
+            <div
+              class="w-8 h-8 p-1 opacity-50 bg-zinc-200 rounded justify-center items-center flex cursor-pointer"
+            >
+              <div
+                class="w-6 h-6 relative flex-col justify-start items-start flex"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M15.1602 7.41L10.5802 12L15.1602 16.59L13.7502 18L7.75016 12L13.7502 6L15.1602 7.41Z"
+                    fill="#71717A"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="w-8 h-8 justify-center items-center flex">
+              <div
+                class="w-8 h-8 relative bg-white rounded border border-blue-400 flex-col justify-center items-center flex cursor-pointer"
+              >
+                <div
+                  class="w-6 h-[22px] text-center text-blue-400 text-sm font-normal font-['Inter'] leading-[21px]"
+                >
+                  1
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-8 h-8 px-1 py-[5px] bg-white rounded border border-zinc-200 justify-center items-center flex cursor-pointer"
+            >
+              <div
+                class="w-6 h-[22px] text-center text-zinc-500 text-sm font-normal font-['Inter'] leading-[21px]"
+              >
+                2
+              </div>
+            </div>
+            <div
+              class="w-8 h-8 px-1 py-[5px] bg-white rounded border border-zinc-200 justify-center items-center flex cursor-pointer"
+            >
+              <div
+                class="w-6 h-[22px] text-center text-zinc-500 text-sm font-normal font-['Inter'] leading-[21px]"
+              >
+                ...
+              </div>
+            </div>
+            <div
+              class="w-8 h-8 px-1 py-[5px] bg-white rounded border border-zinc-200 justify-center items-center flex cursor-pointer"
+            >
+              <div
+                class="w-6 h-[22px] text-center text-zinc-500 text-sm font-normal font-['Inter'] leading-[21px]"
+              >
+                9
+              </div>
+            </div>
+            <div
+              class="w-8 h-8 px-1 py-[5px] bg-white rounded border border-zinc-200 justify-center items-center flex cursor-pointer"
+            >
+              <div
+                class="w-6 h-[22px] text-center text-zinc-500 text-sm font-normal font-['Inter'] leading-[21px]"
+              >
+                10
+              </div>
+            </div>
+            <div
+              class="w-8 h-8 p-1 bg-white rounded border border-zinc-200 justify-center items-center flex cursor-pointer"
+            >
+              <div
+                class="w-6 h-6 relative flex-col justify-start items-start flex"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M8.83984 7.41L13.4198 12L8.83984 16.59L10.2498 18L16.2498 12L10.2498 6L8.83984 7.41Z"
+                    fill="#E4E4E7"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  </body>
+</html>

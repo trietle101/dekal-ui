@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Sale Management</title>
+</head>
+
+<body class="bg-[#FAFAFA] w-[1440px] mx-auto">
+    <div class="flex justify-between items-center px-[50px] py-4">
+        <div
+            class="w-12 self-stretch h-12 px-4 py-2 bg-white rounded-full border border-white inline-flex gap-2 justify-center items-center shadow">
+            <img class="w-6 h-6 relative" src="../assets/img/Logo-Dekal.svg" alt="">
+        </div>
+        <div class="flex gap-6">
+            <ul class="flex bg-white shadow rounded-[46px] p-1">
+                <li class=" self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer">
+                    <img class="w-3.5 h-[12.44px] relative" src="../assets/icon/house 1.svg" alt="">
+                    <div class="text-zinc-500 text-sm font-medium font-['Inter'] leading-[21px]">Dashboard</div>
+                </li>
+                <li class=" self-stretch px-4 py-2 justify-start items-center gap-2 flex rounded-[66px] cursor-pointer">
+                    <img class="w-3.5 h-3.5 relative relative" src="../assets/icon/layer-group 1.svg" alt="">
+                    <div class="text-zinc-500 text-sm font-medium font-['Inter'] leading-[21px]">Hóa đơn</div>
+
+                </li>
+
+                <li
+                    class=" self-stretch bg-red-50 rounded-[66px] px-4 py-2 justify-start items-center gap-2 flex relative cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
+                        <path
+                            d="M7.5 1C8.32812 1 9 1.67156 9 2.5V13.5C9 14.3281 8.32812 15 7.5 15H6.5C5.67188 15 5 14.3281 5 13.5V2.5C5 1.67156 5.67188 1 6.5 1H7.5ZM7.5 2.5H6.5V13.5H7.5V2.5ZM2.5 7C3.32812 7 4 7.67187 4 8.5V13.5C4 14.3281 3.32812 15 2.5 15H1.5C0.671562 15 0 14.3281 0 13.5V8.5C0 7.67187 0.671562 7 1.5 7H2.5ZM2.5 8.5H1.5V13.5H2.5V8.5ZM10 4.5C10 3.67187 10.6719 3 11.5 3H12.5C13.3281 3 14 3.67187 14 4.5V13.5C14 14.3281 13.3281 15 12.5 15H11.5C10.6719 15 10 14.3281 10 13.5V4.5ZM11.5 13.5H12.5V4.5H11.5V13.5Z"
+                            fill="#EF4444" />
+                    </svg>
+                    <div class="text-red-500 text-sm font-medium font-['Inter'] leading-[21px]">Doanh thu</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                        <path
+                            d="M3.64707 6.35308C3.84238 6.54839 4.15957 6.54839 4.35488 6.35308L7.35488 3.35308C7.5502 3.15776 7.5502 2.84058 7.35488 2.64526C7.15957 2.44995 6.84238 2.44995 6.64707 2.64526L4.0002 5.29214L1.35332 2.64683C1.15801 2.45151 0.84082 2.45151 0.645508 2.64683C0.450195 2.84214 0.450195 3.15933 0.645508 3.35464L3.64551 6.35464L3.64707 6.35308Z"
+                            fill="#EF4444" />
+                    </svg>
+                    <div
+                        class="absolute left-0 bottom-[-174px] w-[225px] h-[168px] p-1 bg-white rounded-lg shadow border border-white flex-col justify-center items-start gap-1 inline-flex">
+                        <div class="self-stretch px-4 py-2 rounded justify-start items-center gap-2.5 inline-flex">
+                            <div class="text-black text-sm font-normal font-['Inter'] leading-[21px]">Doanh thu bán hàng
+                            </div>
+                        </div>
+                        <div
+                            class="self-stretch px-4 py-2 bg-zinc-100 rounded justify-start items-center gap-2.5 inline-flex">
+                            <div class="text-zinc-800 text-sm font-normal font-['Inter'] leading-[21px]">Doanh thu tiền
+                                mặt</div>
+                        </div>
+                        <div class="self-stretch px-4 py-2 rounded justify-start items-center gap-2.5 inline-flex">
+                            <div class="text-zinc-800 text-sm font-normal font-['Inter'] leading-[21px]">Doanh thu
+                                chuyển khoản</div>
+                        </div>
+                        <div class="self-stretch px-4 py-2 rounded justify-start items-center gap-2.5 inline-flex">
+                            <div class="text-zinc-800 text-sm font-normal font-['Inter'] leading-[21px]">Công nợ</div>
+                        </div>
+                    </div>
+                </li>
+                <li class=" self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer">
+                    <img class="w-3.5 h-3.5 relative relative" src="../assets/icon/tape 1.svg" alt="">
+                    <div class="text-zinc-500 text-sm font-medium font-['Inter'] leading-[21px]">Vật liệu</div>
+                </li>
+                <li class=" self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer">
+                    <img class="w-3.5 h-3.5 relative relative" src="../assets/icon/wrench 1.svg" alt="">
+                    <div class="text-zinc-500 text-sm font-medium font-['Inter'] leading-[21px]">Gia công</div>
+                </li>
+                <li class=" self-stretch px-4 py-2  justify-start items-center gap-2 flex cursor-pointer">
+                    <img class="w-3.5 h-3.5 relative relative" src="../assets/icon/user-vneck 1.svg" alt="">
+                    <div class="text-zinc-500 text-sm font-medium font-['Inter'] leading-[21px]">Khách hàng</div>
+                </li>
+                <li class=" self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer">
+                    <img class="w-3.5 h-3.5 relative relative" src="../assets/icon/address-card 1.svg" alt="">
+                    <div class="text-zinc-500 text-sm font-medium font-['Inter'] leading-[21px]">Nhân sự</div>
+                </li>
+            </ul>
+            <button class="px-4 py-2 flex self-stretch justify-start items-center gap-2 rounded-[66px] bg-white shadow">
+                <img class="w-3.5 h-4 relative" src="../assets/icon/plus 1.svg" alt="">
+                <div class="text-red-500 text-sm font-medium font-['Inter'] leading-[21px]">Tạo hóa đơn</div>
+            </button>
+        </div>
+        <div
+            class="pl-1 pr-2 py-1 bg-white rounded-[66px] border border-white justify-start items-center gap-5 shadow flex cursor-pointer">
+            <div class="justify-start items-center gap-2 flex">
+                <img class="w-9 h-9 relative rounded-[50px]" src="../assets/img/Frame 7.png" />
+                <div class="flex-col justify-center items-start inline-flex">
+                    <p class="text-black text-xs font-medium font-['Inter'] leading-[18px]">Xuân Mai</p>
+                    <p class="text-zinc-500 text-xs font-normal font-['Inter'] leading-[18px]">Kế toán</p>
+                </div>
+            </div>
+            <div class="w-4 h-4 p-1 bg-zinc-100 rounded-2xl border border-zinc-200 justify-center items-center flex">
+                <img src="../assets/icon/Frame-down.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center pt-5 pb-10 px-6">
+        <div class="inline-flex flex-col gap-5">
+            <div
+                class="px-4 py-2 w-[207px] h-[37px] bg-white rounded-lg border border-zinc-200 justify-start items-center gap-2.5 inline-flex">
+                <div class="w-3.5 h-[12.44px] relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13" viewBox="0 0 14 13" fill="none">
+                        <g clip-path="url(#clip0_8180_5184)">
+                            <path
+                                d="M13.7934 5.86082C14.0389 6.06985 14.0705 6.43686 13.8615 6.68235C13.6524 6.92783 13.2854 6.95943 13.0399 6.7504L12.4444 6.24485V10.7778C12.4444 11.8521 11.5743 12.7223 10.5 12.7223H3.5C2.42618 12.7223 1.55555 11.8521 1.55555 10.7778V6.24485L0.960798 6.7504C0.715068 6.95943 0.347082 6.92783 0.138541 6.68235C-0.0698795 6.43686 -0.0397163 6.06985 0.20594 5.86082L6.62326 0.416374C6.83958 0.231651 7.16042 0.231651 7.37674 0.416374L13.7934 5.86082ZM3.5 11.5556H4.66667V7.86117C4.66667 7.32401 5.10174 6.88894 5.63889 6.88894H8.36111C8.89826 6.88894 9.33333 7.32401 9.33333 7.86117V11.5556H10.5C10.9302 11.5556 11.2778 11.208 11.2778 10.7778V5.25561L7 1.62606L2.72222 5.25561V10.7778C2.72222 11.208 3.06979 11.5556 3.5 11.5556ZM5.83333 11.5556H8.16667V8.05561H5.83333V11.5556Z"
+                                fill="#3F3F46" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_8180_5184">
+                                <rect width="14" height="12.4444" fill="white" transform="translate(0 0.277832)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+
+                <p class="text-zinc-700 text-sm">/</p>
+                <p class="text-zinc-700 text-sm">Doanh thu bán hàng</p>
+            </div>
+            <div
+                class="inline-flex justify-center items-center gap-5 w-[1156px] bg-white border border-zinc-200 rounded-xl">
+                <div class="inline-flex flex-col">
+                    <div
+                        class="self-stretch px-5 py-3 border-b border-zinc-100 justify-start items-center gap-2.5 inline-flex">
+                        <div class="justify-start items-center gap-2.5 flex">
+                            <div class="w-6 h-6 p-[7px] bg-blue-300 rounded-3xl justify-center items-center flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12"
+                                    fill="none">
+                                    <path
+                                        d="M5.35714 0.714355C5.94866 0.714355 6.42857 1.19404 6.42857 1.78578V9.64293C6.42857 10.2344 5.94866 10.7144 5.35714 10.7144H4.64286C4.05134 10.7144 3.57143 10.2344 3.57143 9.64293V1.78578C3.57143 1.19404 4.05134 0.714355 4.64286 0.714355H5.35714ZM5.35714 1.78578H4.64286V9.64293H5.35714V1.78578ZM1.78571 5.00007C2.37723 5.00007 2.85714 5.47998 2.85714 6.0715V9.64293C2.85714 10.2344 2.37723 10.7144 1.78571 10.7144H1.07143C0.479688 10.7144 0 10.2344 0 9.64293V6.0715C0 5.47998 0.479688 5.00007 1.07143 5.00007H1.78571ZM1.78571 6.0715H1.07143V9.64293H1.78571V6.0715ZM7.14286 3.21436C7.14286 2.62284 7.62277 2.14293 8.21429 2.14293H8.92857C9.52009 2.14293 10 2.62284 10 3.21436V9.64293C10 10.2344 9.52009 10.7144 8.92857 10.7144H8.21429C7.62277 10.7144 7.14286 10.2344 7.14286 9.64293V3.21436ZM8.21429 9.64293H8.92857V3.21436H8.21429V9.64293Z"
+                                        fill="#FAFAFA" />
+                                </svg>
+                            </div>
+                            <div class="text-blue-400 text-sm font-bold font-['Inter'] leading-[21px]">Tìm kiếm & lọc
+                                doanh thu bán hàng</div>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div>
+                            <div class="flex gap-6 py-3">
+                                <div class="grow shrink basis-0 h-[29px] justify-start items-center gap-2.5 flex">
+                                    <label
+                                        class="w-[130px] text-zinc-800 text-sm font-medium font-['Inter'] leading-[21px]"
+                                        for="name">Hiện thị theo:
+                                    </label>
+                                    <select
+                                        class="w-[406px] text-sm bg-neutral-50 p-1 border-b border-zinc-300 text-zinc-500"
+                                        name="" id="">
+                                        <option value="">Quý</option>
+                                        <option value="">Năm</option>
+                                    </select>
+                                </div>
+                                <div class="grow shrink basis-0 h-[29px] justify-start items-center gap-2.5 flex">
+                                    <label
+                                        class="w-[130px] text-zinc-800 text-sm font-medium font-['Inter'] leading-[21px]"
+                                        for="name">Chi tiết:
+                                    </label>
+                                    <select
+                                        class="w-[406px] text-sm bg-neutral-50 p-1 border-b border-zinc-300 text-zinc-500"
+                                        name="" id="">
+                                        <option value="">Quý 1 (tháng 1 -> tháng 3)</option>
+                                        <option value="">Quý 2 (tháng 4 -> tháng 6)</option>
+                                        <option value="">Quý 3 (tháng 7 -> tháng 9)</option>
+                                        <option value="">Quý 4 (tháng 10 -> tháng 12)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="flex gap-6 py-3">
+                                <div class="grow shrink basis-0 h-[29px] justify-start items-center gap-2.5 flex">
+                                    <label
+                                        class="w-[130px] text-zinc-800 text-sm font-medium font-['Inter'] leading-[21px]"
+                                        for="name">Tiềm kiếm theo:
+                                    </label>
+                                    <select
+                                        class="w-[406px] text-sm bg-neutral-50 p-1 border-b border-zinc-300 text-zinc-500"
+                                        name="" id="">
+                                        <option value="">Tên</option>
+                                        <option value="">Số điện thoại</option>
+                                        <option value="">Email</option>
+                                    </select>
+                                </div>
+                                <div class="grow shrink basis-0 h-[29px] justify-start items-center gap-2.5 flex">
+                                    <label
+                                        class="w-[130px] text-zinc-800 text-sm font-medium font-['Inter'] leading-[21px]"
+                                        for="search">Chi tiết:
+                                    </label>
+                                    <input
+                                        class="w-[406px] text-sm bg-neutral-50 p-1 border-b border-zinc-300 placeholder-zinc-500"
+                                        type="text" name="name" id="search"
+                                        placeholder="Nhập tên hoặc số điện thoại...">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="flex gap-2.5 justify-end px-5 py-3">
+                            <div
+                                class="h-[34px] px-4 py-2 rounded border border-zinc-800 justify-center items-center gap-2 inline-flex">
+                                <button class="text-center text-zinc-500 text-xs leading-[18px]">Gỡ lọc</button>
+                            </div>
+                            <div
+                                class="w-[106px] h-[34px] px-4 py-2 bg-zinc-700 rounded justify-center items-center gap-2 inline-flex">
+                                <img class="w-3.5 h-3.5 relative" src="../assets/icon/magnifying-glass 1.svg" alt="">
+                                <button
+                                    class="text-center text-white text-xs font-normal font-['Inter'] leading-[18px]">Tìm
+                                    kiếm</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div
+                class="w-[1156px] h-56 px-5 py-3 border-t border-zinc-100 justify-start rounded-xl bg-[#D3F2E5] items-center gap-5 inline-flex">
+
+                <div class="w-60 h-[200px] relative">
+                    <div class="w-[200.59px] h-[165.71px] left-[22.56px] top-[17.14px] absolute">
+                        <img src="../assets/icon/SVG.svg" alt="">
+                    </div>
+                    <div
+                        class="h-10 px-4 py-2 left-[75px] top-[17px] absolute bg-white rounded-xl justify-center items-center gap-2 inline-flex">
+                        <div class="w-3 h-[13.71px] relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14"
+                                fill="none">
+                                <g clip-path="url(#clip0_8749_767)">
+                                    <path
+                                        d="M3.42857 0.142822C3.90268 0.142822 4.28571 0.525858 4.28571 0.999965V1.85711H7.71429V0.999965C7.71429 0.525858 8.09732 0.142822 8.57143 0.142822C9.04554 0.142822 9.42857 0.525858 9.42857 0.999965V1.85711H10.7143C11.4241 1.85711 12 2.433 12 3.14282V4.42854H0V3.14282C0 2.433 0.575893 1.85711 1.28571 1.85711H2.57143V0.999965C2.57143 0.525858 2.95446 0.142822 3.42857 0.142822ZM0 5.28568H12V12.5714C12 13.2812 11.4241 13.8571 10.7143 13.8571H1.28571C0.575893 13.8571 0 13.2812 0 12.5714V5.28568ZM1.71429 7.42854V8.28568C1.71429 8.52139 1.90714 8.71425 2.14286 8.71425H3C3.23571 8.71425 3.42857 8.52139 3.42857 8.28568V7.42854C3.42857 7.19282 3.23571 6.99997 3 6.99997H2.14286C1.90714 6.99997 1.71429 7.19282 1.71429 7.42854ZM5.14286 7.42854V8.28568C5.14286 8.52139 5.33571 8.71425 5.57143 8.71425H6.42857C6.66429 8.71425 6.85714 8.52139 6.85714 8.28568V7.42854C6.85714 7.19282 6.66429 6.99997 6.42857 6.99997H5.57143C5.33571 6.99997 5.14286 7.19282 5.14286 7.42854ZM9 6.99997C8.76429 6.99997 8.57143 7.19282 8.57143 7.42854V8.28568C8.57143 8.52139 8.76429 8.71425 9 8.71425H9.85714C10.0929 8.71425 10.2857 8.52139 10.2857 8.28568V7.42854C10.2857 7.19282 10.0929 6.99997 9.85714 6.99997H9ZM1.71429 10.8571V11.7143C1.71429 11.95 1.90714 12.1428 2.14286 12.1428H3C3.23571 12.1428 3.42857 11.95 3.42857 11.7143V10.8571C3.42857 10.6214 3.23571 10.4285 3 10.4285H2.14286C1.90714 10.4285 1.71429 10.6214 1.71429 10.8571ZM5.57143 10.4285C5.33571 10.4285 5.14286 10.6214 5.14286 10.8571V11.7143C5.14286 11.95 5.33571 12.1428 5.57143 12.1428H6.42857C6.66429 12.1428 6.85714 11.95 6.85714 11.7143V10.8571C6.85714 10.6214 6.66429 10.4285 6.42857 10.4285H5.57143ZM8.57143 10.8571V11.7143C8.57143 11.95 8.76429 12.1428 9 12.1428H9.85714C10.0929 12.1428 10.2857 11.95 10.2857 11.7143V10.8571C10.2857 10.6214 10.0929 10.4285 9.85714 10.4285H9C8.76429 10.4285 8.57143 10.6214 8.57143 10.8571Z"
+                                        fill="#1E9C78" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_8749_767">
+                                        <rect width="12" height="13.7143" fill="white"
+                                            transform="translate(0 0.142822)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="text-teal-600 text-base font-normal font-['PoetsenOne'] leading-normal">2024</div>
+                    </div>
+                </div>
+                <div
+                    class="w-[261.33px] h-[173px] p-5 bg-green-50 rounded-xl flex flex-col gap-1 justify-center items-center">
+                    <div class="flex flex-col justify-center items-center gap-2">
+                        <div
+                            class="w-6 h-6 px-1.5 pt-[7px] pb-[6.33px] bg-[#60897A] rounded-3xl justify-center items-center inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                fill="none">
+                                <g clip-path="url(#clip0_8749_774)">
+                                    <path
+                                        d="M4.6665 5.83325C4.6665 4.71034 5.54359 3.83325 6.6665 3.83325C7.77067 3.83325 8.6665 4.71034 8.6665 5.83325C8.6665 6.93742 7.77067 7.83325 6.6665 7.83325C5.54359 7.83325 4.6665 6.93742 4.6665 5.83325ZM0.666504 3.16659C0.666504 2.43013 1.26338 1.83325 1.99984 1.83325H11.3332C12.0686 1.83325 12.6665 2.43013 12.6665 3.16659V8.49992C12.6665 9.23534 12.0686 9.83325 11.3332 9.83325H1.99984C1.26338 9.83325 0.666504 9.23534 0.666504 8.49992V3.16659ZM1.6665 4.16659V7.49992C2.40296 7.49992 2.99984 8.09784 2.99984 8.83325H10.3332C10.3332 8.09784 10.9311 7.49992 11.6665 7.49992V4.16659C10.9311 4.16659 10.3332 3.56867 10.3332 2.83325H2.99984C2.99984 3.56867 2.40296 4.16659 1.6665 4.16659Z"
+                                        fill="#FAFAFA" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_8749_774">
+                                        <rect width="12" height="10.6667" fill="white"
+                                            transform="translate(0.666504 0.5)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p class="text-gray-500 text-sm font-normal font-['Inter'] leading-[21px]">
+                            Doanh thu tìm kiếm
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-center text-gray-500 text-2xl font-medium font-['Inter'] leading-9">
+                            100,000,000
+                        </p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="61" height="37" viewBox="0 0 61 37" fill="none">
+                        <g clip-path="url(#clip0_8749_780)">
+                            <mask id="mask0_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask0_8749_780)">
+                                <path
+                                    d="M11.0278 36.251C11.0278 35.251 12.0278 34.251 13.0278 34.251C13.6884 34.251 14.3489 35.251 14.3489 36.251C14.3489 36.376 13.3489 36.501 12.3489 36.501C11.6884 36.501 11.0278 36.376 11.0278 36.251Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask1_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask1_8749_780)">
+                                <path
+                                    d="M15.9126 34.5014V30.4014C15.9126 29.4014 16.9126 28.4014 17.9126 28.4014C18.5731 28.4014 19.2337 29.4014 19.2337 30.4014V34.5014C19.2337 35.5014 18.2337 36.5014 17.2337 36.5014C16.5731 36.5014 15.9126 35.5014 15.9126 34.5014Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask2_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask2_8749_780)">
+                                <path
+                                    d="M20.7954 34.5006V33.1006C20.7954 32.1006 21.7954 31.1006 22.7954 31.1006C23.456 31.1006 24.1165 32.1006 24.1165 33.1006V34.5006C24.1165 35.5006 23.1165 36.5006 22.1165 36.5006C21.456 36.5006 20.7954 35.5006 20.7954 34.5006Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask3_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask3_8749_780)">
+                                <path
+                                    d="M25.6802 34.501V15.551C25.6802 14.551 26.6802 13.551 27.6802 13.551C28.3407 13.551 29.0013 14.551 29.0013 15.551V34.501C29.0013 35.501 28.0013 36.501 27.0013 36.501C26.3407 36.501 25.6802 35.501 25.6802 34.501Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask4_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask4_8749_780)">
+                                <path
+                                    d="M30.5649 34.5014V7.90137C30.5649 6.90137 31.5649 5.90137 32.5649 5.90137C33.2255 5.90137 33.886 6.90137 33.886 7.90137V34.5014C33.886 35.5014 32.886 36.5014 31.886 36.5014C31.2255 36.5014 30.5649 35.5014 30.5649 34.5014Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask5_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask5_8749_780)">
+                                <path
+                                    d="M35.4478 34.501V33.551C35.4478 32.551 36.4478 31.551 37.4478 31.551C38.1083 31.551 38.7688 32.551 38.7688 33.551V34.501C38.7688 35.501 37.7688 36.501 36.7688 36.501C36.1083 36.501 35.4478 35.501 35.4478 34.501Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask6_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask6_8749_780)">
+                                <path
+                                    d="M40.3325 34.5012V20.9512C40.3325 19.9512 41.3325 18.9512 42.3325 18.9512C42.9931 18.9512 43.6536 19.9512 43.6536 20.9512V34.5012C43.6536 35.5012 42.6536 36.5012 41.6536 36.5012C40.9931 36.5012 40.3325 35.5012 40.3325 34.5012Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask7_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask7_8749_780)">
+                                <path
+                                    d="M45.2153 34.5006V21.8506C45.2153 20.8506 46.2153 19.8506 47.2153 19.8506C47.8759 19.8506 48.5364 20.8506 48.5364 21.8506V34.5006C48.5364 35.5006 47.5364 36.5006 46.5364 36.5006C45.8759 36.5006 45.2153 35.5006 45.2153 34.5006Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask8_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask8_8749_780)">
+                                <path
+                                    d="M50.1001 34.5006V26.3506C50.1001 25.3506 51.1001 24.3506 52.1001 24.3506C52.7606 24.3506 53.4212 25.3506 53.4212 26.3506V34.5006C53.4212 35.5006 52.4212 36.5006 51.4212 36.5006C50.7606 36.5006 50.1001 35.5006 50.1001 34.5006Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask9_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask9_8749_780)">
+                                <path
+                                    d="M54.9829 34.501V29.501C54.9829 28.501 55.9829 27.501 56.9829 27.501C57.6435 27.501 58.304 28.501 58.304 29.501V34.501C58.304 35.501 57.304 36.501 56.304 36.501C55.6435 36.501 54.9829 35.501 54.9829 34.501Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_8749_780">
+                                <rect width="60" height="36" fill="white" transform="translate(0.666504 0.5)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+                    <circle cx="6.3335" cy="6" r="6" fill="#BCE9D8" />
+                </svg>
+                <div
+                    class="w-[261.33px] h-[173px] p-5 bg-green-50 rounded-xl flex flex-col gap-1 justify-center items-center">
+                    <div class="flex flex-col justify-center items-center gap-2">
+                        <div
+                            class="w-6 h-6 px-1.5 pt-[7px] pb-[6.33px] bg-[#60897A] rounded-3xl justify-center items-center inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                fill="none">
+                                <g clip-path="url(#clip0_8749_774)">
+                                    <path
+                                        d="M4.6665 5.83325C4.6665 4.71034 5.54359 3.83325 6.6665 3.83325C7.77067 3.83325 8.6665 4.71034 8.6665 5.83325C8.6665 6.93742 7.77067 7.83325 6.6665 7.83325C5.54359 7.83325 4.6665 6.93742 4.6665 5.83325ZM0.666504 3.16659C0.666504 2.43013 1.26338 1.83325 1.99984 1.83325H11.3332C12.0686 1.83325 12.6665 2.43013 12.6665 3.16659V8.49992C12.6665 9.23534 12.0686 9.83325 11.3332 9.83325H1.99984C1.26338 9.83325 0.666504 9.23534 0.666504 8.49992V3.16659ZM1.6665 4.16659V7.49992C2.40296 7.49992 2.99984 8.09784 2.99984 8.83325H10.3332C10.3332 8.09784 10.9311 7.49992 11.6665 7.49992V4.16659C10.9311 4.16659 10.3332 3.56867 10.3332 2.83325H2.99984C2.99984 3.56867 2.40296 4.16659 1.6665 4.16659Z"
+                                        fill="#FAFAFA" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_8749_774">
+                                        <rect width="12" height="10.6667" fill="white"
+                                            transform="translate(0.666504 0.5)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p class="text-gray-500 text-sm font-normal font-['Inter'] leading-[21px]">
+                            Doanh thu hôm nay
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-center text-gray-500 text-2xl font-medium font-['Inter'] leading-9">
+                            100,000,000
+                        </p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="61" height="37" viewBox="0 0 61 37" fill="none">
+                        <g clip-path="url(#clip0_8749_780)">
+                            <mask id="mask0_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask0_8749_780)">
+                                <path
+                                    d="M11.0278 36.251C11.0278 35.251 12.0278 34.251 13.0278 34.251C13.6884 34.251 14.3489 35.251 14.3489 36.251C14.3489 36.376 13.3489 36.501 12.3489 36.501C11.6884 36.501 11.0278 36.376 11.0278 36.251Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask1_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask1_8749_780)">
+                                <path
+                                    d="M15.9126 34.5014V30.4014C15.9126 29.4014 16.9126 28.4014 17.9126 28.4014C18.5731 28.4014 19.2337 29.4014 19.2337 30.4014V34.5014C19.2337 35.5014 18.2337 36.5014 17.2337 36.5014C16.5731 36.5014 15.9126 35.5014 15.9126 34.5014Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask2_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask2_8749_780)">
+                                <path
+                                    d="M20.7954 34.5006V33.1006C20.7954 32.1006 21.7954 31.1006 22.7954 31.1006C23.456 31.1006 24.1165 32.1006 24.1165 33.1006V34.5006C24.1165 35.5006 23.1165 36.5006 22.1165 36.5006C21.456 36.5006 20.7954 35.5006 20.7954 34.5006Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask3_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask3_8749_780)">
+                                <path
+                                    d="M25.6802 34.501V15.551C25.6802 14.551 26.6802 13.551 27.6802 13.551C28.3407 13.551 29.0013 14.551 29.0013 15.551V34.501C29.0013 35.501 28.0013 36.501 27.0013 36.501C26.3407 36.501 25.6802 35.501 25.6802 34.501Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask4_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask4_8749_780)">
+                                <path
+                                    d="M30.5649 34.5014V7.90137C30.5649 6.90137 31.5649 5.90137 32.5649 5.90137C33.2255 5.90137 33.886 6.90137 33.886 7.90137V34.5014C33.886 35.5014 32.886 36.5014 31.886 36.5014C31.2255 36.5014 30.5649 35.5014 30.5649 34.5014Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask5_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask5_8749_780)">
+                                <path
+                                    d="M35.4478 34.501V33.551C35.4478 32.551 36.4478 31.551 37.4478 31.551C38.1083 31.551 38.7688 32.551 38.7688 33.551V34.501C38.7688 35.501 37.7688 36.501 36.7688 36.501C36.1083 36.501 35.4478 35.501 35.4478 34.501Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask6_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask6_8749_780)">
+                                <path
+                                    d="M40.3325 34.5012V20.9512C40.3325 19.9512 41.3325 18.9512 42.3325 18.9512C42.9931 18.9512 43.6536 19.9512 43.6536 20.9512V34.5012C43.6536 35.5012 42.6536 36.5012 41.6536 36.5012C40.9931 36.5012 40.3325 35.5012 40.3325 34.5012Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask7_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask7_8749_780)">
+                                <path
+                                    d="M45.2153 34.5006V21.8506C45.2153 20.8506 46.2153 19.8506 47.2153 19.8506C47.8759 19.8506 48.5364 20.8506 48.5364 21.8506V34.5006C48.5364 35.5006 47.5364 36.5006 46.5364 36.5006C45.8759 36.5006 45.2153 35.5006 45.2153 34.5006Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask8_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask8_8749_780)">
+                                <path
+                                    d="M50.1001 34.5006V26.3506C50.1001 25.3506 51.1001 24.3506 52.1001 24.3506C52.7606 24.3506 53.4212 25.3506 53.4212 26.3506V34.5006C53.4212 35.5006 52.4212 36.5006 51.4212 36.5006C50.7606 36.5006 50.1001 35.5006 50.1001 34.5006Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask9_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask9_8749_780)">
+                                <path
+                                    d="M54.9829 34.501V29.501C54.9829 28.501 55.9829 27.501 56.9829 27.501C57.6435 27.501 58.304 28.501 58.304 29.501V34.501C58.304 35.501 57.304 36.501 56.304 36.501C55.6435 36.501 54.9829 35.501 54.9829 34.501Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_8749_780">
+                                <rect width="60" height="36" fill="white" transform="translate(0.666504 0.5)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div
+                    class="w-[261.33px] h-[173px] p-5 bg-green-50 rounded-xl flex flex-col gap-1 justify-center items-center">
+                    <div class="flex flex-col justify-center items-center gap-2">
+                        <div
+                            class="w-6 h-6 px-1.5 pt-[7px] pb-[6.33px] bg-[#60897A] rounded-3xl justify-center items-center inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                fill="none">
+                                <g clip-path="url(#clip0_8749_774)">
+                                    <path
+                                        d="M4.6665 5.83325C4.6665 4.71034 5.54359 3.83325 6.6665 3.83325C7.77067 3.83325 8.6665 4.71034 8.6665 5.83325C8.6665 6.93742 7.77067 7.83325 6.6665 7.83325C5.54359 7.83325 4.6665 6.93742 4.6665 5.83325ZM0.666504 3.16659C0.666504 2.43013 1.26338 1.83325 1.99984 1.83325H11.3332C12.0686 1.83325 12.6665 2.43013 12.6665 3.16659V8.49992C12.6665 9.23534 12.0686 9.83325 11.3332 9.83325H1.99984C1.26338 9.83325 0.666504 9.23534 0.666504 8.49992V3.16659ZM1.6665 4.16659V7.49992C2.40296 7.49992 2.99984 8.09784 2.99984 8.83325H10.3332C10.3332 8.09784 10.9311 7.49992 11.6665 7.49992V4.16659C10.9311 4.16659 10.3332 3.56867 10.3332 2.83325H2.99984C2.99984 3.56867 2.40296 4.16659 1.6665 4.16659Z"
+                                        fill="#FAFAFA" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_8749_774">
+                                        <rect width="12" height="10.6667" fill="white"
+                                            transform="translate(0.666504 0.5)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <p class="text-gray-500 text-sm font-normal font-['Inter'] leading-[21px]">
+                            Doanh thu tháng 3
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-center text-gray-500 text-2xl font-medium font-['Inter'] leading-9">
+                            100,000,000
+                        </p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="61" height="37" viewBox="0 0 61 37" fill="none">
+                        <g clip-path="url(#clip0_8749_780)">
+                            <mask id="mask0_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask0_8749_780)">
+                                <path
+                                    d="M11.0278 36.251C11.0278 35.251 12.0278 34.251 13.0278 34.251C13.6884 34.251 14.3489 35.251 14.3489 36.251C14.3489 36.376 13.3489 36.501 12.3489 36.501C11.6884 36.501 11.0278 36.376 11.0278 36.251Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask1_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask1_8749_780)">
+                                <path
+                                    d="M15.9126 34.5014V30.4014C15.9126 29.4014 16.9126 28.4014 17.9126 28.4014C18.5731 28.4014 19.2337 29.4014 19.2337 30.4014V34.5014C19.2337 35.5014 18.2337 36.5014 17.2337 36.5014C16.5731 36.5014 15.9126 35.5014 15.9126 34.5014Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask2_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask2_8749_780)">
+                                <path
+                                    d="M20.7954 34.5006V33.1006C20.7954 32.1006 21.7954 31.1006 22.7954 31.1006C23.456 31.1006 24.1165 32.1006 24.1165 33.1006V34.5006C24.1165 35.5006 23.1165 36.5006 22.1165 36.5006C21.456 36.5006 20.7954 35.5006 20.7954 34.5006Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask3_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask3_8749_780)">
+                                <path
+                                    d="M25.6802 34.501V15.551C25.6802 14.551 26.6802 13.551 27.6802 13.551C28.3407 13.551 29.0013 14.551 29.0013 15.551V34.501C29.0013 35.501 28.0013 36.501 27.0013 36.501C26.3407 36.501 25.6802 35.501 25.6802 34.501Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask4_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask4_8749_780)">
+                                <path
+                                    d="M30.5649 34.5014V7.90137C30.5649 6.90137 31.5649 5.90137 32.5649 5.90137C33.2255 5.90137 33.886 6.90137 33.886 7.90137V34.5014C33.886 35.5014 32.886 36.5014 31.886 36.5014C31.2255 36.5014 30.5649 35.5014 30.5649 34.5014Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask5_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask5_8749_780)">
+                                <path
+                                    d="M35.4478 34.501V33.551C35.4478 32.551 36.4478 31.551 37.4478 31.551C38.1083 31.551 38.7688 32.551 38.7688 33.551V34.501C38.7688 35.501 37.7688 36.501 36.7688 36.501C36.1083 36.501 35.4478 35.501 35.4478 34.501Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask6_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask6_8749_780)">
+                                <path
+                                    d="M40.3325 34.5012V20.9512C40.3325 19.9512 41.3325 18.9512 42.3325 18.9512C42.9931 18.9512 43.6536 19.9512 43.6536 20.9512V34.5012C43.6536 35.5012 42.6536 36.5012 41.6536 36.5012C40.9931 36.5012 40.3325 35.5012 40.3325 34.5012Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask7_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask7_8749_780)">
+                                <path
+                                    d="M45.2153 34.5006V21.8506C45.2153 20.8506 46.2153 19.8506 47.2153 19.8506C47.8759 19.8506 48.5364 20.8506 48.5364 21.8506V34.5006C48.5364 35.5006 47.5364 36.5006 46.5364 36.5006C45.8759 36.5006 45.2153 35.5006 45.2153 34.5006Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask8_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask8_8749_780)">
+                                <path
+                                    d="M50.1001 34.5006V26.3506C50.1001 25.3506 51.1001 24.3506 52.1001 24.3506C52.7606 24.3506 53.4212 25.3506 53.4212 26.3506V34.5006C53.4212 35.5006 52.4212 36.5006 51.4212 36.5006C50.7606 36.5006 50.1001 35.5006 50.1001 34.5006Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                            <mask id="mask9_8749_780" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="2"
+                                y="-2" width="65" height="41">
+                                <path d="M66.6665 -1.5H2.6665V38.5H66.6665V-1.5Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask9_8749_780)">
+                                <path
+                                    d="M54.9829 34.501V29.501C54.9829 28.501 55.9829 27.501 56.9829 27.501C57.6435 27.501 58.304 28.501 58.304 29.501V34.501C58.304 35.501 57.304 36.501 56.304 36.501C55.6435 36.501 54.9829 35.501 54.9829 34.501Z"
+                                    fill="#B3E5D0" />
+                            </g>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_8749_780">
+                                <rect width="60" height="36" fill="white" transform="translate(0.666504 0.5)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <div class=" bg-white rounded-xl border border-zinc-200">
+                <div class="flex justify-between px-5 py-3 border-b border-zinc-100">
+                    <div class="flex justify-center items-center gap-2.5">
+                        <div
+                            class="w-6 h-6 px-[7px] pt-1.5 pb-[6.57px] bg-blue-300 rounded-3xl justify-center items-center flex">
+                            <img class="w-2.5 h-[11.43px] relative flex-col justify-start items-start flex"
+                                src="../assets/icon/ballot-check 1.svg" alt="">
+                        </div>
+                        <div class="text-blue-400 text-sm font-bold leading-[21px]">Hóa đơn</div>
+                    </div>
+                    <button
+                        class="w-[116px] h-[34px] px-4 py-2 bg-green-600 flex gap-2 items-center justify-center rounded">
+                        <div class="w-4 h-4">
+                            <img src="../assets/img/xlsx.png" alt="">
+                        </div>
+                        <div class="text-center text-neutral-50 text-xs font-normal leading-[18px]">
+                            Xuất Excel</div>
+                    </button>
+                </div>
+                <div class="">
+                    <table class="text-left w-[1156px]">
+                        <thead class="text-xs px-5 bg-neutral-50">
+                            <tr class="pt-12 h-[42px] border-b border-zinc-100">
+                                <th scope="col" class="w-5 pr-6 pl-5 font-medium">#</th>
+                                <th scope="col" class="w-[89px] pr-6 font-medium">Số hóa đơn</th>
+                                <th scope="col" class="w-[180px] pr-6 font-medium">Khách hàng</th>
+                                <th scope="col" class="w-[100px] pr-6 font-medium">Số ĐT</th>
+                                <th scope="col" class="w-[130px] pr-6 font-medium">Thời gian lấy hàng</th>
+                                <th scope="col" class="w-[100px] pr-6 font-medium">Tổng tiền</th>
+                                <th scope="col" class="w-[140px] pr-6 font-medium">Trạng thái thanh toán</th>
+                                <th scope="col" class="w-[120px] pr-6 font-medium">Trạng thái duyệt</th>
+                                <th scope="col" class="w-[76px] pr-5 font-medium">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="py-3 px-5 h-[47px] border-b border-zinc-100 hover:bg-neutral-50">
+                                <td class="">
+                                    <p class="text-zinc-800 text-xs font-normal">1</p>
+                                </td>
+                                <td>
+                                    <p class="text-zinc-800 text-xs font-normal">45321</p>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-4 h-4 p-1 rounded-3xl border border-zinc-200 justify-center items-center inline-flex">
+                                            <img class="w-2 h-2 relative flex-col justify-start items-start flex"
+                                                src="../assets/img/Logo-Dekal.svg" alt="">
+                                        </div>
+                                        <div class="text-zinc-800 text-xs font-normal leading-[18px]">Nguyễn
+                                            Thành Huy</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-zinc-800 text-xs font-normal leading-[18px]">0954515744
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-[71px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                19/02/2024</div>
+                                        </div>
+                                        <div
+                                            class="w-[42px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                15:25</div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-green-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <p class="text-green-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            150.000.000đ</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-red-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-red-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chưa
+                                            thanh toán</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-orange-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-orange-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chờ duyệt</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2.5">
+                                        <div
+                                            class="w-[31.75px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex eye_btn">
+                                            <button class="w-[15.75px] h-3.5 relative">
+                                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="eye 1" clip-path="url(#clip0_8206_6996)">
+                                                        <path id="Vector"
+                                                            d="M4.375 7.5C4.375 5.5668 5.9418 4 7.875 4C9.80821 4 11.375 5.5668 11.375 7.5C11.375 9.4332 9.80821 11 7.875 11C5.9418 11 4.375 9.4332 4.375 7.5ZM7.875 9.6875C9.0836 9.6875 10.0625 8.70859 10.0625 7.5C10.0625 6.29141 9.0836 5.3125 7.875 5.3125C7.85586 5.3125 7.83946 5.3125 7.79571 5.3125C7.85586 5.45195 7.875 5.59961 7.875 5.75C7.875 6.71523 7.09024 7.5 6.125 7.5C5.97461 7.5 5.82696 7.48086 5.6875 7.4207C5.6875 7.46445 5.6875 7.48086 5.6875 7.47539C5.6875 8.70859 6.66641 9.6875 7.875 9.6875ZM2.60914 3.57891C3.89649 2.38234 5.66563 1.375 7.875 1.375C10.0844 1.375 11.8535 2.38234 13.1414 3.57891C14.4211 4.76562 15.277 6.16289 15.6816 7.16367C15.7719 7.37969 15.7719 7.62031 15.6816 7.83633C15.277 8.8125 14.4211 10.2098 13.1414 11.4211C11.8535 12.6187 10.0844 13.625 7.875 13.625C5.66563 13.625 3.89649 12.6187 2.60914 11.4211C1.32946 10.2098 0.474144 8.8125 0.0672964 7.83633C-0.0224321 7.62031 -0.0224321 7.37969 0.0672964 7.16367C0.474144 6.16289 1.32946 4.76562 2.60914 3.57891ZM7.875 2.6875C6.09219 2.6875 4.62657 3.49688 3.50274 4.53867C2.45 5.51758 1.72321 6.65508 1.35188 7.5C1.72321 8.32031 2.45 9.48242 3.50274 10.4613C4.62657 11.5031 6.09219 12.3125 7.875 12.3125C9.65782 12.3125 11.1234 11.5031 12.2473 10.4613C13.3 9.48242 14.0027 8.32031 14.3992 7.5C14.0027 6.65508 13.3 5.51758 12.2473 4.53867C11.1234 3.49688 9.65782 2.6875 7.875 2.6875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_6996">
+                                                            <rect width="15.75" height="14" fill="white"
+                                                                transform="translate(0 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </button>
+
+                                        </div>
+                                        <div
+                                            class="w-[30px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex detail_btn">
+                                            <button class="w-3.5 h-3.5 relative">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="pen-to-square 1" clip-path="url(#clip0_8206_7003)">
+                                                        <path id="Vector"
+                                                            d="M10.952 1.18282C11.7203 0.413995 12.9672 0.413995 13.7355 1.18282L14.0664 1.51423C14.8348 2.28313 14.8348 3.52973 14.0664 4.29809L8.67422 9.69301C8.43633 9.92817 8.14375 10.1004 7.82109 10.1934L5.08672 10.9754C4.85703 11.0411 4.61094 10.9754 4.44141 10.784C4.27461 10.6391 4.20898 10.393 4.27461 10.1633L5.05664 7.42895C5.14961 7.1063 5.32188 6.81372 5.55703 6.57583L10.952 1.18282ZM12.784 2.11087C12.5516 1.85466 12.1359 1.85466 11.8789 2.11087L11.0832 2.9063L12.3438 4.16684L13.1395 3.34653C13.3965 3.11411 13.3965 2.69848 13.1395 2.44227L12.784 2.11087ZM6.31992 7.78989L5.86055 9.3895L7.46016 8.93012C7.56953 8.90005 7.66523 8.84262 7.74453 8.76333L11.4168 5.0938L10.1562 3.83325L6.48672 7.50552C6.40742 7.58481 6.35 7.68051 6.31992 7.78989ZM6.21875 2.25005C6.58242 2.25005 6.875 2.54399 6.875 2.9063C6.875 3.26997 6.58242 3.56255 6.21875 3.56255H3.15625C2.55223 3.56255 2.0625 4.052 2.0625 4.6563V12.0938C2.0625 12.6981 2.55223 13.1875 3.15625 13.1875H10.5938C11.198 13.1875 11.6875 12.6981 11.6875 12.0938V9.0313C11.6875 8.66762 11.9801 8.37505 12.3438 8.37505C12.7074 8.37505 13 8.66762 13 9.0313V12.0938C13 13.4227 11.9227 14.5 10.5938 14.5H3.15625C1.82734 14.5 0.75 13.4227 0.75 12.0938V4.6563C0.75 3.32739 1.82734 2.25005 3.15625 2.25005H6.21875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_7003">
+                                                            <rect width="14" height="14" fill="white"
+                                                                transform="translate(0.75 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="py-3 px-5 h-[47px] border-b border-zinc-100 hover:bg-neutral-50">
+                                <td class="">
+                                    <p class="text-zinc-800 text-xs font-normal">2</p>
+                                </td>
+                                <td>
+                                    <p class="text-zinc-800 text-xs font-normal">45321</p>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-4 h-4 p-1 rounded-3xl border border-zinc-200 justify-center items-center inline-flex">
+                                            <img class="w-2 h-2 relative flex-col justify-start items-start flex"
+                                                src="../assets/img/Logo-Dekal.svg" alt="">
+                                        </div>
+                                        <div class="text-zinc-800 text-xs font-normal leading-[18px]">Nguyễn
+                                            Thành Huy</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-zinc-800 text-xs font-normal leading-[18px]">0954515744
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-[71px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                19/02/2024</div>
+                                        </div>
+                                        <div
+                                            class="w-[42px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                15:25</div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-green-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <p class="text-green-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            150.000.000đ</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-green-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-green-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Đã
+                                            thanh toán</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-green-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-green-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Đã duyệt</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2.5">
+                                        <div
+                                            class="w-[31.75px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex eye_btn">
+                                            <button class="w-[15.75px] h-3.5 relative">
+                                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="eye 1" clip-path="url(#clip0_8206_6996)">
+                                                        <path id="Vector"
+                                                            d="M4.375 7.5C4.375 5.5668 5.9418 4 7.875 4C9.80821 4 11.375 5.5668 11.375 7.5C11.375 9.4332 9.80821 11 7.875 11C5.9418 11 4.375 9.4332 4.375 7.5ZM7.875 9.6875C9.0836 9.6875 10.0625 8.70859 10.0625 7.5C10.0625 6.29141 9.0836 5.3125 7.875 5.3125C7.85586 5.3125 7.83946 5.3125 7.79571 5.3125C7.85586 5.45195 7.875 5.59961 7.875 5.75C7.875 6.71523 7.09024 7.5 6.125 7.5C5.97461 7.5 5.82696 7.48086 5.6875 7.4207C5.6875 7.46445 5.6875 7.48086 5.6875 7.47539C5.6875 8.70859 6.66641 9.6875 7.875 9.6875ZM2.60914 3.57891C3.89649 2.38234 5.66563 1.375 7.875 1.375C10.0844 1.375 11.8535 2.38234 13.1414 3.57891C14.4211 4.76562 15.277 6.16289 15.6816 7.16367C15.7719 7.37969 15.7719 7.62031 15.6816 7.83633C15.277 8.8125 14.4211 10.2098 13.1414 11.4211C11.8535 12.6187 10.0844 13.625 7.875 13.625C5.66563 13.625 3.89649 12.6187 2.60914 11.4211C1.32946 10.2098 0.474144 8.8125 0.0672964 7.83633C-0.0224321 7.62031 -0.0224321 7.37969 0.0672964 7.16367C0.474144 6.16289 1.32946 4.76562 2.60914 3.57891ZM7.875 2.6875C6.09219 2.6875 4.62657 3.49688 3.50274 4.53867C2.45 5.51758 1.72321 6.65508 1.35188 7.5C1.72321 8.32031 2.45 9.48242 3.50274 10.4613C4.62657 11.5031 6.09219 12.3125 7.875 12.3125C9.65782 12.3125 11.1234 11.5031 12.2473 10.4613C13.3 9.48242 14.0027 8.32031 14.3992 7.5C14.0027 6.65508 13.3 5.51758 12.2473 4.53867C11.1234 3.49688 9.65782 2.6875 7.875 2.6875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_6996">
+                                                            <rect width="15.75" height="14" fill="white"
+                                                                transform="translate(0 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </button>
+
+                                        </div>
+                                        <div
+                                            class="w-[30px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex detail_btn">
+                                            <button class="w-3.5 h-3.5 relative">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="pen-to-square 1" clip-path="url(#clip0_8206_7003)">
+                                                        <path id="Vector"
+                                                            d="M10.952 1.18282C11.7203 0.413995 12.9672 0.413995 13.7355 1.18282L14.0664 1.51423C14.8348 2.28313 14.8348 3.52973 14.0664 4.29809L8.67422 9.69301C8.43633 9.92817 8.14375 10.1004 7.82109 10.1934L5.08672 10.9754C4.85703 11.0411 4.61094 10.9754 4.44141 10.784C4.27461 10.6391 4.20898 10.393 4.27461 10.1633L5.05664 7.42895C5.14961 7.1063 5.32188 6.81372 5.55703 6.57583L10.952 1.18282ZM12.784 2.11087C12.5516 1.85466 12.1359 1.85466 11.8789 2.11087L11.0832 2.9063L12.3438 4.16684L13.1395 3.34653C13.3965 3.11411 13.3965 2.69848 13.1395 2.44227L12.784 2.11087ZM6.31992 7.78989L5.86055 9.3895L7.46016 8.93012C7.56953 8.90005 7.66523 8.84262 7.74453 8.76333L11.4168 5.0938L10.1562 3.83325L6.48672 7.50552C6.40742 7.58481 6.35 7.68051 6.31992 7.78989ZM6.21875 2.25005C6.58242 2.25005 6.875 2.54399 6.875 2.9063C6.875 3.26997 6.58242 3.56255 6.21875 3.56255H3.15625C2.55223 3.56255 2.0625 4.052 2.0625 4.6563V12.0938C2.0625 12.6981 2.55223 13.1875 3.15625 13.1875H10.5938C11.198 13.1875 11.6875 12.6981 11.6875 12.0938V9.0313C11.6875 8.66762 11.9801 8.37505 12.3438 8.37505C12.7074 8.37505 13 8.66762 13 9.0313V12.0938C13 13.4227 11.9227 14.5 10.5938 14.5H3.15625C1.82734 14.5 0.75 13.4227 0.75 12.0938V4.6563C0.75 3.32739 1.82734 2.25005 3.15625 2.25005H6.21875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_7003">
+                                                            <rect width="14" height="14" fill="white"
+                                                                transform="translate(0.75 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="py-3 px-5 h-[47px] border-b border-zinc-100 hover:bg-neutral-50">
+                                <td class="">
+                                    <p class="text-zinc-800 text-xs font-normal">3</p>
+                                </td>
+                                <td>
+                                    <p class="text-zinc-800 text-xs font-normal">45321</p>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-4 h-4 p-1 rounded-3xl border border-zinc-200 justify-center items-center inline-flex">
+                                            <img class="w-2 h-2 relative flex-col justify-start items-start flex"
+                                                src="../assets/img/Logo-Dekal.svg" alt="">
+                                        </div>
+                                        <div class="text-zinc-800 text-xs font-normal leading-[18px]">Nguyễn
+                                            Thành Huy</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-zinc-800 text-xs font-normal leading-[18px]">0954515744
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-[71px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                19/02/2024</div>
+                                        </div>
+                                        <div
+                                            class="w-[42px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                15:25</div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-green-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <p class="text-green-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            150.000.000đ</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-red-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-red-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chưa
+                                            thanh toán</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-orange-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-orange-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chờ duyệt</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2.5">
+                                        <div
+                                            class="w-[31.75px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex eye_btn">
+                                            <button class="w-[15.75px] h-3.5 relative">
+                                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="eye 1" clip-path="url(#clip0_8206_6996)">
+                                                        <path id="Vector"
+                                                            d="M4.375 7.5C4.375 5.5668 5.9418 4 7.875 4C9.80821 4 11.375 5.5668 11.375 7.5C11.375 9.4332 9.80821 11 7.875 11C5.9418 11 4.375 9.4332 4.375 7.5ZM7.875 9.6875C9.0836 9.6875 10.0625 8.70859 10.0625 7.5C10.0625 6.29141 9.0836 5.3125 7.875 5.3125C7.85586 5.3125 7.83946 5.3125 7.79571 5.3125C7.85586 5.45195 7.875 5.59961 7.875 5.75C7.875 6.71523 7.09024 7.5 6.125 7.5C5.97461 7.5 5.82696 7.48086 5.6875 7.4207C5.6875 7.46445 5.6875 7.48086 5.6875 7.47539C5.6875 8.70859 6.66641 9.6875 7.875 9.6875ZM2.60914 3.57891C3.89649 2.38234 5.66563 1.375 7.875 1.375C10.0844 1.375 11.8535 2.38234 13.1414 3.57891C14.4211 4.76562 15.277 6.16289 15.6816 7.16367C15.7719 7.37969 15.7719 7.62031 15.6816 7.83633C15.277 8.8125 14.4211 10.2098 13.1414 11.4211C11.8535 12.6187 10.0844 13.625 7.875 13.625C5.66563 13.625 3.89649 12.6187 2.60914 11.4211C1.32946 10.2098 0.474144 8.8125 0.0672964 7.83633C-0.0224321 7.62031 -0.0224321 7.37969 0.0672964 7.16367C0.474144 6.16289 1.32946 4.76562 2.60914 3.57891ZM7.875 2.6875C6.09219 2.6875 4.62657 3.49688 3.50274 4.53867C2.45 5.51758 1.72321 6.65508 1.35188 7.5C1.72321 8.32031 2.45 9.48242 3.50274 10.4613C4.62657 11.5031 6.09219 12.3125 7.875 12.3125C9.65782 12.3125 11.1234 11.5031 12.2473 10.4613C13.3 9.48242 14.0027 8.32031 14.3992 7.5C14.0027 6.65508 13.3 5.51758 12.2473 4.53867C11.1234 3.49688 9.65782 2.6875 7.875 2.6875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_6996">
+                                                            <rect width="15.75" height="14" fill="white"
+                                                                transform="translate(0 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </button>
+
+                                        </div>
+                                        <div
+                                            class="w-[30px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex detail_btn">
+                                            <button class="w-3.5 h-3.5 relative">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="pen-to-square 1" clip-path="url(#clip0_8206_7003)">
+                                                        <path id="Vector"
+                                                            d="M10.952 1.18282C11.7203 0.413995 12.9672 0.413995 13.7355 1.18282L14.0664 1.51423C14.8348 2.28313 14.8348 3.52973 14.0664 4.29809L8.67422 9.69301C8.43633 9.92817 8.14375 10.1004 7.82109 10.1934L5.08672 10.9754C4.85703 11.0411 4.61094 10.9754 4.44141 10.784C4.27461 10.6391 4.20898 10.393 4.27461 10.1633L5.05664 7.42895C5.14961 7.1063 5.32188 6.81372 5.55703 6.57583L10.952 1.18282ZM12.784 2.11087C12.5516 1.85466 12.1359 1.85466 11.8789 2.11087L11.0832 2.9063L12.3438 4.16684L13.1395 3.34653C13.3965 3.11411 13.3965 2.69848 13.1395 2.44227L12.784 2.11087ZM6.31992 7.78989L5.86055 9.3895L7.46016 8.93012C7.56953 8.90005 7.66523 8.84262 7.74453 8.76333L11.4168 5.0938L10.1562 3.83325L6.48672 7.50552C6.40742 7.58481 6.35 7.68051 6.31992 7.78989ZM6.21875 2.25005C6.58242 2.25005 6.875 2.54399 6.875 2.9063C6.875 3.26997 6.58242 3.56255 6.21875 3.56255H3.15625C2.55223 3.56255 2.0625 4.052 2.0625 4.6563V12.0938C2.0625 12.6981 2.55223 13.1875 3.15625 13.1875H10.5938C11.198 13.1875 11.6875 12.6981 11.6875 12.0938V9.0313C11.6875 8.66762 11.9801 8.37505 12.3438 8.37505C12.7074 8.37505 13 8.66762 13 9.0313V12.0938C13 13.4227 11.9227 14.5 10.5938 14.5H3.15625C1.82734 14.5 0.75 13.4227 0.75 12.0938V4.6563C0.75 3.32739 1.82734 2.25005 3.15625 2.25005H6.21875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_7003">
+                                                            <rect width="14" height="14" fill="white"
+                                                                transform="translate(0.75 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="py-3 px-5 h-[47px] border-b border-zinc-100 hover:bg-neutral-50">
+                                <td class="">
+                                    <p class="text-zinc-800 text-xs font-normal">4</p>
+                                </td>
+                                <td>
+                                    <p class="text-zinc-800 text-xs font-normal">45321</p>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-4 h-4 p-1 rounded-3xl border border-zinc-200 justify-center items-center inline-flex">
+                                            <img class="w-2 h-2 relative flex-col justify-start items-start flex"
+                                                src="../assets/img/Logo-Dekal.svg" alt="">
+                                        </div>
+                                        <div class="text-zinc-800 text-xs font-normal leading-[18px]">Nguyễn
+                                            Thành Huy</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-zinc-800 text-xs font-normal leading-[18px]">0954515744
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-[71px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                19/02/2024</div>
+                                        </div>
+                                        <div
+                                            class="w-[42px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                15:25</div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-green-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <p class="text-green-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            150.000.000đ</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-red-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-red-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chưa
+                                            thanh toán</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-orange-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-orange-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chờ duyệt</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2.5">
+                                        <div
+                                            class="w-[31.75px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex eye_btn">
+                                            <button class="w-[15.75px] h-3.5 relative">
+                                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="eye 1" clip-path="url(#clip0_8206_6996)">
+                                                        <path id="Vector"
+                                                            d="M4.375 7.5C4.375 5.5668 5.9418 4 7.875 4C9.80821 4 11.375 5.5668 11.375 7.5C11.375 9.4332 9.80821 11 7.875 11C5.9418 11 4.375 9.4332 4.375 7.5ZM7.875 9.6875C9.0836 9.6875 10.0625 8.70859 10.0625 7.5C10.0625 6.29141 9.0836 5.3125 7.875 5.3125C7.85586 5.3125 7.83946 5.3125 7.79571 5.3125C7.85586 5.45195 7.875 5.59961 7.875 5.75C7.875 6.71523 7.09024 7.5 6.125 7.5C5.97461 7.5 5.82696 7.48086 5.6875 7.4207C5.6875 7.46445 5.6875 7.48086 5.6875 7.47539C5.6875 8.70859 6.66641 9.6875 7.875 9.6875ZM2.60914 3.57891C3.89649 2.38234 5.66563 1.375 7.875 1.375C10.0844 1.375 11.8535 2.38234 13.1414 3.57891C14.4211 4.76562 15.277 6.16289 15.6816 7.16367C15.7719 7.37969 15.7719 7.62031 15.6816 7.83633C15.277 8.8125 14.4211 10.2098 13.1414 11.4211C11.8535 12.6187 10.0844 13.625 7.875 13.625C5.66563 13.625 3.89649 12.6187 2.60914 11.4211C1.32946 10.2098 0.474144 8.8125 0.0672964 7.83633C-0.0224321 7.62031 -0.0224321 7.37969 0.0672964 7.16367C0.474144 6.16289 1.32946 4.76562 2.60914 3.57891ZM7.875 2.6875C6.09219 2.6875 4.62657 3.49688 3.50274 4.53867C2.45 5.51758 1.72321 6.65508 1.35188 7.5C1.72321 8.32031 2.45 9.48242 3.50274 10.4613C4.62657 11.5031 6.09219 12.3125 7.875 12.3125C9.65782 12.3125 11.1234 11.5031 12.2473 10.4613C13.3 9.48242 14.0027 8.32031 14.3992 7.5C14.0027 6.65508 13.3 5.51758 12.2473 4.53867C11.1234 3.49688 9.65782 2.6875 7.875 2.6875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_6996">
+                                                            <rect width="15.75" height="14" fill="white"
+                                                                transform="translate(0 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </button>
+
+                                        </div>
+                                        <div
+                                            class="w-[30px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex detail_btn">
+                                            <button class="w-3.5 h-3.5 relative">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="pen-to-square 1" clip-path="url(#clip0_8206_7003)">
+                                                        <path id="Vector"
+                                                            d="M10.952 1.18282C11.7203 0.413995 12.9672 0.413995 13.7355 1.18282L14.0664 1.51423C14.8348 2.28313 14.8348 3.52973 14.0664 4.29809L8.67422 9.69301C8.43633 9.92817 8.14375 10.1004 7.82109 10.1934L5.08672 10.9754C4.85703 11.0411 4.61094 10.9754 4.44141 10.784C4.27461 10.6391 4.20898 10.393 4.27461 10.1633L5.05664 7.42895C5.14961 7.1063 5.32188 6.81372 5.55703 6.57583L10.952 1.18282ZM12.784 2.11087C12.5516 1.85466 12.1359 1.85466 11.8789 2.11087L11.0832 2.9063L12.3438 4.16684L13.1395 3.34653C13.3965 3.11411 13.3965 2.69848 13.1395 2.44227L12.784 2.11087ZM6.31992 7.78989L5.86055 9.3895L7.46016 8.93012C7.56953 8.90005 7.66523 8.84262 7.74453 8.76333L11.4168 5.0938L10.1562 3.83325L6.48672 7.50552C6.40742 7.58481 6.35 7.68051 6.31992 7.78989ZM6.21875 2.25005C6.58242 2.25005 6.875 2.54399 6.875 2.9063C6.875 3.26997 6.58242 3.56255 6.21875 3.56255H3.15625C2.55223 3.56255 2.0625 4.052 2.0625 4.6563V12.0938C2.0625 12.6981 2.55223 13.1875 3.15625 13.1875H10.5938C11.198 13.1875 11.6875 12.6981 11.6875 12.0938V9.0313C11.6875 8.66762 11.9801 8.37505 12.3438 8.37505C12.7074 8.37505 13 8.66762 13 9.0313V12.0938C13 13.4227 11.9227 14.5 10.5938 14.5H3.15625C1.82734 14.5 0.75 13.4227 0.75 12.0938V4.6563C0.75 3.32739 1.82734 2.25005 3.15625 2.25005H6.21875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_7003">
+                                                            <rect width="14" height="14" fill="white"
+                                                                transform="translate(0.75 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="py-3 px-5 h-[47px] border-b border-zinc-100 hover:bg-neutral-50">
+                                <td class="">
+                                    <p class="text-zinc-800 text-xs font-normal">5</p>
+                                </td>
+                                <td>
+                                    <p class="text-zinc-800 text-xs font-normal">45321</p>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-4 h-4 p-1 rounded-3xl border border-zinc-200 justify-center items-center inline-flex">
+                                            <img class="w-2 h-2 relative flex-col justify-start items-start flex"
+                                                src="../assets/img/Logo-Dekal.svg" alt="">
+                                        </div>
+                                        <div class="text-zinc-800 text-xs font-normal leading-[18px]">Nguyễn
+                                            Thành Huy</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-zinc-800 text-xs font-normal leading-[18px]">0954515744
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-[71px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                19/02/2024</div>
+                                        </div>
+                                        <div
+                                            class="w-[42px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                15:25</div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-green-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <p class="text-green-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            150.000.000đ</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-red-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-red-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chưa
+                                            thanh toán</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-orange-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-orange-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chờ duyệt</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2.5">
+                                        <div
+                                            class="w-[31.75px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex eye_btn">
+                                            <button class="w-[15.75px] h-3.5 relative">
+                                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="eye 1" clip-path="url(#clip0_8206_6996)">
+                                                        <path id="Vector"
+                                                            d="M4.375 7.5C4.375 5.5668 5.9418 4 7.875 4C9.80821 4 11.375 5.5668 11.375 7.5C11.375 9.4332 9.80821 11 7.875 11C5.9418 11 4.375 9.4332 4.375 7.5ZM7.875 9.6875C9.0836 9.6875 10.0625 8.70859 10.0625 7.5C10.0625 6.29141 9.0836 5.3125 7.875 5.3125C7.85586 5.3125 7.83946 5.3125 7.79571 5.3125C7.85586 5.45195 7.875 5.59961 7.875 5.75C7.875 6.71523 7.09024 7.5 6.125 7.5C5.97461 7.5 5.82696 7.48086 5.6875 7.4207C5.6875 7.46445 5.6875 7.48086 5.6875 7.47539C5.6875 8.70859 6.66641 9.6875 7.875 9.6875ZM2.60914 3.57891C3.89649 2.38234 5.66563 1.375 7.875 1.375C10.0844 1.375 11.8535 2.38234 13.1414 3.57891C14.4211 4.76562 15.277 6.16289 15.6816 7.16367C15.7719 7.37969 15.7719 7.62031 15.6816 7.83633C15.277 8.8125 14.4211 10.2098 13.1414 11.4211C11.8535 12.6187 10.0844 13.625 7.875 13.625C5.66563 13.625 3.89649 12.6187 2.60914 11.4211C1.32946 10.2098 0.474144 8.8125 0.0672964 7.83633C-0.0224321 7.62031 -0.0224321 7.37969 0.0672964 7.16367C0.474144 6.16289 1.32946 4.76562 2.60914 3.57891ZM7.875 2.6875C6.09219 2.6875 4.62657 3.49688 3.50274 4.53867C2.45 5.51758 1.72321 6.65508 1.35188 7.5C1.72321 8.32031 2.45 9.48242 3.50274 10.4613C4.62657 11.5031 6.09219 12.3125 7.875 12.3125C9.65782 12.3125 11.1234 11.5031 12.2473 10.4613C13.3 9.48242 14.0027 8.32031 14.3992 7.5C14.0027 6.65508 13.3 5.51758 12.2473 4.53867C11.1234 3.49688 9.65782 2.6875 7.875 2.6875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_6996">
+                                                            <rect width="15.75" height="14" fill="white"
+                                                                transform="translate(0 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </button>
+
+                                        </div>
+                                        <div
+                                            class="w-[30px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex detail_btn">
+                                            <button class="w-3.5 h-3.5 relative">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="pen-to-square 1" clip-path="url(#clip0_8206_7003)">
+                                                        <path id="Vector"
+                                                            d="M10.952 1.18282C11.7203 0.413995 12.9672 0.413995 13.7355 1.18282L14.0664 1.51423C14.8348 2.28313 14.8348 3.52973 14.0664 4.29809L8.67422 9.69301C8.43633 9.92817 8.14375 10.1004 7.82109 10.1934L5.08672 10.9754C4.85703 11.0411 4.61094 10.9754 4.44141 10.784C4.27461 10.6391 4.20898 10.393 4.27461 10.1633L5.05664 7.42895C5.14961 7.1063 5.32188 6.81372 5.55703 6.57583L10.952 1.18282ZM12.784 2.11087C12.5516 1.85466 12.1359 1.85466 11.8789 2.11087L11.0832 2.9063L12.3438 4.16684L13.1395 3.34653C13.3965 3.11411 13.3965 2.69848 13.1395 2.44227L12.784 2.11087ZM6.31992 7.78989L5.86055 9.3895L7.46016 8.93012C7.56953 8.90005 7.66523 8.84262 7.74453 8.76333L11.4168 5.0938L10.1562 3.83325L6.48672 7.50552C6.40742 7.58481 6.35 7.68051 6.31992 7.78989ZM6.21875 2.25005C6.58242 2.25005 6.875 2.54399 6.875 2.9063C6.875 3.26997 6.58242 3.56255 6.21875 3.56255H3.15625C2.55223 3.56255 2.0625 4.052 2.0625 4.6563V12.0938C2.0625 12.6981 2.55223 13.1875 3.15625 13.1875H10.5938C11.198 13.1875 11.6875 12.6981 11.6875 12.0938V9.0313C11.6875 8.66762 11.9801 8.37505 12.3438 8.37505C12.7074 8.37505 13 8.66762 13 9.0313V12.0938C13 13.4227 11.9227 14.5 10.5938 14.5H3.15625C1.82734 14.5 0.75 13.4227 0.75 12.0938V4.6563C0.75 3.32739 1.82734 2.25005 3.15625 2.25005H6.21875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_7003">
+                                                            <rect width="14" height="14" fill="white"
+                                                                transform="translate(0.75 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="py-3 px-5 h-[47px] border-b border-zinc-100 hover:bg-neutral-50">
+                                <td class="">
+                                    <p class="text-zinc-800 text-xs font-normal">6</p>
+                                </td>
+                                <td>
+                                    <p class="text-zinc-800 text-xs font-normal">45321</p>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-4 h-4 p-1 rounded-3xl border border-zinc-200 justify-center items-center inline-flex">
+                                            <img class="w-2 h-2 relative flex-col justify-start items-start flex"
+                                                src="../assets/img/Logo-Dekal.svg" alt="">
+                                        </div>
+                                        <div class="text-zinc-800 text-xs font-normal leading-[18px]">Nguyễn
+                                            Thành Huy</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-zinc-800 text-xs font-normal leading-[18px]">0954515744
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-[71px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                19/02/2024</div>
+                                        </div>
+                                        <div
+                                            class="w-[42px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                15:25</div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-green-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <p class="text-green-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            150.000.000đ</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-red-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-red-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chưa
+                                            thanh toán</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-orange-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-orange-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chờ duyệt</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2.5">
+                                        <div
+                                            class="w-[31.75px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex eye_btn">
+                                            <button class="w-[15.75px] h-3.5 relative">
+                                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="eye 1" clip-path="url(#clip0_8206_6996)">
+                                                        <path id="Vector"
+                                                            d="M4.375 7.5C4.375 5.5668 5.9418 4 7.875 4C9.80821 4 11.375 5.5668 11.375 7.5C11.375 9.4332 9.80821 11 7.875 11C5.9418 11 4.375 9.4332 4.375 7.5ZM7.875 9.6875C9.0836 9.6875 10.0625 8.70859 10.0625 7.5C10.0625 6.29141 9.0836 5.3125 7.875 5.3125C7.85586 5.3125 7.83946 5.3125 7.79571 5.3125C7.85586 5.45195 7.875 5.59961 7.875 5.75C7.875 6.71523 7.09024 7.5 6.125 7.5C5.97461 7.5 5.82696 7.48086 5.6875 7.4207C5.6875 7.46445 5.6875 7.48086 5.6875 7.47539C5.6875 8.70859 6.66641 9.6875 7.875 9.6875ZM2.60914 3.57891C3.89649 2.38234 5.66563 1.375 7.875 1.375C10.0844 1.375 11.8535 2.38234 13.1414 3.57891C14.4211 4.76562 15.277 6.16289 15.6816 7.16367C15.7719 7.37969 15.7719 7.62031 15.6816 7.83633C15.277 8.8125 14.4211 10.2098 13.1414 11.4211C11.8535 12.6187 10.0844 13.625 7.875 13.625C5.66563 13.625 3.89649 12.6187 2.60914 11.4211C1.32946 10.2098 0.474144 8.8125 0.0672964 7.83633C-0.0224321 7.62031 -0.0224321 7.37969 0.0672964 7.16367C0.474144 6.16289 1.32946 4.76562 2.60914 3.57891ZM7.875 2.6875C6.09219 2.6875 4.62657 3.49688 3.50274 4.53867C2.45 5.51758 1.72321 6.65508 1.35188 7.5C1.72321 8.32031 2.45 9.48242 3.50274 10.4613C4.62657 11.5031 6.09219 12.3125 7.875 12.3125C9.65782 12.3125 11.1234 11.5031 12.2473 10.4613C13.3 9.48242 14.0027 8.32031 14.3992 7.5C14.0027 6.65508 13.3 5.51758 12.2473 4.53867C11.1234 3.49688 9.65782 2.6875 7.875 2.6875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_6996">
+                                                            <rect width="15.75" height="14" fill="white"
+                                                                transform="translate(0 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </button>
+
+                                        </div>
+                                        <div
+                                            class="w-[30px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex detail_btn">
+                                            <button class="w-3.5 h-3.5 relative">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="pen-to-square 1" clip-path="url(#clip0_8206_7003)">
+                                                        <path id="Vector"
+                                                            d="M10.952 1.18282C11.7203 0.413995 12.9672 0.413995 13.7355 1.18282L14.0664 1.51423C14.8348 2.28313 14.8348 3.52973 14.0664 4.29809L8.67422 9.69301C8.43633 9.92817 8.14375 10.1004 7.82109 10.1934L5.08672 10.9754C4.85703 11.0411 4.61094 10.9754 4.44141 10.784C4.27461 10.6391 4.20898 10.393 4.27461 10.1633L5.05664 7.42895C5.14961 7.1063 5.32188 6.81372 5.55703 6.57583L10.952 1.18282ZM12.784 2.11087C12.5516 1.85466 12.1359 1.85466 11.8789 2.11087L11.0832 2.9063L12.3438 4.16684L13.1395 3.34653C13.3965 3.11411 13.3965 2.69848 13.1395 2.44227L12.784 2.11087ZM6.31992 7.78989L5.86055 9.3895L7.46016 8.93012C7.56953 8.90005 7.66523 8.84262 7.74453 8.76333L11.4168 5.0938L10.1562 3.83325L6.48672 7.50552C6.40742 7.58481 6.35 7.68051 6.31992 7.78989ZM6.21875 2.25005C6.58242 2.25005 6.875 2.54399 6.875 2.9063C6.875 3.26997 6.58242 3.56255 6.21875 3.56255H3.15625C2.55223 3.56255 2.0625 4.052 2.0625 4.6563V12.0938C2.0625 12.6981 2.55223 13.1875 3.15625 13.1875H10.5938C11.198 13.1875 11.6875 12.6981 11.6875 12.0938V9.0313C11.6875 8.66762 11.9801 8.37505 12.3438 8.37505C12.7074 8.37505 13 8.66762 13 9.0313V12.0938C13 13.4227 11.9227 14.5 10.5938 14.5H3.15625C1.82734 14.5 0.75 13.4227 0.75 12.0938V4.6563C0.75 3.32739 1.82734 2.25005 3.15625 2.25005H6.21875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_7003">
+                                                            <rect width="14" height="14" fill="white"
+                                                                transform="translate(0.75 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="py-3 px-5 h-[47px] border-b border-zinc-100 hover:bg-neutral-50">
+                                <td class="">
+                                    <p class="text-zinc-800 text-xs font-normal">7</p>
+                                </td>
+                                <td>
+                                    <p class="text-zinc-800 text-xs font-normal">45321</p>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-4 h-4 p-1 rounded-3xl border border-zinc-200 justify-center items-center inline-flex">
+                                            <img class="w-2 h-2 relative flex-col justify-start items-start flex"
+                                                src="../assets/img/Logo-Dekal.svg" alt="">
+                                        </div>
+                                        <div class="text-zinc-800 text-xs font-normal leading-[18px]">Nguyễn
+                                            Thành Huy</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-zinc-800 text-xs font-normal leading-[18px]">0954515744
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-[71px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                19/02/2024</div>
+                                        </div>
+                                        <div
+                                            class="w-[42px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                15:25</div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-green-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <p class="text-green-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            150.000.000đ</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-red-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-red-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chưa
+                                            thanh toán</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-orange-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-orange-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chờ duyệt</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2.5">
+                                        <div
+                                            class="w-[31.75px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex eye_btn">
+                                            <button class="w-[15.75px] h-3.5 relative">
+                                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="eye 1" clip-path="url(#clip0_8206_6996)">
+                                                        <path id="Vector"
+                                                            d="M4.375 7.5C4.375 5.5668 5.9418 4 7.875 4C9.80821 4 11.375 5.5668 11.375 7.5C11.375 9.4332 9.80821 11 7.875 11C5.9418 11 4.375 9.4332 4.375 7.5ZM7.875 9.6875C9.0836 9.6875 10.0625 8.70859 10.0625 7.5C10.0625 6.29141 9.0836 5.3125 7.875 5.3125C7.85586 5.3125 7.83946 5.3125 7.79571 5.3125C7.85586 5.45195 7.875 5.59961 7.875 5.75C7.875 6.71523 7.09024 7.5 6.125 7.5C5.97461 7.5 5.82696 7.48086 5.6875 7.4207C5.6875 7.46445 5.6875 7.48086 5.6875 7.47539C5.6875 8.70859 6.66641 9.6875 7.875 9.6875ZM2.60914 3.57891C3.89649 2.38234 5.66563 1.375 7.875 1.375C10.0844 1.375 11.8535 2.38234 13.1414 3.57891C14.4211 4.76562 15.277 6.16289 15.6816 7.16367C15.7719 7.37969 15.7719 7.62031 15.6816 7.83633C15.277 8.8125 14.4211 10.2098 13.1414 11.4211C11.8535 12.6187 10.0844 13.625 7.875 13.625C5.66563 13.625 3.89649 12.6187 2.60914 11.4211C1.32946 10.2098 0.474144 8.8125 0.0672964 7.83633C-0.0224321 7.62031 -0.0224321 7.37969 0.0672964 7.16367C0.474144 6.16289 1.32946 4.76562 2.60914 3.57891ZM7.875 2.6875C6.09219 2.6875 4.62657 3.49688 3.50274 4.53867C2.45 5.51758 1.72321 6.65508 1.35188 7.5C1.72321 8.32031 2.45 9.48242 3.50274 10.4613C4.62657 11.5031 6.09219 12.3125 7.875 12.3125C9.65782 12.3125 11.1234 11.5031 12.2473 10.4613C13.3 9.48242 14.0027 8.32031 14.3992 7.5C14.0027 6.65508 13.3 5.51758 12.2473 4.53867C11.1234 3.49688 9.65782 2.6875 7.875 2.6875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_6996">
+                                                            <rect width="15.75" height="14" fill="white"
+                                                                transform="translate(0 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </button>
+
+                                        </div>
+                                        <div
+                                            class="w-[30px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex detail_btn">
+                                            <button class="w-3.5 h-3.5 relative">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="pen-to-square 1" clip-path="url(#clip0_8206_7003)">
+                                                        <path id="Vector"
+                                                            d="M10.952 1.18282C11.7203 0.413995 12.9672 0.413995 13.7355 1.18282L14.0664 1.51423C14.8348 2.28313 14.8348 3.52973 14.0664 4.29809L8.67422 9.69301C8.43633 9.92817 8.14375 10.1004 7.82109 10.1934L5.08672 10.9754C4.85703 11.0411 4.61094 10.9754 4.44141 10.784C4.27461 10.6391 4.20898 10.393 4.27461 10.1633L5.05664 7.42895C5.14961 7.1063 5.32188 6.81372 5.55703 6.57583L10.952 1.18282ZM12.784 2.11087C12.5516 1.85466 12.1359 1.85466 11.8789 2.11087L11.0832 2.9063L12.3438 4.16684L13.1395 3.34653C13.3965 3.11411 13.3965 2.69848 13.1395 2.44227L12.784 2.11087ZM6.31992 7.78989L5.86055 9.3895L7.46016 8.93012C7.56953 8.90005 7.66523 8.84262 7.74453 8.76333L11.4168 5.0938L10.1562 3.83325L6.48672 7.50552C6.40742 7.58481 6.35 7.68051 6.31992 7.78989ZM6.21875 2.25005C6.58242 2.25005 6.875 2.54399 6.875 2.9063C6.875 3.26997 6.58242 3.56255 6.21875 3.56255H3.15625C2.55223 3.56255 2.0625 4.052 2.0625 4.6563V12.0938C2.0625 12.6981 2.55223 13.1875 3.15625 13.1875H10.5938C11.198 13.1875 11.6875 12.6981 11.6875 12.0938V9.0313C11.6875 8.66762 11.9801 8.37505 12.3438 8.37505C12.7074 8.37505 13 8.66762 13 9.0313V12.0938C13 13.4227 11.9227 14.5 10.5938 14.5H3.15625C1.82734 14.5 0.75 13.4227 0.75 12.0938V4.6563C0.75 3.32739 1.82734 2.25005 3.15625 2.25005H6.21875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_7003">
+                                                            <rect width="14" height="14" fill="white"
+                                                                transform="translate(0.75 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="py-3 px-5 h-[47px] border-b border-zinc-100 hover:bg-neutral-50">
+                                <td class="">
+                                    <p class="text-zinc-800 text-xs font-normal">8</p>
+                                </td>
+                                <td>
+                                    <p class="text-zinc-800 text-xs font-normal">45321</p>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-4 h-4 p-1 rounded-3xl border border-zinc-200 justify-center items-center inline-flex">
+                                            <img class="w-2 h-2 relative flex-col justify-start items-start flex"
+                                                src="../assets/img/Logo-Dekal.svg" alt="">
+                                        </div>
+                                        <div class="text-zinc-800 text-xs font-normal leading-[18px]">Nguyễn
+                                            Thành Huy</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-zinc-800 text-xs font-normal leading-[18px]">0954515744
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-[71px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                19/02/2024</div>
+                                        </div>
+                                        <div
+                                            class="w-[42px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                15:25</div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-green-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <p class="text-green-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            150.000.000đ</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-red-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-red-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chưa
+                                            thanh toán</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-orange-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-orange-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chờ duyệt</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2.5">
+                                        <div
+                                            class="w-[31.75px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex eye_btn">
+                                            <button class="w-[15.75px] h-3.5 relative">
+                                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="eye 1" clip-path="url(#clip0_8206_6996)">
+                                                        <path id="Vector"
+                                                            d="M4.375 7.5C4.375 5.5668 5.9418 4 7.875 4C9.80821 4 11.375 5.5668 11.375 7.5C11.375 9.4332 9.80821 11 7.875 11C5.9418 11 4.375 9.4332 4.375 7.5ZM7.875 9.6875C9.0836 9.6875 10.0625 8.70859 10.0625 7.5C10.0625 6.29141 9.0836 5.3125 7.875 5.3125C7.85586 5.3125 7.83946 5.3125 7.79571 5.3125C7.85586 5.45195 7.875 5.59961 7.875 5.75C7.875 6.71523 7.09024 7.5 6.125 7.5C5.97461 7.5 5.82696 7.48086 5.6875 7.4207C5.6875 7.46445 5.6875 7.48086 5.6875 7.47539C5.6875 8.70859 6.66641 9.6875 7.875 9.6875ZM2.60914 3.57891C3.89649 2.38234 5.66563 1.375 7.875 1.375C10.0844 1.375 11.8535 2.38234 13.1414 3.57891C14.4211 4.76562 15.277 6.16289 15.6816 7.16367C15.7719 7.37969 15.7719 7.62031 15.6816 7.83633C15.277 8.8125 14.4211 10.2098 13.1414 11.4211C11.8535 12.6187 10.0844 13.625 7.875 13.625C5.66563 13.625 3.89649 12.6187 2.60914 11.4211C1.32946 10.2098 0.474144 8.8125 0.0672964 7.83633C-0.0224321 7.62031 -0.0224321 7.37969 0.0672964 7.16367C0.474144 6.16289 1.32946 4.76562 2.60914 3.57891ZM7.875 2.6875C6.09219 2.6875 4.62657 3.49688 3.50274 4.53867C2.45 5.51758 1.72321 6.65508 1.35188 7.5C1.72321 8.32031 2.45 9.48242 3.50274 10.4613C4.62657 11.5031 6.09219 12.3125 7.875 12.3125C9.65782 12.3125 11.1234 11.5031 12.2473 10.4613C13.3 9.48242 14.0027 8.32031 14.3992 7.5C14.0027 6.65508 13.3 5.51758 12.2473 4.53867C11.1234 3.49688 9.65782 2.6875 7.875 2.6875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_6996">
+                                                            <rect width="15.75" height="14" fill="white"
+                                                                transform="translate(0 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </button>
+
+                                        </div>
+                                        <div
+                                            class="w-[30px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex detail_btn">
+                                            <button class="w-3.5 h-3.5 relative">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="pen-to-square 1" clip-path="url(#clip0_8206_7003)">
+                                                        <path id="Vector"
+                                                            d="M10.952 1.18282C11.7203 0.413995 12.9672 0.413995 13.7355 1.18282L14.0664 1.51423C14.8348 2.28313 14.8348 3.52973 14.0664 4.29809L8.67422 9.69301C8.43633 9.92817 8.14375 10.1004 7.82109 10.1934L5.08672 10.9754C4.85703 11.0411 4.61094 10.9754 4.44141 10.784C4.27461 10.6391 4.20898 10.393 4.27461 10.1633L5.05664 7.42895C5.14961 7.1063 5.32188 6.81372 5.55703 6.57583L10.952 1.18282ZM12.784 2.11087C12.5516 1.85466 12.1359 1.85466 11.8789 2.11087L11.0832 2.9063L12.3438 4.16684L13.1395 3.34653C13.3965 3.11411 13.3965 2.69848 13.1395 2.44227L12.784 2.11087ZM6.31992 7.78989L5.86055 9.3895L7.46016 8.93012C7.56953 8.90005 7.66523 8.84262 7.74453 8.76333L11.4168 5.0938L10.1562 3.83325L6.48672 7.50552C6.40742 7.58481 6.35 7.68051 6.31992 7.78989ZM6.21875 2.25005C6.58242 2.25005 6.875 2.54399 6.875 2.9063C6.875 3.26997 6.58242 3.56255 6.21875 3.56255H3.15625C2.55223 3.56255 2.0625 4.052 2.0625 4.6563V12.0938C2.0625 12.6981 2.55223 13.1875 3.15625 13.1875H10.5938C11.198 13.1875 11.6875 12.6981 11.6875 12.0938V9.0313C11.6875 8.66762 11.9801 8.37505 12.3438 8.37505C12.7074 8.37505 13 8.66762 13 9.0313V12.0938C13 13.4227 11.9227 14.5 10.5938 14.5H3.15625C1.82734 14.5 0.75 13.4227 0.75 12.0938V4.6563C0.75 3.32739 1.82734 2.25005 3.15625 2.25005H6.21875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_7003">
+                                                            <rect width="14" height="14" fill="white"
+                                                                transform="translate(0.75 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="py-3 px-5 h-[47px] border-b border-zinc-100 hover:bg-neutral-50">
+                                <td class="">
+                                    <p class="text-zinc-800 text-xs font-normal">9</p>
+                                </td>
+                                <td>
+                                    <p class="text-zinc-800 text-xs font-normal">45321</p>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-4 h-4 p-1 rounded-3xl border border-zinc-200 justify-center items-center inline-flex">
+                                            <img class="w-2 h-2 relative flex-col justify-start items-start flex"
+                                                src="../assets/img/Logo-Dekal.svg" alt="">
+                                        </div>
+                                        <div class="text-zinc-800 text-xs font-normal leading-[18px]">Nguyễn
+                                            Thành Huy</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-zinc-800 text-xs font-normal leading-[18px]">0954515744
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-[71px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                19/02/2024</div>
+                                        </div>
+                                        <div
+                                            class="w-[42px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                15:25</div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-green-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <p class="text-green-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            150.000.000đ</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-red-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-red-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chưa
+                                            thanh toán</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-orange-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-orange-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chờ duyệt</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2.5">
+                                        <div
+                                            class="w-[31.75px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex eye_btn">
+                                            <button class="w-[15.75px] h-3.5 relative">
+                                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="eye 1" clip-path="url(#clip0_8206_6996)">
+                                                        <path id="Vector"
+                                                            d="M4.375 7.5C4.375 5.5668 5.9418 4 7.875 4C9.80821 4 11.375 5.5668 11.375 7.5C11.375 9.4332 9.80821 11 7.875 11C5.9418 11 4.375 9.4332 4.375 7.5ZM7.875 9.6875C9.0836 9.6875 10.0625 8.70859 10.0625 7.5C10.0625 6.29141 9.0836 5.3125 7.875 5.3125C7.85586 5.3125 7.83946 5.3125 7.79571 5.3125C7.85586 5.45195 7.875 5.59961 7.875 5.75C7.875 6.71523 7.09024 7.5 6.125 7.5C5.97461 7.5 5.82696 7.48086 5.6875 7.4207C5.6875 7.46445 5.6875 7.48086 5.6875 7.47539C5.6875 8.70859 6.66641 9.6875 7.875 9.6875ZM2.60914 3.57891C3.89649 2.38234 5.66563 1.375 7.875 1.375C10.0844 1.375 11.8535 2.38234 13.1414 3.57891C14.4211 4.76562 15.277 6.16289 15.6816 7.16367C15.7719 7.37969 15.7719 7.62031 15.6816 7.83633C15.277 8.8125 14.4211 10.2098 13.1414 11.4211C11.8535 12.6187 10.0844 13.625 7.875 13.625C5.66563 13.625 3.89649 12.6187 2.60914 11.4211C1.32946 10.2098 0.474144 8.8125 0.0672964 7.83633C-0.0224321 7.62031 -0.0224321 7.37969 0.0672964 7.16367C0.474144 6.16289 1.32946 4.76562 2.60914 3.57891ZM7.875 2.6875C6.09219 2.6875 4.62657 3.49688 3.50274 4.53867C2.45 5.51758 1.72321 6.65508 1.35188 7.5C1.72321 8.32031 2.45 9.48242 3.50274 10.4613C4.62657 11.5031 6.09219 12.3125 7.875 12.3125C9.65782 12.3125 11.1234 11.5031 12.2473 10.4613C13.3 9.48242 14.0027 8.32031 14.3992 7.5C14.0027 6.65508 13.3 5.51758 12.2473 4.53867C11.1234 3.49688 9.65782 2.6875 7.875 2.6875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_6996">
+                                                            <rect width="15.75" height="14" fill="white"
+                                                                transform="translate(0 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </button>
+
+                                        </div>
+                                        <div
+                                            class="w-[30px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex detail_btn">
+                                            <button class="w-3.5 h-3.5 relative">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="pen-to-square 1" clip-path="url(#clip0_8206_7003)">
+                                                        <path id="Vector"
+                                                            d="M10.952 1.18282C11.7203 0.413995 12.9672 0.413995 13.7355 1.18282L14.0664 1.51423C14.8348 2.28313 14.8348 3.52973 14.0664 4.29809L8.67422 9.69301C8.43633 9.92817 8.14375 10.1004 7.82109 10.1934L5.08672 10.9754C4.85703 11.0411 4.61094 10.9754 4.44141 10.784C4.27461 10.6391 4.20898 10.393 4.27461 10.1633L5.05664 7.42895C5.14961 7.1063 5.32188 6.81372 5.55703 6.57583L10.952 1.18282ZM12.784 2.11087C12.5516 1.85466 12.1359 1.85466 11.8789 2.11087L11.0832 2.9063L12.3438 4.16684L13.1395 3.34653C13.3965 3.11411 13.3965 2.69848 13.1395 2.44227L12.784 2.11087ZM6.31992 7.78989L5.86055 9.3895L7.46016 8.93012C7.56953 8.90005 7.66523 8.84262 7.74453 8.76333L11.4168 5.0938L10.1562 3.83325L6.48672 7.50552C6.40742 7.58481 6.35 7.68051 6.31992 7.78989ZM6.21875 2.25005C6.58242 2.25005 6.875 2.54399 6.875 2.9063C6.875 3.26997 6.58242 3.56255 6.21875 3.56255H3.15625C2.55223 3.56255 2.0625 4.052 2.0625 4.6563V12.0938C2.0625 12.6981 2.55223 13.1875 3.15625 13.1875H10.5938C11.198 13.1875 11.6875 12.6981 11.6875 12.0938V9.0313C11.6875 8.66762 11.9801 8.37505 12.3438 8.37505C12.7074 8.37505 13 8.66762 13 9.0313V12.0938C13 13.4227 11.9227 14.5 10.5938 14.5H3.15625C1.82734 14.5 0.75 13.4227 0.75 12.0938V4.6563C0.75 3.32739 1.82734 2.25005 3.15625 2.25005H6.21875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_7003">
+                                                            <rect width="14" height="14" fill="white"
+                                                                transform="translate(0.75 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="py-3 px-5 h-[47px] border-b border-zinc-100 hover:bg-neutral-50">
+                                <td class="">
+                                    <p class="text-zinc-800 text-xs font-normal">10</p>
+                                </td>
+                                <td>
+                                    <p class="text-zinc-800 text-xs font-normal">45321</p>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-4 h-4 p-1 rounded-3xl border border-zinc-200 justify-center items-center inline-flex">
+                                            <img class="w-2 h-2 relative flex-col justify-start items-start flex"
+                                                src="../assets/img/Logo-Dekal.svg" alt="">
+                                        </div>
+                                        <div class="text-zinc-800 text-xs font-normal leading-[18px]">Nguyễn
+                                            Thành Huy</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-zinc-800 text-xs font-normal leading-[18px]">0954515744
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2">
+                                        <div
+                                            class="w-[71px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                19/02/2024</div>
+                                        </div>
+                                        <div
+                                            class="w-[42px] h-[26px] px-2 py-1 bg-neutral-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                            <div class="text-zinc-500 text-xs font-normal leading-[18px]">
+                                                15:25</div>
+                                        </div>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-green-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <p class="text-green-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            150.000.000đ</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-red-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-red-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chưa
+                                            thanh toán</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div
+                                        class=" h-[26px] px-2 py-1 bg-orange-50 rounded-lg justify-start items-center gap-2.5 inline-flex">
+                                        <div class="text-orange-500 text-xs font-normal font-['Inter'] leading-[18px]">
+                                            Chờ duyệt</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="flex gap-2.5">
+                                        <div
+                                            class="w-[31.75px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex eye_btn">
+                                            <button class="w-[15.75px] h-3.5 relative">
+                                                <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="eye 1" clip-path="url(#clip0_8206_6996)">
+                                                        <path id="Vector"
+                                                            d="M4.375 7.5C4.375 5.5668 5.9418 4 7.875 4C9.80821 4 11.375 5.5668 11.375 7.5C11.375 9.4332 9.80821 11 7.875 11C5.9418 11 4.375 9.4332 4.375 7.5ZM7.875 9.6875C9.0836 9.6875 10.0625 8.70859 10.0625 7.5C10.0625 6.29141 9.0836 5.3125 7.875 5.3125C7.85586 5.3125 7.83946 5.3125 7.79571 5.3125C7.85586 5.45195 7.875 5.59961 7.875 5.75C7.875 6.71523 7.09024 7.5 6.125 7.5C5.97461 7.5 5.82696 7.48086 5.6875 7.4207C5.6875 7.46445 5.6875 7.48086 5.6875 7.47539C5.6875 8.70859 6.66641 9.6875 7.875 9.6875ZM2.60914 3.57891C3.89649 2.38234 5.66563 1.375 7.875 1.375C10.0844 1.375 11.8535 2.38234 13.1414 3.57891C14.4211 4.76562 15.277 6.16289 15.6816 7.16367C15.7719 7.37969 15.7719 7.62031 15.6816 7.83633C15.277 8.8125 14.4211 10.2098 13.1414 11.4211C11.8535 12.6187 10.0844 13.625 7.875 13.625C5.66563 13.625 3.89649 12.6187 2.60914 11.4211C1.32946 10.2098 0.474144 8.8125 0.0672964 7.83633C-0.0224321 7.62031 -0.0224321 7.37969 0.0672964 7.16367C0.474144 6.16289 1.32946 4.76562 2.60914 3.57891ZM7.875 2.6875C6.09219 2.6875 4.62657 3.49688 3.50274 4.53867C2.45 5.51758 1.72321 6.65508 1.35188 7.5C1.72321 8.32031 2.45 9.48242 3.50274 10.4613C4.62657 11.5031 6.09219 12.3125 7.875 12.3125C9.65782 12.3125 11.1234 11.5031 12.2473 10.4613C13.3 9.48242 14.0027 8.32031 14.3992 7.5C14.0027 6.65508 13.3 5.51758 12.2473 4.53867C11.1234 3.49688 9.65782 2.6875 7.875 2.6875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_6996">
+                                                            <rect width="15.75" height="14" fill="white"
+                                                                transform="translate(0 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </button>
+
+                                        </div>
+                                        <div
+                                            class="w-[30px] h-[22px] px-2 py-1 bg-neutral-50 hover:bg-blue-50 rounded-lg justify-start items-center gap-2.5 inline-flex detail_btn">
+                                            <button class="w-3.5 h-3.5 relative">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <g id="pen-to-square 1" clip-path="url(#clip0_8206_7003)">
+                                                        <path id="Vector"
+                                                            d="M10.952 1.18282C11.7203 0.413995 12.9672 0.413995 13.7355 1.18282L14.0664 1.51423C14.8348 2.28313 14.8348 3.52973 14.0664 4.29809L8.67422 9.69301C8.43633 9.92817 8.14375 10.1004 7.82109 10.1934L5.08672 10.9754C4.85703 11.0411 4.61094 10.9754 4.44141 10.784C4.27461 10.6391 4.20898 10.393 4.27461 10.1633L5.05664 7.42895C5.14961 7.1063 5.32188 6.81372 5.55703 6.57583L10.952 1.18282ZM12.784 2.11087C12.5516 1.85466 12.1359 1.85466 11.8789 2.11087L11.0832 2.9063L12.3438 4.16684L13.1395 3.34653C13.3965 3.11411 13.3965 2.69848 13.1395 2.44227L12.784 2.11087ZM6.31992 7.78989L5.86055 9.3895L7.46016 8.93012C7.56953 8.90005 7.66523 8.84262 7.74453 8.76333L11.4168 5.0938L10.1562 3.83325L6.48672 7.50552C6.40742 7.58481 6.35 7.68051 6.31992 7.78989ZM6.21875 2.25005C6.58242 2.25005 6.875 2.54399 6.875 2.9063C6.875 3.26997 6.58242 3.56255 6.21875 3.56255H3.15625C2.55223 3.56255 2.0625 4.052 2.0625 4.6563V12.0938C2.0625 12.6981 2.55223 13.1875 3.15625 13.1875H10.5938C11.198 13.1875 11.6875 12.6981 11.6875 12.0938V9.0313C11.6875 8.66762 11.9801 8.37505 12.3438 8.37505C12.7074 8.37505 13 8.66762 13 9.0313V12.0938C13 13.4227 11.9227 14.5 10.5938 14.5H3.15625C1.82734 14.5 0.75 13.4227 0.75 12.0938V4.6563C0.75 3.32739 1.82734 2.25005 3.15625 2.25005H6.21875Z"
+                                                            fill="currentColor" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_8206_7003">
+                                                            <rect width="14" height="14" fill="white"
+                                                                transform="translate(0.75 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="w-[1156px] h-8 bg-white flex-col justify-center items-center inline-flex">
+                <div class="justify-start items-center gap-2 inline-flex">
+                    <div
+                        class="w-8 h-8 p-1 opacity-50 bg-zinc-200 rounded justify-center items-center flex cursor-pointer">
+                        <div class="w-6 h-6 relative flex-col justify-start items-start flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M15.1602 7.41L10.5802 12L15.1602 16.59L13.7502 18L7.75016 12L13.7502 6L15.1602 7.41Z"
+                                    fill="#71717A" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="w-8 h-8 justify-center items-center flex">
+                        <div
+                            class="w-8 h-8 relative bg-white rounded border border-blue-400 flex-col justify-center items-center flex cursor-pointer">
+                            <div
+                                class="w-6 h-[22px] text-center text-blue-400 text-sm font-normal font-['Inter'] leading-[21px]">
+                                1</div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-8 h-8 px-1 py-[5px] bg-white rounded border border-zinc-200 justify-center items-center flex cursor-pointer">
+                        <div
+                            class="w-6 h-[22px] text-center text-zinc-500 text-sm font-normal font-['Inter'] leading-[21px]">
+                            2</div>
+                    </div>
+                    <div
+                        class="w-8 h-8 px-1 py-[5px] bg-white rounded border border-zinc-200 justify-center items-center flex cursor-pointer">
+                        <div
+                            class="w-6 h-[22px] text-center text-zinc-500 text-sm font-normal font-['Inter'] leading-[21px]">
+                            ...</div>
+                    </div>
+                    <div
+                        class="w-8 h-8 px-1 py-[5px] bg-white rounded border border-zinc-200 justify-center items-center flex cursor-pointer">
+                        <div
+                            class="w-6 h-[22px] text-center text-zinc-500 text-sm font-normal font-['Inter'] leading-[21px]">
+                            9</div>
+                    </div>
+                    <div
+                        class="w-8 h-8 px-1 py-[5px] bg-white rounded border border-zinc-200 justify-center items-center flex cursor-pointer">
+                        <div
+                            class="w-6 h-[22px] text-center text-zinc-500 text-sm font-normal font-['Inter'] leading-[21px]">
+                            10</div>
+                    </div>
+                    <div
+                        class="w-8 h-8 p-1 bg-white rounded border border-zinc-200 justify-center items-center flex cursor-pointer">
+                        <div class="w-6 h-6 relative flex-col justify-start items-start flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M8.83984 7.41L13.4198 12L8.83984 16.59L10.2498 18L16.2498 12L10.2498 6L8.83984 7.41Z"
+                                    fill="#E4E4E7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

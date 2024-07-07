@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Order</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+    <body class="bg-[#FAFAFA]">
+        <div class="w-[1440px] mx-auto">
+             <!-- Header -->
+            <div class="w-[1440px] flex justify-between items-center px-[50px] py-4">
+                <div
+                    class="w-12 self-stretch h-12 px-4 py-2 bg-white rounded-full border border-white inline-flex gap-2 justify-center items-center shadow-md">
+                    <a href="#!"><img class="block w-6 h-6 relative" src="../assets/img/Logo-Dekal.svg" alt=""></a>
+                </div>
+                <div class="flex gap-6">
+                    <div class="flex bg-white shadow-md rounded-[46px] p-1">
+                        <div class=" self-stretch px-4 py-2 justify-start items-center gap-2 flex bg-[#FEF2F2] rounded-[66px] cursor-pointer">
+                            <img class="w-[14px] h-[14px] relative" src="../assets/icon/house 1.svg" alt="">
+                            <div class="text-red-500 text-sm font-medium leading-[21px]">Dashboard</div>
+                        </div>
+                        <div class=" self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer">
+                            <img class="w-[14px] h-[14px] relative relative" src="../assets/icon/layer-group 1.svg" alt="">
+                            <div class="text-zinc-500 text-sm font-medium leading-[21px]">Hóa đơn</div>
+                        </div>
+                        <div class=" self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer">
+                            <img class="w-[14px] h-[14px] relative relative" src="../assets/icon/chart-simple 1.svg" alt="">
+                            <div class="text-zinc-500 text-sm font-medium leading-[21px]">Doanh thu</div>
+                        </div>
+                        <div class=" self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer">
+                            <img class="w-[14px] h-[14px] relative relative" src="../assets/icon/tape 1.svg" alt="">
+                            <div class="text-zinc-500 text-sm font-medium leading-[21px]">Vật liệu</div>
+                        </div>
+                        <div class=" self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer">
+                            <img class="w-[14px] h-[14px] relative relative" src="../assets/icon/wrench 1.svg" alt="">
+                            <div class="text-zinc-500 text-sm font-medium leading-[21px]">Gia công</div>
+                        </div>
+                        <div class=" self-stretch px-4 py-2  justify-start items-center gap-2 flex cursor-pointer">
+                            <img class="w-[14px] h-[12px] relative relative" src="../assets/icon/user-vneck 1.svg" alt="">
+                            <div class="text-zinc-500 text-sm font-medium leading-[21px]">Khách hàng</div>
+                        </div>
+                        <div class=" self-stretch px-4 py-2 justify-start items-center gap-2 flex cursor-pointer">
+                            <img class="w-[14px] h-[14px] relative relative" src="../assets/icon/address-card 1.svg" alt="">
+                            <div class="text-zinc-500 text-sm font-medium leading-[21px]">Nhân sự</div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-2 flex self-stretch justify-start items-center gap-2 rounded-[66px] bg-white shadow-md cursor-pointer">
+                        <img class="w-3.5 h-4 relative" src="../assets/icon/plus 1.svg" alt="">
+                        <div class="text-red-500 text-sm font-medium leading-[21px]">Tạo hóa đơn</div>
+                    </div>
+                </div>
+                <div
+                    class="pl-1 pr-2 py-1 bg-white rounded-[66px] border border-white justify-start items-center gap-5 shadow-md flex">
+                    <div class="justify-start items-center gap-2 flex">
+                        <img class="w-9 h-9 relative rounded-[50px] cursor-pointer" src="../assets/img/Frame 7.png" />
+                        <div class="flex-col justify-center items-start inline-flex">
+                            <p class="text-black text-xs font-medium leading-[18px]">Xuân Mai</p>
+                            <p class="text-zinc-500 text-xs font-normal leading-[18px]">Kế toán</p>
+                        </div>
+                    </div>
+                    <div class="w-4 h-4 p-1 bg-zinc-100 rounded-2xl border border-zinc-200 justify-center items-center flex cursor-pointer">
+                        <img src="../assets/icon/Frame-down.svg" alt=""> 
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Order -->
+            <div class="w-[1156px] mx-auto pb-[40px]">
+                <!-- breadcrumb -->
+            <div class="pt-[36px]">
+                <!-- <div class="h-[37px] px-4 py-2 bg-white rounded-lg border border-zinc-200 justify-start items-center gap-2.5 inline-flex">
+                    <div class="w-[14px] h-[14px]"><img src="../assets/icon/house 1 black.svg" alt=""></div>
+                    <div class="text-zinc-700 text-sm font-normal">/</div>
+                    <div class="text-zinc-700 text-sm font-normal">Tạo hóa đơn</div>
+                    <div class="text-zinc-700 text-sm font-normal">/</div>
+                    <div class="text-zinc-700 text-sm font-normal">Hóa đơn 12.2.3</div>
+                </div> -->
+                <div class="h-[37px] justify-start items-center gap-2 inline-flex">
+                    <div class="px-4 py-2 bg-white rounded-lg border border-zinc-200 justify-start items-center gap-2.5 flex">
+                        <div class="w-[14px] h-[14px]"><img src="../assets/icon/house 1 black.svg" alt=""></div>
+                        <div class="text-zinc-700 text-sm font-normal leading-[21px]">/</div>
+                        <div class="text-zinc-700 text-sm font-normal leading-[21px]">Hóa đơn cần xử lý</div>
+                        <div class="text-zinc-700 text-sm font-normal leading-[21px]">/</div>
+                        <div class="text-zinc-700 text-sm font-normal leading-[21px]">Hóa đơn 12.2.3</div>
+                    </div>
+                    <div class="h-[39px] p-[8px] bg-white rounded-lg border border-zinc-200 justify-start items-center gap-2 flex">
+                        <div class="px-2 py-1 bg-orange-50 rounded-lg justify-start items-center gap-2.5 flex cursor-pointer">
+                            <div class="text-orange-500 text-[10px] font-normal leading-[15px]">Chờ duyệt</div>
+                        </div>
+                        <div class="w-2 h-2 bg-zinc-200 rounded-full"></div>
+                        <div class="px-2 py-1 bg-red-50 rounded-lg justify-start items-center gap-2.5 flex cursor-pointer">
+                            <div class="text-red-500 text-[10px] font-normal leading-[15px]">Chưa thanh toán</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                <div class="bg-[#fff] rounded-lg border-[1px] border-solid border-[#E4E4E7] mt-[20px] mb-[40px] py-[40px] px-[78px]">
+            
+                    <!-- head -->
+                    <div class="w-[1000px] p-[40px] bg-white shadow-[0_0_15px_0_rgba(0,0,0,0.10)]">
+                        <div class="flex justify-start items-center">
+                            <div class="w-[396px] h-[168px] flex-col justify-between items-start inline-flex">
+                                <div class="pr-[246px] pb-[54.98px] justify-start items-center inline-flex">
+                                    <img class="w-[150px] h-[74.23px]" src="../assets/img/Decal 1.jpg" />
+                                </div>
+                                <div class="self-stretch justify-start items-center gap-2.5 inline-flex">
+                                    <div class="text-zinc-800 text-base font-bold leading-normal">Tờ số:</div>
+                                    <input type="text" class="w-[100px] h-8 p-1 bg-neutral-50 border-b border-zinc-300 justify-start items-center gap-2.5 flex placeholder:text-[#27272A] placeholder:text-[16px] placeholder:font-bold " placeholder="12.2.3" disabled/>                           
+                                </div>
+                            </div>
+                            <div class="flex-col justify-start items-start inline-flex pl-[52px]">
+                                <div class="text-zinc-800 text-2xl font-bold leading-9">PHIẾU BÁN HÀNG VÀ SẢN XUẤT</div>
+                                <div class="text-zinc-800 text-2xl font-bold leading-9">Công ty TNHH TMDV Dekal</div>
+                                <div class="text-zinc-800 text-base font-normal leading-normal">Đ/C Văn phòng: 12 Võ Văn Kiệt, P.12, Q.1, TP. HCM</div>
+                                <div class="text-zinc-800 text-base font-normal leading-normal">Email: Dekal@gmail.com</div>
+                                <div class="text-zinc-800 text-base font-normal leading-normal">Website: www.dekal.com</div>
+                                <div class="text-zinc-800 text-base font-normal leading-normal">ĐT: 02.5888.232</div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="flex justify-between items-center mt-[20px]">
+                            <div class="w-[396px] text-black text-base font-normal leading-normal">Ghi chú: Sai không được hủy phải giữ lại</div>
+                            <div class="w-[473px] text-black text-xl font-bold leading-[30px]">TP.HCM, ngày 19 tháng 02 năm 2024</div>
+                        </div>
+                        <!--  -->
+                        <div class="flex-col justify-start items-start gap-4 inline-flex mt-[24px]">
+                            <div class="self-stretch justify-start items-start gap-20 inline-flex">
+                                <div class="h-[29px] justify-start items-center gap-2.5 flex">
+                                    <div class="w-[130px] text-zinc-800 text-sm font-bold font-['Inter'] leading-[21px]">Tên khách hàng:</div>
+                                    <input type="text" class="w-[322px] grow shrink basis-0 h-[29px] p-1 bg-neutral-50 border-b border-zinc-300 justify-start items-center gap-2.5 flex placeholder:text-sm placeholder:text-zinc-800" placeholder="Trần Nguyễn Thành Huy" disabled/>
+                                        <!-- <div class="grow shrink basis-0 text-zinc-800 text-sm font-normal font-['Inter'] leading-[21px]">Trần Nguyễn Thành Huy</div> -->
+                                </div>
+                                <div class="grow shrink basis-0 h-[29px] justify-start items-center gap-2.5 flex">
+                                    <div class="text-zinc-800 text-sm font-bold font-['Inter'] leading-[21px]">Số điện thoại:</div>
+                                    <input type="number" class="w-[276px] grow shrink basis-0 h-[29px] p-1 bg-neutral-50 border-b border-zinc-300 justify-start items-center gap-2.5 flex placeholder:text-sm placeholder:text-zinc-800" placeholder="0935545453" disabled/>
+                                        <!-- <div class="grow shrink basis-0 text-zinc-800 text-sm font-normal font-['Inter'] leading-[21px]">0935545453</div> -->
+                                </div>
+                            </div>
+                            <div class="self-stretch justify-start items-start gap-20 inline-flex">
+                                <div class="h-[29px] justify-start items-center gap-2.5 flex">
+                                    <div class="w-[130px] text-zinc-800 text-sm font-bold font-['Inter'] leading-[21px]">Địa chỉ:</div>
+                                    <input type="text" class="w-[322px] grow shrink basis-0 h-[29px] p-1 bg-neutral-50 border-b border-zinc-300 justify-start items-center gap-2.5 flex placeholder:text-sm placeholder:text-zinc-800" placeholder="82 Hai Bà Trưng, P2, Q.1, TP.HCM" disabled/>
+                                        <!-- <div class="grow shrink basis-0 text-zinc-800 text-sm font-normal font-['Inter'] leading-[21px]">82 Hai Bà Trưng, P2, Q.1, TP.HCM</div> -->
+                                </div>
+                                <div class="grow shrink basis-0 h-[29px] justify-start items-center gap-2.5 flex">
+                                    <div class="w-[91px] text-zinc-800 text-sm font-bold font-['Inter'] leading-[21px]">Thời gian:</div>
+                                    <div class="justify-start items-center gap-2.5 flex">
+                                        <div class="text-zinc-800 text-sm font-bold font-['Inter'] leading-[21px]">Ngày:</div>
+                                        <input type="text" class="w-[85px] p-1 bg-neutral-50 border-b border-zinc-300 justify-start items-center gap-2.5 flex placeholder:text-sm placeholder:text-zinc-800" placeholder="19/02/2024" disabled/>
+                                            <!-- <div class="text-zinc-800 text-sm font-normal font-['Inter'] leading-[21px]">19/02/2024</div> --> 
+                                    </div>
+                                    <div class="grow shrink basis-0 h-[29px] justify-start items-center gap-2.5 flex">
+                                        <div class="text-zinc-800 text-sm font-bold font-['Inter'] leading-[21px]">Giờ</div>
+                                        <input type="text" class="w-[90px] grow shrink basis-0 h-[29px] p-1 bg-neutral-50 border-b border-zinc-300 justify-start items-center gap-2.5 flex  placeholder:text-sm placeholder:text-zinc-800" placeholder="02:00:00" disabled/>
+                                            <!-- <div class="text-zinc-800 text-sm font-normal font-['Inter'] leading-[21px]">02:00:00</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Table -->
+                        <table class="w-full border-collapse bg-white mt-[20px]">
+                            <thead>
+                                <tr class="text-xs font-medium text-[#000]">
+                                    <td class="border border-[#B9B9B9] px-[12px] py-[10px] w-[153.3px] bg-[#f0f0f0]">Tổng diện tích</td>
+                                    <td class="border border-[#B9B9B9] px-[12px] py-[10px] w-1/6">0 (m2)</td>
+                                    <td class="border border-[#B9B9B9] px-[12px] py-[10px] w-1/6  bg-[#f0f0f0]">Đơn giá</td>
+                                    <td class="border border-[#B9B9B9] px-[12px] py-[10px] w-1/6">
+                                        <input type="text" class="w-full h-[26px] p-1 bg-neutral-50 border-b border-zinc-300 justify-start items-center gap-2.5 inline-flex placeholder:text-zinc-800 placeholder:text-xs placeholder:font-normal placeholder:leading-[18px]" placeholder="250.000" disabled/>
+                                            <!-- <div class="text-zinc-800 text-xs font-normal leading-[18px]">250.000</div> -->
+                                    </td>
+                                    <td class="border border-[#B9B9B9] px-[12px] py-[10px] w-1/6  bg-[#f0f0f0]">Tổng thanh toán</td>
+                                    <td class="border border-[#B9B9B9] px-[12px] py-[10px] w-1/6">
+                                        <div class="text-black text-xs font-semibold font-['Inter'] leading-none">25.550.520(VNĐ)</div>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-xs font-medium text-[#000]">
+                                    <td class="border border-[#B9B9B9] px-[12px] py-[10px]">Đặt trước</td>
+                                    <td class="border border-[#B9B9B9] px-[12px] py-[10px]" colspan="2">
+                                        <input type="text" class="w-full h-[26px] p-1 bg-neutral-50 border-b border-zinc-300 justify-start items-center gap-2.5 inline-flex placeholder:text-zinc-800 placeholder:text-xs placeholder:font-normal placeholder:leading-[18px]" placeholder="0 (vnđ)" disabled>
+                                            <!-- <div class="text-zinc-800 text-xs font-normal font-['Inter'] leading-[18px]">0 (vnđ)</div> -->
+                                        </input>
+                                    </td>
+                                    <td class="border border-[#B9B9B9] px-[12px] py-[10px]">Thiết kế</td>
+                                    <td class="border border-[#B9B9B9] px-[12px] py-[10px]" colspan="2">
+                                        <input type="text" class="w-full h-[26px] p-1 bg-neutral-50 border-b border-zinc-300 justify-start items-center gap-2.5 inline-flex placeholder:text-zinc-800 placeholder:text-xs placeholder:font-normal placeholder:leading-[18px]" placeholder="0 (vnđ)" disabled>
+                                    </td>
+                                    <!-- <td class="border border-[#B9B9B9] px-[12px] py-[10px]"></td> -->
+                                    <!-- <td class="border border-[#B9B9B9] px-[12px] py-[10px]"></td> -->
+                                </tr>
+                                <tr class="text-xs font-normal text-[#000] h-[72px]">
+                                    <td class="relative border border-[#B9B9B9] px-[12px]"><span class="absolute top-2">Chất liệu</span></td>
+                                    <td class="relative border border-[#B9B9B9] px-[12px]">
+                                        <div class="absolute top-2 flex items-center gap-[8px]">
+                                            <input type="radio" class="">
+                                            <label for="">PPF</label>
+                                        </div>
+                                        <select name="" id="" class="w-[137.3px] h-[26px] border border-[#D4D4D8] rounded mt-[25px] px-[4px] text-xs font-normal text-[#71717a]">
+                                            <option value="Ash Grey" selected>Ash Grey</option>
+                                            <option value="Ash Grey">Ash Grey</option>
+                                        </select>
+                                    </td>
+                                    <td class="relative border border-[#B9B9B9] px-[12px]">
+                                        <div class="absolute top-2 flex items-center gap-[8px]">
+                                            <input type="radio" class="">
+                                            <label for="">Decal đổi màu</label>
+                                        </div>
+                                        <select name="" id="" class="w-[137.3px] h-[26px] border border-[#D4D4D8] rounded mt-[25px] px-[4px] text-xs font-normal text-[#71717a]">
+                                            <option value="Ash Grey" selected>Ash Grey</option>
+                                            <option value="Ash Grey">Ash Grey</option>
+                                        </select>
+                                    </td>
+                                    <td class="relative border border-[#B9B9B9] px-[12px]">
+                                        <div class="absolute top-2 flex items-center gap-[8px]">
+                                            <input type="radio" class="">
+                                            <label for="">Sản phẩm khác</label>
+                                        </div>
+                                        <select name="" id="" class="w-[137.3px] h-[26px] border border-[#D4D4D8] rounded mt-[25px] px-[4px] text-xs font-normal text-[#71717a]">
+                                            <option value="Ash Grey" selected>Ash Grey</option>
+                                            <option value="Ash Grey">Ash Grey</option>
+                                        </select>
+                                    </td>
+                                    <td class="border border-[#B9B9B9] px-[12px]"></td>
+                                    <td class="border border-[#B9B9B9] px-[12px]"></td>                            
+                                </tr>
+                                <tr class="text-xs font-normal text-[#000] h-[72px]">
+                                    <td class="relative border border-[#B9B9B9] px-[12px]"><span class="absolute top-3">Kích thước</span></td>
+                                    <td class="relative border border-[#B9B9B9] px-[12px]">
+                                        <div class="absolute top-2 flex items-center gap-[10px]">
+                                            <label for="">Tên file:</label>
+                                            <input type="text" class="w-[75px] h-[26px] bg-[#FAFAFA] border-b border-[#D4D4D8] placeholder:text-xs placeholder:font-normal placeholder:text-[#27272A] pl-[3px]" placeholder="file 1" disabled>
+                                        </div>
+                                    </td>
+                                    <td class="relative border border-[#B9B9B9] px-[12px]">
+                                        <div class="absolute top-2 flex items-center">
+                                            <label for="" class="pr-[10px]">Ngang:</label>
+                                            <input type="text" class="w-[53px] h-[26px] bg-[#FAFAFA] border-b border-[#D4D4D8] placeholder:text-xs placeholder:font-normal placeholder:text-[#27272A] pl-[3px]" placeholder="23" disabled>
+                                            <div>(cm)</div>
+                                        </div>
+                                    </td>
+                                    <td class="relative border border-[#B9B9B9] px-[12px]">
+                                        <div class="absolute top-2 flex items-center">
+                                            <label for="" class="pr-[10px]">Cao:</label>
+                                            <input type="text" class="w-[68px] h-[26px] bg-[#FAFAFA] border-b border-[#D4D4D8] placeholder:text-xs placeholder:font-normal placeholder:text-[#27272A] pl-[3px]" placeholder="23" disabled>
+                                            <div>(cm)</div>
+                                        </div>
+                                    </td>
+                                    <td class="relative border border-[#B9B9B9] px-[12px]">
+                                        <div class="absolute top-2 flex items-center">
+                                            <label for="" class="pr-[10px]">Số tấm:</label>
+                                            <input type="text" class="w-[68px] h-[26px] bg-[#FAFAFA] border-b border-[#D4D4D8] placeholder:text-xs placeholder:font-normal placeholder:text-[#27272A] pl-[3px]" placeholder="2" disabled>
+                                        </div>
+                                    </td>
+                                    <td class="relative border border-[#B9B9B9] px-[12px]">
+                                        <div class="absolute top-2 flex items-center gap-[8px]">
+                                            <!-- <input type="radio" class=""> -->
+                                            <label for="">Cách gia công</label>
+                                        </div>
+                                        <select name="" id="" class="w-[137.3px] h-[26px] border border-[#D4D4D8] rounded mt-[25px] px-[4px] text-xs font-normal text-[#71717a]">
+                                            <option value="Cán bóng" selected>Cán bóng</option>
+                                            <option value="Ash Grey">Ash Grey</option>
+                                        </select>
+                                    </td>                       
+                                </tr>
+                                <tr class="text-xs font-medium text-[#000]">
+                                    <td class="border border-[#B9B9B9] px-[12px] pb-[12px]" colspan="2">
+                                        <div class="">
+                                            <span class="text-xs font-normal pr-[3px]">NV kế toán:</span>
+                                            <select name="" id="" class="w-[178px] h-[26px] border border-[#D4D4D8] rounded mt-[13px] px-[4px] text-xs font-normal text-[#71717a]">
+                                                <option value="Nguyễn Ngọc Minh Đan" selected>Nguyễn Ngọc Minh Đan</option>
+                                                <option value="Ash Grey">Ash Grey</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="border border-[#B9B9B9] px-[12px] pb-[12px]" colspan="2">
+                                        <div class="">
+                                            <span class="text-xs font-normal pr-[6px]">NV thiết kế:</span>
+                                            <select name="" id="" class="w-[222px] h-[26px] border border-[#D4D4D8] rounded mt-[13px] px-[4px] text-xs font-normal text-[#71717a]">
+                                                <option value="Nguyễn Ngọc Minh Đan" selected>Nguyễn Ngọc Minh Đan</option>
+                                                <option value="Ash Grey">Ash Grey</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="border border-[#B9B9B9] px-[12px] pb-[12px]" colspan="2">
+                                        <div class="">
+                                            <span class="text-xs font-normal pr-[3px]">NV kinh doanh:</span>
+                                            <select name="" id="" class="w-[200px] h-[26px] border border-[#D4D4D8] rounded mt-[13px] px-[4px] text-xs font-normal text-[#71717a]">
+                                                <option value="Nguyễn Ngọc Minh Đan" selected>Nguyễn Ngọc Minh Đan</option>
+                                                <option value="Ash Grey">Ash Grey</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                
+                                </tr>
+                            </tbody>
+                        </table>
+        
+                        <div class="w-[920px] text-black text-sm font-normal leading-[21px] mt-[20px] mb-[20px]">Lưu ý: Khách hàng kiểm tra, đếm hàng đầy đủ về chất lượng và số lượng, công ty sẽ không chịu trách nhiệm sau khi đã kí giao nhận hàng hóa.</div>
+                        <div class="w-full h-[0px] border border-zinc-100"></div>
+                        <!-- Trạng thái -->
+                        <div class="w-full justify-between items-center inline-flex mt-[20px]">
+                            <div class="justify-start items-center gap-2.5 flex">
+                                <div class="w-[140px] text-zinc-800 text-sm font-medium leading-[21px]">Trạng thái:</div>
+                                <div class="justify-start items-center gap-5 flex">
+                                    <div class="justify-start items-center gap-1 flex">
+                                        <!-- <div class="w-4 h-4 justify-center items-center flex">
+                                            <div class="w-4 h-4 relative flex-col justify-start items-start flex">
+                                                <div class="w-4 h-4 bg-white rounded-[999px] border border-zinc-400"></div>
+                                            </div>
+                                        </div>
+                                        <div class="p-1 justify-start items-center gap-2.5 flex">
+                                            <div class="text-zinc-500 text-sm font-normal leading-[21px]">Chờ duyệt</div>
+                                        </div> -->
+                                        <div class="flex items-center gap-2">
+                                            <input type="radio" name="status" id="" checked>
+                                            <div class="text-zinc-500 text-sm font-normal leading-[21px]">Chờ duyệt</div>
+                                        </div>
+                                    </div>
+                                    <div class="justify-start items-center gap-1 flex">
+                                        <!-- <div class="w-4 h-4 justify-center items-center flex">
+                                            <div class="w-4 h-4 justify-center items-center inline-flex">
+                                                <div class="w-4 h-4 relative flex-col justify-start items-start flex">
+                                                    <div class="w-4 h-4 bg-blue-400 rounded-[999px] border border-white"></div>
+                                                    <div class="w-1 h-1 origin-top-left rotate-180 bg-white rounded-full"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-1 justify-start items-center gap-2.5 flex">
+                                            <div class="text-zinc-500 text-sm font-normal leading-[21px]">Duyệt</div>
+                                        </div> -->
+                                        <div class="flex items-center gap-2">
+                                            <input type="radio" name="status" id="">
+                                            <div class="text-zinc-500 text-sm font-normal leading-[21px]">Duyệt</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="justify-start items-center gap-2.5 flex">
+                                <div class="w-[150px] text-zinc-800 text-sm font-medium leading-[21px]">Thanh toán:</div>
+                                <div class="justify-start items-center gap-5 flex">
+                                    <div class="justify-start items-center gap-1 flex">
+                                        <!-- <div class="w-4 h-4 justify-center items-center flex">
+                                            <div class="w-4 h-4 relative flex-col justify-start items-start flex">
+                                                <div class="w-4 h-4 bg-white rounded-[999px] border border-zinc-400"></div>
+                                            </div>
+                                        </div>
+                                        <div class="p-1 justify-start items-center gap-2.5 flex">
+                                            <div class="text-zinc-500 text-sm font-normal leading-[21px]">Chưa thanh toán</div>
+                                        </div> -->
+                                        <div class="flex items-center gap-2">
+                                            <input type="radio" name="pay" id="" checked>
+                                            <div class="text-zinc-500 text-sm font-normal leading-[21px]">Chưa thanh toán</div>
+                                        </div>
+                                    </div>
+                                    <div class="justify-start items-center gap-1 flex">
+                                        <!-- <div class="w-4 h-4 justify-center items-center flex">
+                                            <div class="w-4 h-4 justify-center items-center inline-flex">
+                                                <div class="w-4 h-4 relative flex-col justify-start items-start flex">
+                                                    <div class="w-4 h-4 bg-blue-400 rounded-[999px] border border-white"></div>
+                                                    <div class="w-1 h-1 origin-top-left rotate-180 bg-white rounded-full"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="p-1 justify-start items-center gap-2.5 flex">
+                                            <div class="text-zinc-500 text-sm font-normal leading-[21px]">Đã thanh toán</div>
+                                        </div> -->
+                                        <div class="flex items-center gap-2">
+                                            <input type="radio" name="pay" id="">
+                                            <div class="text-zinc-500 text-sm font-normal leading-[21px]">Đã thanh toán</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end mt-[20px]">
+                           <div class="flex items-center gap-[10px]">
+                                <div class="h-[34px] px-4 py-2 rounded border border-red-800 justify-center items-center gap-2 inline-flex cursor-pointer">
+                                    <div class="text-center text-red-800 text-xs font-normal leading-[18px]">Hủy đơn hàng</div>
+                                </div>
+                                <div class="w-[0px] h-[22px] rotate-180 border border-zinc-200"></div>
+                                <div class="h-[34px] px-4 py-2 bg-zinc-700 rounded justify-start items-center gap-2 inline-flex cursor-pointer">
+                                    <div class="w-3.5 h-3.5"><img src="../assets/icon/print 1.svg" alt=""></div>
+                                    <div class="text-center text-white text-xs font-normal leading-[18px]">In đơn hàng</div>
+                                </div>
+                                <div class="h-[34px] px-4 py-2 bg-zinc-700 rounded justify-start items-center gap-2 inline-flex cursor-pointer">
+                                    <div class="text-center text-white text-xs font-normal leading-[18px]">Cập nhật đơn hàng</div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+       
+       
+    </body>
+</body>
+</html>
